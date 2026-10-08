@@ -1,0 +1,122 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// --- ADMIN USERS ---
+model AdminUser {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// --- PRICING PACKAGES & TIERS ---
+model PricingPackage {
+  id            String         @id @default(cuid())
+  slug          String         @unique
+  titleCa       String
+  titleEs       String
+  titleEn       String
+  badgeCa       String?
+  badgeEs       String?
+  badgeEn       String?
+  subtitleCa    String?
+  subtitleEs    String?
+  subtitleEn    String?
+  hours         String         // e.g., "17:00h – 21:00h (4h)"
+  basePrice     Int            // e.g., 130
+  isPopular     Boolean        @default(false)
+  isFeatured    Boolean        @default(false)
+  descriptionCa String         @db.Text
+  descriptionEs String         @db.Text
+  descriptionEn String         @db.Text
+  includedCa    String         @db.Text // JSON string array of inclusions
+  includedEs    String         @db.Text
+  includedEn    String         @db.Text
+  order         Int            @default(0)
+  isActive      Boolean        @default(true)
+  extras        PricingExtra[]
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+}
+
+// --- PRICING EXTRAS / ADD-ONS ---
+model PricingExtra {
+  id          String          @id @default(cuid())
+  packageId   String?
+  package     PricingPackage? @relation(fields: [packageId], references: [id], onDelete: Cascade)
+  nameCa      String
+  nameEs      String
+  nameEn      String
+  price       Int             // e.g., 10, 20, 35, 50
+  timeSlot    String?         // e.g., "14:00 – 15:00"
+  isGlobal    Boolean         @default(false)
+  isActive    Boolean         @default(true)
+  order       Int             @default(0)
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+}
+
+// --- FREQUENTLY ASKED QUESTIONS ---
+model FaqItem {
+  id         String   @id @default(cuid())
+  questionCa String   @db.Text
+  questionEs String   @db.Text
+  questionEn String   @db.Text
+  answerCa   String   @db.Text
+  answerEs   String   @db.Text
+  answerEn   String   @db.Text
+  category   String   @default("general") // general, parties, booking, facilities
+  order      Int      @default(0)
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+// --- SITE SETTINGS (Hours, Phone, WhatsApp, Address, Banner Notice) ---
+model SiteSetting {
+  id          String   @id @default(cuid())
+  key         String   @unique // e.g., "opening_hours", "phone", "whatsapp", "address", "notice_banner"
+  value       String   @db.Text
+  description String?
+  updatedAt   DateTime @updatedAt
+}
+
+// --- GALLERY PHOTOS (Cloudinary Managed) ---
+model GalleryPhoto {
+  id          String   @id @default(cuid())
+  title       String?
+  category    String   @default("venue") // venue, parties, playground, activities
+  imageUrl    String   @db.Text
+  publicId    String?  // Cloudinary public_id
+  width       Int?
+  height      Int?
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// --- ENQUIRY / BOOKING SUBMISSIONS ---
+model EnquirySubmission {
+  id          String   @id @default(cuid())
+  name        String
+  email       String
+  phone       String
+  eventType   String?  // birthday, private_event, baby_shower, corporate
+  date        String?
+  timeSlot    String?
+  attendees   Int?
+  message     String?  @db.Text
+  status      String   @default("NEW") // NEW, CONTACTED, BOOKED, ARCHIVED
+  notes       String?  @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

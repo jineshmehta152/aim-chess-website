@@ -1,0 +1,212 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Aim Chess Academy brand color palette from official logo */
+  --background: #f8fafc;
+  --foreground: #042047;
+  --card: #ffffff;
+  --card-foreground: #042047;
+  --popover: #ffffff;
+  --popover-foreground: #042047;
+  
+  /* Aim Chess Deep Navy Blue, Cyan Blue & Yellow Accent */
+  --primary: #042047;
+  --primary-foreground: #ffffff;
+  --secondary: #00aeef;
+  --secondary-foreground: #ffffff;
+  
+  --muted: #f0f7ff;
+  --muted-foreground: #475569;
+  
+  --accent: #fffbeb;
+  --accent-foreground: #042047;
+  --aim-yellow: #ffe80a;
+  --aim-yellow-hover: #fed100;
+  --aim-cyan: #00aeef;
+  --aim-navy: #042047;
+  --aim-blue: #0c71c3;
+  --aim-gold: #f59e0b;
+  
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  
+  --border: #e2e8f0;
+  --input: #ffffff;
+  --ring: rgba(0, 174, 239, 0.4);
+  
+  --chart-1: #042047;
+  --chart-2: #00aeef;
+  --chart-3: #ffe80a;
+  --chart-4: #0c71c3;
+  --chart-5: #38bdf8;
+  
+  --radius: 0.875rem;
+  
+  --sidebar: #ffffff;
+  --sidebar-foreground: #042047;
+  --sidebar-primary: #042047;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f0f9ff;
+  --sidebar-accent-foreground: #00aeef;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: rgba(0, 174, 239, 0.4);
+}
+
+.dark {
+  --background: #06101e;
+  --foreground: #f8fafc;
+  --card: #0b1c36;
+  --card-foreground: #f8fafc;
+  --popover: #0b1c36;
+  --popover-foreground: #f8fafc;
+  --primary: #00aeef;
+  --primary-foreground: #042047;
+  --secondary: #38bdf8;
+  --secondary-foreground: #042047;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #2e2600;
+  --accent-foreground: #ffe80a;
+  --destructive: #f87171;
+  --destructive-foreground: #06101e;
+  --border: #1e3a5f;
+  --input: #0b1c36;
+  --ring: rgba(0, 174, 239, 0.5);
+  --chart-1: #00aeef;
+  --chart-2: #38bdf8;
+  --chart-3: #ffe80a;
+  --chart-4: #60a5fa;
+  --chart-5: #818cf8;
+  --sidebar: #0b1c36;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #00aeef;
+  --sidebar-primary-foreground: #042047;
+  --sidebar-accent: #1e293b;
+  --sidebar-accent-foreground: #38bdf8;
+  --sidebar-border: #1e3a5f;
+  --sidebar-ring: rgba(0, 174, 239, 0.5);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
+  --font-mono: var(--font-geist-mono, ui-monospace, monospace);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: rgba(0, 174, 239, 0.4);
+    box-sizing: border-box;
+  }
+  html {
+    overflow-x: hidden;
+    max-width: 100%;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Custom scrollbar & glass effect */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass-nav {
+  background: rgba(6, 16, 30, 0.94);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #042047 0%, #0c71c3 50%, #00aeef 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-badge {
+  background: linear-gradient(135deg, #e0f2fe 0%, #fef9c3 100%);
+}
+
+.card-hover-effect {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(4, 32, 71, 0.12), 0 8px 10px -6px rgba(0, 174, 239, 0.1);
+}
+
+/* Chess Board styling */
+.chess-square-light {
+  background-color: #f0d9b5;
+}
+.chess-square-dark {
+  background-color: #b58863;
+}
+.chess-square-selected {
+  background-color: #7fa650 !important;
+}
+.chess-square-valid {
+  background-color: #e8e18c !important;
+}

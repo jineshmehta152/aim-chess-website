@@ -1,0 +1,438 @@
+{
+  "metadata": {
+    "title": "Aim Chess Academy | Unleash Your Inner Grandmaster with Aim Chess Academy",
+    "description": "Empowering children's minds through structured chess coaching, FIDE certified trainers, monthly practice tournaments, and ISO certified curriculum. Book a free demo class today!",
+    "ogDescription": "Premier chess academy offering Beginner, Intermediate, Advanced & FIDE rating courses with FIDE certified trainers.",
+    "siteName": "AIM Chess Academy"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "coaches": "Coach Profile",
+    "courses": "Courses Offered",
+    "achievements": "Achievements & Success",
+    "whyUs": "Why Choose Us",
+    "playChess": "Play Chess",
+    "gallery": "Gallery",
+    "faq": "FAQs",
+    "contact": "Contact Us",
+    "bookNow": "Book Free Demo",
+    "enquireNow": "Join Academy"
+  },
+  "topBar": {
+    "tagline": "Empowering Children's Minds",
+    "address": "Nabapally, Choto Bazar, Barasat-700126",
+    "phone": "+91 99034 52493"
+  },
+  "hero": {
+    "badge": "🏆 ISO Certified & FIDE Certified Coaching",
+    "title1": "Unleash Your Inner Grandmaster with",
+    "titleHighlight": "Aim Chess Academy",
+    "subtitle": "",
+    "ctaBook": "Book a Free Demo Class",
+    "ctaExplore": "Explore Courses",
+    "ctaCall": "Call: +91 99034 52493",
+    "stat1Value": "500+",
+    "stat1Label": "Students Coached",
+    "stat2Value": "20+",
+    "stat2Label": "Tournament Winners",
+    "stat3Value": "5.0★",
+    "stat3Label": "Google Rating (34+ Reviews)",
+    "features": [
+      "FIDE Certified Trainer Guidance",
+      "Interactive Play & Game Analysis",
+      "Monthly Practice Tournaments",
+      "ISO Recognized Certification"
+    ],
+    "quickEnrollTitle": "Book Your Free Trial Class",
+    "quickEnrollSubtitle": "Get personalized evaluation from a FIDE trainer"
+  },
+  "about": {
+    "badge": "About Our Academy",
+    "bannerTitle": "About Aim Chess Academy",
+    "breadcrumb": "About Us",
+    "title": "Shaping Future Champions Through the Art of Chess",
+    "storySubtitle": "Our Vision, Mission & Philosophy",
+    "p1": "Aim Chess Academy was established with a singular mission: to empower young minds through the royal game of chess. We believe chess is more than just a game—it is a powerful tool to cultivate concentration, logical reasoning, endurance, and decisive problem-solving abilities.",
+    "p2": "Under the mentorship of FIDE Certified Trainers and titled masters, our academy has trained hundreds of young players from India, the UK, USA, Canada, Australia, Singapore, and the UAE, guiding them from basic piece movement to winning state championships and earning official FIDE ratings.",
+    "uniqueBadge": "Why Aim Chess Academy?",
+    "unique1Title": "FIDE Certified Mentorship",
+    "unique1Desc": "Direct personalized instruction by international chess federation certified coaches with deep tournament experience.",
+    "unique2Title": "Structured Age-Appropriate Curriculum",
+    "unique2Desc": "Step-by-step modular lessons from beginner fundamentals to master-level positional concepts and endgame precision.",
+    "unique3Title": "Regular Competitive Exposure",
+    "unique3Desc": "Monthly internal practice tournaments and active preparation for district, state, national, and international tournaments.",
+    "unique4Title": "ISO Certified Academy",
+    "unique4Desc": "Quality-controlled training standards with official ISO course completion certificates awarded to each student.",
+    "facilitiesTitle": "Our Training Ecosystem",
+    "facilities": [
+      { "title": "Interactive Digital & Physical Boards", "desc": "Live analysis on high-end digital demonstration boards and wooden tournament sets." },
+      { "title": "Personalized Game Review", "desc": "Individual PGN game analysis identifying blunders, strategic missed chances, and strengths." },
+      { "title": "Tactics & Puzzle Vault", "desc": "Extensive database of tactical motifs, opening repertoires, and classical grandmaster games." },
+      { "title": "Small Batch Sizes", "desc": "Strictly limited student-to-coach ratio ensuring every child receives individualized attention." },
+      { "title": "Online & Offline Flexibility", "desc": "Seamless online global classroom via high-speed platforms and offline training center in Barasat." },
+      { "title": "Parent Progress Reports", "desc": "Periodic evaluation cards, rating progress tracking, and personal coach feedback sessions." }
+    ]
+  },
+  "coaches": {
+    "badge": "Certified Leadership",
+    "bannerTitle": "Our Coaches & Mentors",
+    "breadcrumb": "Coach Profile",
+    "title": "Learn Directly From FIDE Certified Champions",
+    "subtitle": "Our trainers bring decades of competitive tournament mastery and passionate child pedagogy to every single class.",
+    "leadCoach": {
+      "name": "Soumen Banerjee",
+      "role": "Founder & Head FIDE Certified Trainer",
+      "bio": "Experienced chess mentor with a stellar record of nurturing junior champions. Coach Soumen provides mental, strategic, and tactical guidance that inspires confidence in every student.",
+      "specialties": ["Opening Repertoire", "FIDE Rating Preparation", "Junior Tournament Psychology", "Endgame Technique"]
+    }
+  },
+  "achievements": {
+    "badge": "Success Stories",
+    "bannerTitle": "Achievements & Success Story",
+    "breadcrumb": "Achievements",
+    "title": "Celebrating Our Champions' Glorious Victories",
+    "subtitle": "In 2024, AIM Chess Academy successfully organized three exciting Inter-Academy Tournaments, while over 20 students secured podium prizes in prestigious external state and national tournaments.",
+    "interTournamentTitle": "Inter-Academy Tournaments 2024",
+    "interTournamentDesc": "Providing students with real competitive clock exposure, psychological resilience, and sportsman spirit. Our students have consistently demonstrated tactical brilliance and sportsmanship.",
+    "stats": [
+      { "number": "3+", "label": "Major Tournaments Hosted" },
+      { "number": "20+", "label": "External Prize Winners" },
+      { "number": "50+", "label": "FIDE Rated Students" },
+      { "number": "100%", "label": "Dedication to Excellence" }
+    ]
+  },
+  "courses": {
+    "badge": "Training Programs",
+    "bannerTitle": "Courses Offered",
+    "breadcrumb": "Courses",
+    "title": "Comprehensive Courses for Every Skill Level",
+    "subtitle": "From absolute beginners (age 5+) to tournament players striving for FIDE ratings and master titles.",
+    "currencySelectLabel": "Select Currency:",
+    "perMonth": "per month",
+    "enrollBtn": "Enroll in Course",
+    "items": [
+      {
+        "id": "beginner",
+        "name": "Beginner Course",
+        "inrPrice": 1600,
+        "usdPrice": 25,
+        "gbpPrice": 20,
+        "cadPrice": 32,
+        "audPrice": 35,
+        "sgdPrice": 32,
+        "aedPrice": 90,
+        "tagline": "Ideal for children & beginners starting their chess journey.",
+        "features": [
+          "Weekly 2 live classes",
+          "Focused on learning the fundamentals of chess",
+          "Piece movements, special rules & board vision",
+          "Basic checkmates, pins & forks",
+          "FIDE Certified Trainer guidance"
+        ]
+      },
+      {
+        "id": "intermediate",
+        "name": "Intermediate Course",
+        "inrPrice": 1600,
+        "usdPrice": 25,
+        "gbpPrice": 20,
+        "cadPrice": 32,
+        "audPrice": 35,
+        "sgdPrice": 32,
+        "aedPrice": 90,
+        "tagline": "Deepen your strategic understanding & tactical calculation.",
+        "features": [
+          "Weekly 2 live classes",
+          "Advanced understanding of strategies and openings",
+          "Middle game tactical combinations & planning",
+          "Essential king & pawn endgames",
+          "FIDE Certified Trainer guidance"
+        ]
+      },
+      {
+        "id": "advanced",
+        "name": "Advanced Course",
+        "inrPrice": 1800,
+        "usdPrice": 30,
+        "gbpPrice": 25,
+        "cadPrice": 38,
+        "audPrice": 42,
+        "sgdPrice": 38,
+        "aedPrice": 105,
+        "tagline": "Master deep calculation, complex endgames & tournament prep.",
+        "features": [
+          "Weekly 2 live classes",
+          "In-depth lessons on advanced tactics and endgames",
+          "Attacking king safety & positional piece sacrifices",
+          "Comprehensive tournament psychological prep",
+          "FIDE Certified Trainer guidance"
+        ]
+      },
+      {
+        "id": "individual",
+        "name": "Individual 1-on-1 Classes",
+        "inrPrice": 2000,
+        "usdPrice": 35,
+        "gbpPrice": 28,
+        "cadPrice": 45,
+        "audPrice": 50,
+        "sgdPrice": 45,
+        "aedPrice": 125,
+        "tagline": "Personalized 1-on-1 coaching tailored solely to the student.",
+        "features": [
+          "Weekly 1-on-1 dedicated session",
+          "One-on-one training directly with FIDE Certified Trainers",
+          "Customized tournament game analysis & opening repertoire",
+          "Exclusive strategies, weaknesses diagnosis & rapid growth",
+          "FIDE Certified Trainer guidance"
+        ]
+      },
+      {
+        "id": "expert",
+        "name": "Expert Course",
+        "inrPrice": 2600,
+        "usdPrice": 40,
+        "gbpPrice": 32,
+        "cadPrice": 52,
+        "audPrice": 58,
+        "sgdPrice": 52,
+        "aedPrice": 145,
+        "tagline": "High-level master classes & titled player analysis.",
+        "features": [
+          "Weekly 2 advanced classes",
+          "Titled Player Analysis Sessions",
+          "Exclusive grandmaster strategies and high-level practice",
+          "Complex endgame studies & prophylaxis",
+          "FIDE Certified Trainer guidance"
+        ]
+      },
+      {
+        "id": "fide-rating",
+        "name": "FIDE Rating Course",
+        "inrPrice": 2200,
+        "usdPrice": 35,
+        "gbpPrice": 28,
+        "cadPrice": 45,
+        "audPrice": 50,
+        "sgdPrice": 45,
+        "aedPrice": 125,
+        "tagline": "Dedicated roadmap to achieve and elevate your official FIDE rating.",
+        "features": [
+          "Weekly 2 intensive classes",
+          "Focused on helping students achieve their official FIDE rating",
+          "Standard, Rapid & Blitz tournament clock simulations",
+          "Personalized guidance from FIDE Certified Trainers",
+          "Official tournament registration assistance"
+        ]
+      }
+    ]
+  },
+  "keyFeatures": {
+    "badge": "Academy Standard",
+    "title": "Key Features of All Courses",
+    "subtitle": "Every student at AIM Chess Academy benefits from our holistic, results-oriented training framework.",
+    "items": [
+      {
+        "title": "Monthly Practice Tournament",
+        "desc": "Hone your skills in a competitive environment with live clocks and round-robin pairings.",
+        "icon": "trophy"
+      },
+      {
+        "title": "ISO Certification",
+        "desc": "Receive an official ISO-recognized certificate upon successful course completion.",
+        "icon": "certificate"
+      },
+      {
+        "title": "Engaging Environment",
+        "desc": "A supportive, encouraging learning space designed for children to grow, think, and thrive.",
+        "icon": "child"
+      },
+      {
+        "title": "Child Engagement & Logic",
+        "desc": "Specially curated interactive activities to keep children motivated, curious, and excited.",
+        "icon": "gamepad"
+      }
+    ]
+  },
+  "interactiveChess": {
+    "badge": "Interactive Board",
+    "title": "Try a Move on Our Interactive Chess Board",
+    "subtitle": "Play against AI or solve puzzles directly in your browser. Experience how we make chess intuitive and engaging.",
+    "reset": "Reset Board",
+    "statusTurn": "Current Turn",
+    "white": "White",
+    "black": "Black",
+    "check": "Check!",
+    "checkmate": "Checkmate!",
+    "stalemate": "Stalemate"
+  },
+  "gallery": {
+    "badge": "Moments of Pride",
+    "bannerTitle": "Photo Gallery",
+    "breadcrumb": "Gallery",
+    "title": "Tournaments, Trophies & Academy Life",
+    "subtitle": "Glimpses of our vibrant chess classrooms, intense tournament battles, and proud prize distributions.",
+    "all": "All Photos",
+    "tournaments": "Tournaments",
+    "trophies": "Trophies & Prizes",
+    "classroom": "Academy Classes"
+  },
+  "faq": {
+    "badge": "Got Questions?",
+    "bannerTitle": "Frequently Asked Questions",
+    "breadcrumb": "FAQs",
+    "title": "Everything You Need to Know",
+    "subtitle": "Find clear answers about demo classes, age requirements, batch timings, and certifications.",
+    "items": [
+      {
+        "q": "What is the age limit to join AIM Chess Academy?",
+        "a": "We welcome students aged 5 years and above. Our courses are structured for all levels, from complete young beginners to seasoned advanced tournament players."
+      },
+      {
+        "q": "How can I schedule a demo session?",
+        "a": "Scheduling a demo session is simple! Contact us via phone (+91 99034 52493), email (contact@aimchessacademy.com), or submit the online form, and we will arrange a free trial class at your convenience."
+      },
+      {
+        "q": "What are the timings for each course?",
+        "a": "Course timings depend on the specific batch and skill level. We offer flexible schedules, including weekday evenings and weekend batches, accommodating both Indian and international time zones."
+      },
+      {
+        "q": "Are the courses suitable for complete beginners?",
+        "a": "Absolutely! Our Beginner Course is tailored specifically for those who are brand new to chess, providing step-by-step guidance to build a solid tactical and strategic foundation."
+      },
+      {
+        "q": "Will I get a certificate upon completion of the course?",
+        "a": "Yes! We provide official ISO-certified course completion certificates to all students who successfully finish their respective training levels."
+      },
+      {
+        "q": "What is the duration of each course?",
+        "a": "Course durations vary depending on the level and student pace, ranging from modular monthly programs to structured multi-month master curriculums."
+      },
+      {
+        "q": "Are there any competitions or tournaments for students?",
+        "a": "Yes, we organize regular monthly practice tournaments and exciting inter-academy competitions to help students apply their learning and gain invaluable tournament experience."
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "Google Reviews",
+    "title": "Loved by Parents & Students Worldwide",
+    "subtitle": "Over 34+ verified 5-Star reviews on Google from families across India, the UK, USA, and beyond.",
+    "ratingText": "5.0 ★ Excellent based on 34+ Google Reviews",
+    "items": [
+      {
+        "name": "Priya Sen",
+        "role": "Parent",
+        "rating": 5,
+        "comment": "AIM Chess Academy has made a big difference for my child. The lessons are well-organized, and the coaching has really helped improve their chess skills and confidence."
+      },
+      {
+        "name": "Arjun Kar",
+        "role": "FIDE Rated Student",
+        "rating": 5,
+        "comment": "Thanks to AIM Chess Academy, I earned my FIDE rating and gained more confidence in my problem-solving. The academy's great environment and challenging tournaments helped me grow."
+      },
+      {
+        "name": "Rina Mitra",
+        "role": "Parent",
+        "rating": 5,
+        "comment": "The inter-academy competitions were exciting and taught me a lot about strategy and how to stay strong. AIM Chess Academy really makes chess more than just a game!"
+      },
+      {
+        "name": "Suman Bhattacharya",
+        "role": "Parent of Aadrito Bhattacharya",
+        "rating": 5,
+        "comment": "I'm extremely impressed! The coaches are knowledgeable, supportive, and provide personalized attention. Mentor Soumen sir even supported my child mentally and strategically over mobile on Friday night right before Sunday's championship!"
+      },
+      {
+        "name": "Monalisa Roy Bhowmik",
+        "role": "Parent",
+        "rating": 5,
+        "comment": "From being just a curious kid, I have seen my son evolve into a confident young player. Huge development in concentration, willpower, and critical thinking over the years. Words fall short for AIM Chess Academy!"
+      },
+      {
+        "name": "Sudipta Chatterjee",
+        "role": "Parents of Purnendu Chatterjee (Bradford, UK)",
+        "rating": 5,
+        "comment": "A perfect place for kids to start and grow. Thanks to the teachers for teaching with such positive, polite and caring manner. We are really satisfied from the UK and highly recommend this institute!"
+      },
+      {
+        "name": "Susmita Das",
+        "role": "Parent",
+        "rating": 5,
+        "comment": "Thank you Sir for your exceptional teaching and dedication. Your ability to analyze each student personally and tailor guidance to their unique strengths is truly remarkable."
+      },
+      {
+        "name": "Pompy Chowdhury",
+        "role": "Parent",
+        "rating": 5,
+        "comment": "AIM Chess Academy is truly a haven for young minds to grow and thrive. Meticulously crafted curriculum and supportive coaches tailored to his unique needs!"
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Get in Touch",
+    "bannerTitle": "Contact AIM Chess Academy",
+    "breadcrumb": "Contact",
+    "title": "Start Your Chess Journey With Us",
+    "subtitle": "Have questions about courses, demo sessions, or tournament coaching? Reach out to our team today.",
+    "form": {
+      "name": "Student / Parent Name",
+      "namePlaceholder": "e.g. Sourav Banerjee",
+      "email": "Email Address",
+      "emailPlaceholder": "your-email@example.com",
+      "phone": "Phone / WhatsApp Number",
+      "phonePlaceholder": "+91 99034 52493",
+      "eventType": "Desired Course Level",
+      "eventTypeOptions": {
+        "beginner": "Beginner Course (Age 5+)",
+        "intermediate": "Intermediate Course",
+        "advanced": "Advanced Course",
+        "individual": "Individual 1-on-1 Classes",
+        "expert": "Expert Course",
+        "fide": "FIDE Rating Preparation",
+        "demo": "Book Free Demo Session"
+      },
+      "date": "Preferred Start / Demo Date",
+      "timeSlot": "Preferred Batch Time",
+      "timeSlotOptions": {
+        "morning": "Morning Batch (10:00 AM - 12:00 PM)",
+        "evening": "Evening Batch (5:00 PM - 7:00 PM)",
+        "weekend": "Weekend Batch (Saturday / Sunday)",
+        "custom": "International Timezone Slot"
+      },
+      "guests": "Student Age",
+      "package": "Course Selected",
+      "message": "Student's Current Chess Level or Notes",
+      "messagePlaceholder": "Tell us about your child's age, whether they know basic rules, or any tournament experience...",
+      "submit": "Submit Demo Class Request",
+      "submitting": "Submitting Request...",
+      "successTitle": "Demo Class Request Received!",
+      "successDesc": "Thank you for reaching out to AIM Chess Academy! Our coach will contact you within 24 hours to schedule your free demo class.",
+      "error": "There was an error sending your request. Please call or WhatsApp us directly at +91 99034 52493."
+    },
+    "directContact": "Direct Contact Information",
+    "phoneLabel": "Phone & Inquiries",
+    "whatsappLabel": "Chat on WhatsApp",
+    "whatsappAction": "WhatsApp +91 99034 52493",
+    "emailLabel": "Email Addresses",
+    "addressLabel": "Academy Address",
+    "addressVal": "Nabapally, Choto Bazar, Surendranath Colony, Barasat - 700126, Kolkata, West Bengal, India",
+    "hoursLabel": "Training Hours",
+    "hoursVal": "Monday to Sunday: 9:00 AM - 8:30 PM (IST) Online & Offline"
+  },
+  "pricing": {
+    "badge": "AFFORDABLE EXCELLENCE",
+    "bannerTitle": "Course Fees & Plans",
+    "subtitle": "Transparent, value-driven pricing for world-class FIDE certified chess training.",
+    "breadcrumb": "Pricing"
+  },
+  "footer": {
+    "tagline": "Unleash Your Inner Grandmaster with Aim Chess Academy. Empowering children and chess enthusiasts through certified coaching, tactical excellence, and tournament mastery.",
+    "extraLinks": "Extra Links",
+    "contactInfo": "Contact Info",
+    "affiliations": "Officially Affiliated & ISO Certified",
+    "rights": "© 2025 AIM Chess Academy. All Rights Reserved."
+  }
+}

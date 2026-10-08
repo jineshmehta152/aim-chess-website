@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="iconOuterRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00AEEF" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="iconMiddleRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0369A1" />
+      <stop offset="100%" stop-color="#042047" />
+    </linearGradient>
+    <linearGradient id="iconCenterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="iconArrowGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFE80A" />
+      <stop offset="100%" stop-color="#FBBF24" />
+    </linearGradient>
+    <filter id="iconGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Outer Cyan Ring -->
+  <circle cx="200" cy="200" r="170" fill="url(#iconOuterRing)" stroke="#FFFFFF" stroke-width="4" filter="url(#iconGlow)" />
+
+  <!-- Middle Ring -->
+  <circle cx="200" cy="200" r="115" fill="url(#iconMiddleRing)" stroke="#FFFFFF" stroke-width="3" />
+
+  <!-- Center Circle -->
+  <circle cx="200" cy="200" r="75" fill="url(#iconCenterGrad)" stroke="#FFFFFF" stroke-width="3" />
+
+  <!-- Arrow -->
+  <g filter="url(#iconGlow)">
+    <path d="M 40 360 L 355 45" stroke="url(#iconArrowGrad)" stroke-width="11" stroke-linecap="round" />
+    <polygon points="380,20 320,48 350,82" fill="url(#iconArrowGrad)" stroke="#042047" stroke-width="1.5" />
+    <polygon points="20,380 40,330 55,360 85,345 65,395 35,385" fill="url(#iconArrowGrad)" stroke="#042047" stroke-width="1.5" />
+  </g>
+
+  <!-- AIM Text -->
+  <text x="200" y="217" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="46" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">
+    AIM
+  </text>
+</svg>
