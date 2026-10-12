@@ -26,7 +26,7 @@ export default function CtaSection() {
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Compact Unique Floating CTA Card */}
-        <div className="relative rounded-[36px] bg-gradient-to-br from-[#042047] via-[#082956] to-[#041a38] border-3 border-[#00aeef] shadow-[0_10px_0_0_#042047] p-7 sm:p-10 lg:p-12 overflow-hidden">
+        <div className="relative rounded-[28px] sm:rounded-[36px] bg-gradient-to-br from-[#042047] via-[#082956] to-[#041a38] border-3 border-[#00aeef] shadow-[0_6px_0_0_#042047] sm:shadow-[0_10px_0_0_#042047] p-5 xs:p-7 sm:p-10 lg:p-12 overflow-hidden">
           
           {/* Ambient Glows Inside Card */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#00aeef]/20 rounded-full blur-3xl pointer-events-none" />
@@ -44,7 +44,7 @@ export default function CtaSection() {
               </div>
 
               {/* Main Headline */}
-              <h2 className="text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+              <h2 className="text-xl xs:text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight">
                 Unleash Your Inner{" "}
                 <span className="bg-[#ffe80a] text-[#042047] font-black px-3 py-0.5 rounded-xl inline-block shadow-xs">
                   Grandmaster

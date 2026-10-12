@@ -24,7 +24,7 @@ export default function ContactCtaSection() {
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Compact Neo-Brutalist Banner */}
-        <div className="rounded-[28px] sm:rounded-[32px] bg-[#042047] text-white border-[3px] border-[#00aeef] shadow-[6px_6px_0px_0px_#042047] p-6 sm:p-8 lg:p-9 relative overflow-hidden">
+        <div className="rounded-2xl sm:rounded-[32px] bg-[#042047] text-white border-[2.5px] sm:border-[3px] border-[#00aeef] shadow-[4px_4px_0px_0px_#042047] sm:shadow-[6px_6px_0px_0px_#042047] p-5 xs:p-6 sm:p-8 lg:p-9 relative overflow-hidden">
           
           {/* Subtle Background Glows */}
           <div className="absolute top-0 right-0 w-72 h-72 bg-[#00aeef]/15 rounded-full blur-3xl pointer-events-none" />
@@ -39,9 +39,9 @@ export default function ContactCtaSection() {
                 <span>FREE 30-MIN EVALUATION · AGES 5+</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight">
+              <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight">
                 Ready To Start Your Child&apos;s{" "}
-                <span className="bg-[#ffe80a] text-[#042047] px-3 py-0.5 rounded-xl inline-block shadow-sm">
+                <span className="bg-[#ffe80a] text-[#042047] px-2.5 xs:px-3 py-0.5 rounded-xl inline-block shadow-sm">
                   Chess Journey?
                 </span>
               </h2>

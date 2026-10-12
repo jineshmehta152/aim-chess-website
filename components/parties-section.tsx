@@ -29,7 +29,7 @@ export default function PartiesSection() {
       levelBadge: "BEGINNER LEVEL · AGES 5+",
       badgeBg: "bg-[#00aeef] text-white",
       cardBorder: "border-[#00aeef]/40",
-      image: "/images/arch_top.jpg",
+      image: "/beginner.jpeg",
       title: "Beginner Chess Fundamentals",
       summary: "Designed for young minds with zero prior experience. We build confidence and a deep love for chess from the ground up.",
       curriculum: [
@@ -50,7 +50,7 @@ export default function PartiesSection() {
       levelBadge: "INTERMEDIATE LEVEL · MOST POPULAR",
       badgeBg: "bg-[#ffe80a] text-[#042047]",
       cardBorder: "border-[#ffe80a]",
-      image: "/images/arch_center.jpg",
+      image: "/inter.jpg",
       title: "Intermediate Tactics & Strategy",
       summary: "For players who know how to play but often blunder or struggle to find a winning plan in the middle-game.",
       curriculum: [
@@ -71,7 +71,7 @@ export default function PartiesSection() {
       levelBadge: "ADVANCED LEVEL · FIDE PREPARATION",
       badgeBg: "bg-[#042047] text-white",
       cardBorder: "border-[#042047]/40",
-      image: "/images/arch_bottom.jpg",
+      image: "/adv.jpg",
       title: "Advanced & FIDE Rating Prep",
       summary: "Intensive training for tournament competitors aiming for state, national podiums and official FIDE Elo ratings.",
       curriculum: [
@@ -104,19 +104,19 @@ export default function PartiesSection() {
             <span>STRUCTURED CHESS CURRICULUM</span>
           </div>
 
-          <h2 className="text-3xl xs:text-4xl sm:text-4xl font-black text-[#042047] tracking-tight leading-[1.2]">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#042047] tracking-tight leading-[1.2]">
             Find Your Level &amp;{" "}
-            <span className="bg-[#ffe80a] text-[#042047] font-black px-4 py-1 rounded-2xl inline-block shadow-xs">
+            <span className="bg-[#ffe80a] text-[#042047] font-black px-3.5 sm:px-4 py-0.5 sm:py-1 rounded-2xl inline-block shadow-xs">
               Start Learning
             </span>
             <br />
             From Beginner{" "}
-            <span className="bg-[#00aeef] text-white font-black px-4 py-1 rounded-2xl inline-block shadow-xs mt-1">
+            <span className="bg-[#00aeef] text-white font-black px-3.5 sm:px-4 py-0.5 sm:py-1 rounded-2xl inline-block shadow-xs mt-1">
               To Champion
             </span>
           </h2>
 
-          <p className="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed font-medium">
+          <p className="mt-3 sm:mt-4 text-slate-600 text-xs sm:text-base leading-relaxed font-medium">
             Not sure where to start? Choose the question below that best describes your child&apos;s current chess journey to see what we will teach.
           </p>
         </div>
@@ -126,24 +126,24 @@ export default function PartiesSection() {
           {courses.map((course) => (
             <div
               key={course.id}
-              className={`rounded-[32px] border-3 bg-white p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 relative group ${
+              className={`rounded-[28px] sm:rounded-[32px] border-3 bg-white p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 relative group ${
                 course.popular
-                  ? "border-[#ffe80a] shadow-[0_12px_30px_rgba(255,232,10,0.25)] ring-4 ring-[#ffe80a]/30 -translate-y-2"
+                  ? "border-[#ffe80a] shadow-[0_12px_30px_rgba(255,232,10,0.25)] ring-4 ring-[#ffe80a]/30 lg:-translate-y-2"
                   : "border-[#042047]/20 shadow-[0_8px_20px_rgba(4,32,71,0.06)] hover:shadow-xl hover:-translate-y-1"
               }`}
             >
               {/* Popular Ribbon on Middle Card */}
               {course.popular && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#042047] text-[#ffe80a] text-[11px] font-black uppercase tracking-widest px-4 py-1 rounded-full border-2 border-[#ffe80a] shadow-md flex items-center gap-1.5 whitespace-nowrap z-20">
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#042047] text-[#ffe80a] text-[10px] xs:text-[11px] font-black uppercase tracking-widest px-3.5 xs:px-4 py-1 rounded-full border-2 border-[#ffe80a] shadow-md flex items-center gap-1.5 whitespace-nowrap z-20">
                   <Sparkles className="w-3.5 h-3.5 fill-[#ffe80a]" />
                   <span>Most Enrolled</span>
                 </div>
               )}
 
-              <div className="space-y-5">
+              <div className="space-y-4 sm:space-y-5">
                 
                 {/* Course Featured Image Header */}
-                <div className="relative w-full h-44 sm:h-48 rounded-[24px] overflow-hidden border-2 border-slate-100 bg-slate-100">
+                <div className="relative w-full h-40 xs:h-44 sm:h-48 rounded-[20px] sm:rounded-[24px] overflow-hidden border-2 border-slate-100 bg-slate-100">
                   <Image 
                     src={course.image} 
                     alt={course.title}

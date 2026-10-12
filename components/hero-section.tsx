@@ -41,25 +41,25 @@ export function HeroSection() {
           <div className="lg:col-span-6 space-y-6 text-left">
             
             {/* Eyebrow Title */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-[#00aeef]/40 text-white text-xs sm:text-sm font-extrabold shadow-sm">
-              <Sparkles className="w-4 h-4 text-[#ffe80a]" />
-              <span>AIM Chess Academy: <span className="text-[#ffe80a] font-bold">Empowering Young Minds</span></span>
+            <div className="inline-flex items-center gap-2 px-3.5 xs:px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-[#00aeef]/40 text-white text-[11px] xs:text-xs sm:text-sm font-extrabold shadow-sm max-w-full">
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#ffe80a] shrink-0" />
+              <span className="truncate">AIM Chess Academy: <span className="text-[#ffe80a] font-bold">Empowering Young Minds</span></span>
             </div>
 
             {/* Main Hero Headline */}
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-[33px] font-black text-white tracking-tight leading-[1.06] drop-shadow-md">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-[33px] font-black text-white tracking-tight leading-[1.08] sm:leading-[1.06] drop-shadow-md">
               <span className="block">{t("title1") || "Unleash Your Inner Grandmaster with"}</span>
-              <span className="block font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#ffe80a] via-[#fcd116] to-[#00aeef] text-4xl xs:text-5xl sm:text-6xl lg:text-[45px] leading-tight mt-1 drop-shadow-lg break-words">
+              <span className="block font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#ffe80a] via-[#fcd116] to-[#00aeef] text-3xl xs:text-5xl sm:text-6xl lg:text-[45px] leading-tight mt-1 drop-shadow-lg break-words">
                 AIM Chess Academy
               </span>
             </h1>
 
             {/* Location and Info Badge */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 pt-1">
-              <span className="text-sm sm:text-lg font-black text-white drop-shadow-xs">
+              <span className="text-xs xs:text-sm sm:text-lg font-black text-white drop-shadow-xs">
                 Barasat, Kolkata
               </span>
-              <span className="bg-[#ffe80a] text-[#042047] font-black px-3 sm:px-3.5 py-1 rounded-full text-xs sm:text-sm shadow-md">
+              <span className="bg-[#ffe80a] text-[#042047] font-black px-2.5 xs:px-3 sm:px-3.5 py-1 rounded-full text-[11px] xs:text-xs sm:text-sm shadow-md">
                 Online &amp; Offline Batches Worldwide
               </span>
             </div>
@@ -107,8 +107,8 @@ export function HeroSection() {
           </div>
 
           {/* Right Column: Iconic Arch / Capsule Collage with Playful Doodles */}
-          <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end mt-4 lg:mt-0">
-            <div className="relative w-full max-w-[340px] xs:max-w-[420px] sm:max-w-[520px] h-[360px] xs:h-[440px] sm:h-[540px]">
+          <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end mt-6 lg:mt-0">
+            <div className="relative w-full max-w-[290px] xs:max-w-[380px] sm:max-w-[520px] h-[330px] xs:h-[420px] sm:h-[540px]">
               
               {/* Doodle 1: Yellow Star above center arch */}
               <div className="absolute top-2 left-[18%] sm:left-[20%] z-20 animate-pulse pointer-events-none">
@@ -119,21 +119,21 @@ export function HeroSection() {
 
               {/* Doodle 2: Light Cyan / White Hand-drawn Loop Scribble ("lee") */}
               <div className="absolute top-[32%] left-[2%] sm:left-[6%] z-20 pointer-events-none">
-                <svg className="w-12 h-9 xs:w-16 xs:h-12 sm:w-20 sm:h-14 text-[#00aeef]/85" viewBox="0 0 120 70" fill="none" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="w-10 h-7 xs:w-16 xs:h-12 sm:w-20 sm:h-14 text-[#00aeef]/85" viewBox="0 0 120 70" fill="none" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M10 45 C15 20, 30 15, 40 30 C50 45, 35 60, 25 50 C15 40, 25 15, 55 25 C75 32, 85 55, 70 60 C55 65, 60 30, 95 35 C108 37, 115 45, 110 55" />
                 </svg>
               </div>
 
               {/* Doodle 3: Yellow Star below center arch */}
-              <div className="absolute bottom-10 xs:bottom-14 left-[20%] sm:left-[24%] z-20 pointer-events-none">
+              <div className="absolute bottom-8 xs:bottom-12 sm:bottom-14 left-[20%] sm:left-[24%] z-20 pointer-events-none">
                 <svg className="w-5 h-5 sm:w-8 sm:h-8 text-[#ffe80a]" viewBox="0 0 100 100" fill="currentColor">
                   <path d="M50 0 C52 35 65 48 100 50 C65 52 52 65 50 100 C48 65 35 52 0 50 C35 48 48 35 50 0 Z" />
                 </svg>
               </div>
 
               {/* Doodle 4: White Radiating Sunburst Doodle at bottom right */}
-              <div className="absolute bottom-2 right-[24%] sm:right-[32%] z-20 pointer-events-none">
-                <svg className="w-12 h-12 xs:w-16 xs:h-16 sm:w-20 sm:h-20 text-white/90" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round">
+              <div className="absolute bottom-2 right-[20%] xs:right-[24%] sm:right-[32%] z-20 pointer-events-none">
+                <svg className="w-10 h-10 xs:w-16 xs:h-16 sm:w-20 sm:h-20 text-white/90" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round">
                   <line x1="8" y1="50" x2="28" y2="50" />
                   <line x1="14" y1="30" x2="30" y2="38" />
                   <line x1="24" y1="14" x2="38" y2="30" />
@@ -146,10 +146,10 @@ export function HeroSection() {
               </div>
 
               {/* Arch 1: Top Right Arch Card */}
-              <div className="absolute top-0 right-0 sm:right-2 w-28 xs:w-36 sm:w-40 lg:w-44 h-36 xs:h-48 sm:h-56 rounded-t-full rounded-b-[24px] sm:rounded-b-[32px] overflow-hidden bg-[#00aeef] shadow-2xl z-0 flex items-end justify-center transition-transform duration-300 hover:scale-105 border-2 border-white/20">
+              <div className="absolute top-0 right-0 sm:right-2 w-24 xs:w-32 sm:w-40 lg:w-44 h-32 xs:h-44 sm:h-56 rounded-t-full rounded-b-[20px] xs:rounded-b-[24px] sm:rounded-b-[32px] overflow-hidden bg-[#00aeef] shadow-2xl z-0 flex items-end justify-center transition-transform duration-300 hover:scale-105 border-2 border-white/20">
                 <div className="relative w-full h-full">
                   <Image 
-                    src="/images/arch_top.jpg" 
+                    src="/images/prize-1.jpg" 
                     alt="Chess Training in Action"
                     fill
                     className="object-cover"
@@ -160,10 +160,10 @@ export function HeroSection() {
               </div>
 
               {/* Arch 2: Center Main Tall Arch Card */}
-              <div className="absolute top-6 sm:top-8 left-12 xs:left-16 sm:left-20 w-36 xs:w-48 sm:w-56 lg:w-64 h-52 xs:h-72 sm:h-84 lg:h-96 rounded-t-full rounded-b-[28px] sm:rounded-b-[36px] overflow-hidden bg-[#0c71c3] shadow-2xl z-10 flex items-end justify-center transition-transform duration-300 hover:scale-105 border-4 border-white/30">
+              <div className="absolute top-5 xs:top-6 sm:top-8 left-8 xs:left-14 sm:left-20 w-32 xs:w-44 sm:w-56 lg:w-64 h-48 xs:h-64 sm:h-84 lg:h-96 rounded-t-full rounded-b-[24px] xs:rounded-b-[28px] sm:rounded-b-[36px] overflow-hidden bg-[#0c71c3] shadow-2xl z-10 flex items-end justify-center transition-transform duration-300 hover:scale-105 border-4 border-white/30">
                 <div className="relative w-full h-full">
                   <Image 
-                    src="/images/arch_center.jpg" 
+                    src="/images/prize-6.jpg" 
                     alt="AIM Chess Academy Grandmaster Session"
                     fill
                     className="object-cover"
@@ -175,10 +175,10 @@ export function HeroSection() {
               </div>
 
               {/* Arch 3: Bottom Left Arch Card */}
-              <div className="absolute bottom-4 xs:bottom-6 sm:bottom-8 left-0 sm:left-2 w-28 xs:w-36 sm:w-40 lg:w-44 h-36 xs:h-48 sm:h-56 rounded-t-full rounded-b-[20px] sm:rounded-b-[28px] overflow-hidden bg-[#ffe80a] shadow-xl z-0 flex items-end justify-center transition-transform duration-300 hover:scale-105 border-2 border-white/20">
+              <div className="absolute bottom-3 xs:bottom-5 sm:bottom-8 left-0 sm:left-2 w-24 xs:w-32 sm:w-40 lg:w-44 h-32 xs:h-44 sm:h-56 rounded-t-full rounded-b-[18px] xs:rounded-b-[20px] sm:rounded-b-[28px] overflow-hidden bg-[#ffe80a] shadow-xl z-0 flex items-end justify-center transition-transform duration-300 hover:scale-105 border-2 border-white/20">
                 <div className="relative w-full h-full">
                   <Image 
-                    src="/images/arch_bottom.jpg" 
+                    src="/images/achievement-2.jpg" 
                     alt="Chess Tournament Winners"
                     fill
                     className="object-cover"

@@ -171,14 +171,14 @@ export default function WhatStudentsLearnSection() {
             <span>STRUCTURED VISUAL CURRICULUM</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
             What Students Learn:{" "}
-            <span className="bg-[#ffe80a] text-[#042047] px-4 py-1 rounded-2xl inline-block shadow-sm">
+            <span className="bg-[#ffe80a] text-[#042047] px-2.5 xs:px-4 py-0.5 xs:py-1 rounded-xl xs:rounded-2xl inline-block shadow-sm">
               Core Chess Skills
             </span>
           </h2>
 
-          <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-600 text-xs sm:text-base font-medium leading-relaxed max-w-2xl mx-auto px-1">
             Instead of rote memorization, our visual curriculum trains the 6 indispensable pillars of chess mastery to build intuitive, complete chess players.
           </p>
 
@@ -187,7 +187,7 @@ export default function WhatStudentsLearnSection() {
         {/* ========================================================================= */}
         {/* 6 CORE CHESS SKILLS GRID                                                  */}
         {/* ========================================================================= */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             const isSelected = selectedSkill === index;
@@ -195,7 +195,7 @@ export default function WhatStudentsLearnSection() {
               <div
                 key={skill.id}
                 onClick={() => setSelectedSkill(index)}
-                className={`relative rounded-[32px] bg-white border-[3px] border-[#042047] shadow-[6px_6px_0px_0px_#042047] hover:shadow-[2px_2px_0px_0px_#042047] hover:translate-x-0.5 hover:translate-y-0.5 transition-all p-6 sm:p-7 flex flex-col justify-between group overflow-hidden cursor-pointer ${
+                className={`relative rounded-2xl sm:rounded-[32px] bg-white border-[2.5px] sm:border-[3px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] sm:shadow-[6px_6px_0px_0px_#042047] hover:shadow-[2px_2px_0px_0px_#042047] hover:translate-x-0.5 hover:translate-y-0.5 transition-all p-5 xs:p-6 sm:p-7 flex flex-col justify-between group overflow-hidden cursor-pointer ${
                   isSelected ? "ring-4 ring-[#ffe80a]/60 bg-amber-50/20" : ""
                 }`}
               >

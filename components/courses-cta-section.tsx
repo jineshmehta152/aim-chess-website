@@ -30,7 +30,7 @@ export default function CoursesCtaSection() {
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Compact & Unique Neo-Brutalist Card */}
-        <div className="relative rounded-[32px] bg-[#042047] text-white border-[3px] border-[#00aeef] shadow-[6px_6px_0px_0px_#042047] p-6 sm:p-8 lg:p-10 overflow-hidden">
+        <div className="relative rounded-2xl sm:rounded-[32px] bg-[#042047] text-white border-[2.5px] sm:border-[3px] border-[#00aeef] shadow-[4px_4px_0px_0px_#042047] sm:shadow-[6px_6px_0px_0px_#042047] p-5 xs:p-6 sm:p-8 lg:p-10 overflow-hidden">
           
           {/* Ambient Glows Inside */}
           <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#00aeef]/20 rounded-full blur-2xl pointer-events-none" />
@@ -48,9 +48,9 @@ export default function CoursesCtaSection() {
               </div>
 
               {/* Main Headline */}
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight">
+              <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight">
                 Ready to Find Your Child&apos;s{" "}
-                <span className="bg-[#ffe80a] text-[#042047] px-3 py-0.5 rounded-xl inline-block shadow-sm">
+                <span className="bg-[#ffe80a] text-[#042047] px-2.5 xs:px-3 py-0.5 rounded-xl inline-block shadow-sm">
                   Chess Level?
                 </span>
               </h2>
@@ -61,11 +61,11 @@ export default function CoursesCtaSection() {
               </p>
 
               {/* Compact Action Buttons */}
-              <div className="pt-2 flex flex-wrap items-center gap-3">
+              <div className="pt-2 flex flex-col xs:flex-row items-stretch xs:items-center gap-3">
                 <button
                   onClick={() => openBookingModal()}
                   type="button"
-                  className="inline-flex items-center gap-2 bg-[#ffe80a] hover:bg-[#ffd600] text-[#042047] font-black text-xs sm:text-sm px-6 py-3 rounded-xl border-2 border-[#042047] shadow-[3px_3px_0px_0px_#ffffff] hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 transition-all cursor-pointer uppercase tracking-wider"
+                  className="inline-flex items-center justify-center gap-2 bg-[#ffe80a] hover:bg-[#ffd600] text-[#042047] font-black text-xs sm:text-sm px-6 py-3 rounded-xl border-2 border-[#042047] shadow-[3px_3px_0px_0px_#ffffff] hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 transition-all cursor-pointer uppercase tracking-wider"
                 >
                   <Calendar className="w-4 h-4 stroke-[2.5]" />
                   <span>Book a Trial Class</span>
@@ -76,7 +76,7 @@ export default function CoursesCtaSection() {
                   href={getWhatsAppUrl("Hi Coach, I would like to find my child's chess level and discuss the best course.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-black text-xs sm:text-sm px-5 py-3 rounded-xl border-2 border-white/20 shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 transition-all cursor-pointer uppercase tracking-wider"
+                  className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-black text-xs sm:text-sm px-5 py-3 rounded-xl border-2 border-white/20 shadow-sm hover:translate-x-0.5 hover:translate-y-0.5 transition-all cursor-pointer uppercase tracking-wider"
                 >
                   <MessageCircle className="w-4 h-4 fill-white" />
                   <span>Talk to a Coach</span>

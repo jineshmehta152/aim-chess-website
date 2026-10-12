@@ -73,29 +73,29 @@ export function TestimonialsSection() {
             <span>5.0★ GOOGLE VERIFIED REVIEWS</span>
           </div>
 
-          <h2 className="text-3xl xs:text-4xl sm:text-4xl font-black text-[#042047] tracking-tight leading-[1.2]">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#042047] tracking-tight leading-[1.2]">
             Real Stories from{" "}
-            <span className="bg-[#ffe80a] text-[#042047] font-black px-4 py-1 rounded-2xl inline-block shadow-xs">
+            <span className="bg-[#ffe80a] text-[#042047] font-black px-3.5 sm:px-4 py-0.5 sm:py-1 rounded-2xl inline-block shadow-xs">
               Our Students
             </span>
             <br />
             And{" "}
-            <span className="bg-[#00aeef] text-white font-black px-4 py-1 rounded-2xl inline-block shadow-xs mt-1">
+            <span className="bg-[#00aeef] text-white font-black px-3.5 sm:px-4 py-0.5 sm:py-1 rounded-2xl inline-block shadow-xs mt-1">
               Proud Parents
             </span>
           </h2>
 
-          <p className="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed font-medium">
+          <p className="mt-3 sm:mt-4 text-slate-600 text-xs sm:text-base leading-relaxed font-medium">
             Hear how AIM Chess Academy has nurtured tactical excellence, confidence, and international FIDE ratings.
           </p>
         </div>
 
         {/* 3 Unique Testimonial Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-[1300px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch max-w-[1300px] mx-auto">
           {reviews.map((item) => (
             <div
               key={item.id}
-              className="rounded-[36px] bg-gradient-to-br from-[#0b2850] via-[#071f40] to-[#04162e] text-white p-7 sm:p-8 flex flex-col justify-between border-3 border-[#00aeef]/40 shadow-[0_10px_0_0_#042047] hover:shadow-[0_16px_0_0_#00aeef] hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group"
+              className="rounded-[28px] sm:rounded-[36px] bg-gradient-to-br from-[#0b2850] via-[#071f40] to-[#04162e] text-white p-5 xs:p-6 sm:p-8 flex flex-col justify-between border-3 border-[#00aeef]/40 shadow-[0_6px_0_0_#042047] sm:shadow-[0_10px_0_0_#042047] hover:shadow-[0_16px_0_0_#00aeef] hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group"
             >
               {/* Background Chess Ambient Watermark */}
               <div className="absolute -right-8 -bottom-8 opacity-5 text-white pointer-events-none group-hover:scale-110 transition-transform duration-500">

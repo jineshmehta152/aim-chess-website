@@ -129,14 +129,14 @@ export default function StudentProgressSection() {
             <span>MEASURABLE CHESS GROWTH</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
             Your Progress.{" "}
-            <span className="bg-[#ffe80a] text-[#042047] px-4 py-1 rounded-2xl inline-block shadow-sm">
+            <span className="bg-[#ffe80a] text-[#042047] px-2.5 xs:px-4 py-0.5 xs:py-1 rounded-xl xs:rounded-2xl inline-block shadow-sm">
               Your Next Move.
             </span>
           </h2>
 
-          <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-600 text-xs sm:text-base font-medium leading-relaxed max-w-2xl mx-auto px-1">
             We don’t believe in guesswork. Every student’s journey is tracked with scientific milestones, PGN diagnostics, and tangible rating benchmarks.
           </p>
 
@@ -145,7 +145,7 @@ export default function StudentProgressSection() {
         {/* ========================================================================= */}
         {/* 1. THREE-STAGE PROGRESSION ROADMAP                                        */}
         {/* ========================================================================= */}
-        <div className="rounded-[32px] bg-white border-[3.5px] border-[#042047] shadow-[8px_8px_0px_0px_#042047] p-6 sm:p-10 lg:p-12 space-y-8">
+        <div className="rounded-2xl sm:rounded-[32px] bg-white border-[2.5px] sm:border-[3.5px] border-[#042047] shadow-[5px_5px_0px_0px_#042047] sm:shadow-[8px_8px_0px_0px_#042047] p-4 xs:p-6 sm:p-10 lg:p-12 space-y-6 sm:space-y-8">
           
           <div className="flex items-center justify-between border-b-2 border-slate-100 pb-4">
             <div>

@@ -281,14 +281,14 @@ export default function FaqExplorerSection() {
             <span>KNOWLEDGE BASE &amp; FREQUENTLY ASKED QUESTIONS</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
             Everything You Need To{" "}
-            <span className="bg-[#ffe80a] text-[#042047] px-4 py-1 rounded-2xl inline-block shadow-sm">
+            <span className="bg-[#ffe80a] text-[#042047] px-2.5 xs:px-4 py-0.5 xs:py-1 rounded-xl xs:rounded-2xl inline-block shadow-sm">
               Know
             </span>
           </h2>
 
-          <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-600 text-xs sm:text-base font-medium leading-relaxed max-w-2xl mx-auto px-1">
             Browse our comprehensive categorized guide on demo classes, curriculum, batch timings, FIDE tournament roadmaps, and admissions.
           </p>
         </div>
@@ -296,7 +296,7 @@ export default function FaqExplorerSection() {
         {/* ========================================================================= */}
         {/* CATEGORY SELECTOR TABS & SEARCH BAR                                       */}
         {/* ========================================================================= */}
-        <div className="bg-white rounded-[32px] border-[3px] border-[#042047] shadow-[6px_6px_0px_0px_#042047] p-5 sm:p-7 space-y-5">
+        <div className="bg-white rounded-2xl sm:rounded-[32px] border-[2.5px] sm:border-[3px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] sm:shadow-[6px_6px_0px_0px_#042047] p-4 xs:p-5 sm:p-7 space-y-4 sm:space-y-5">
           
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             
@@ -371,15 +371,15 @@ export default function FaqExplorerSection() {
               return (
                 <div
                   key={faq.id}
-                  className={`rounded-[24px] border-[2.5px] transition-all duration-300 overflow-hidden bg-white ${
+                  className={`rounded-2xl sm:rounded-[24px] border-[2.5px] transition-all duration-300 overflow-hidden bg-white ${
                     isOpen 
-                      ? "border-[#00aeef] shadow-[5px_5px_0px_0px_#042047]" 
-                      : "border-[#042047]/20 hover:border-[#042047] shadow-[2px_2px_0px_0px_#042047]"
+                       ? "border-[#00aeef] shadow-[4px_4px_0px_0px_#042047] sm:shadow-[5px_5px_0px_0px_#042047]" 
+                       : "border-[#042047]/20 hover:border-[#042047] shadow-[2px_2px_0px_0px_#042047]"
                   }`}
                 >
                   <button
                     onClick={() => toggleFaq(faq.id)}
-                    className="w-full text-left p-5 sm:p-6 flex items-start justify-between gap-4 cursor-pointer"
+                    className="w-full text-left p-4 xs:p-5 sm:p-6 flex items-start justify-between gap-3 sm:gap-4 cursor-pointer"
                   >
                     <div className="space-y-1 text-left">
                       <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-slate-100 text-[10px] font-black text-[#0c71c3] uppercase tracking-wider">
@@ -390,7 +390,7 @@ export default function FaqExplorerSection() {
                       </h3>
                     </div>
 
-                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border-2 transition-all duration-300 mt-1 ${
+                    <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center shrink-0 border-2 transition-all duration-300 mt-1 ${
                       isOpen 
                         ? "bg-[#042047] text-[#ffe80a] border-[#042047] rotate-180" 
                         : "bg-slate-100 text-[#042047] border-slate-200"
@@ -400,7 +400,7 @@ export default function FaqExplorerSection() {
                   </button>
 
                   {isOpen && (
-                    <div className="px-5 sm:px-6 pb-6 text-xs sm:text-sm text-slate-700 leading-relaxed border-t-2 border-slate-100 pt-4 font-normal bg-slate-50/40">
+                    <div className="px-4 xs:px-5 sm:px-6 pb-5 sm:pb-6 text-xs sm:text-sm text-slate-700 leading-relaxed border-t-2 border-slate-100 pt-3.5 sm:pt-4 font-normal bg-slate-50/40">
                       <p>{faq.answer}</p>
                     </div>
                   )}
@@ -431,7 +431,7 @@ export default function FaqExplorerSection() {
             <div className="sticky top-24 space-y-6">
               
               {/* Card 1: Speak with Coach */}
-              <div className="rounded-[32px] bg-[#042047] text-white p-6 sm:p-7 shadow-[6px_6px_0px_0px_#00aeef] border-[3px] border-[#00aeef] space-y-4 text-left">
+              <div className="rounded-2xl sm:rounded-[32px] bg-[#042047] text-white p-5 xs:p-6 sm:p-7 shadow-[4px_4px_0px_0px_#00aeef] sm:shadow-[6px_6px_0px_0px_#00aeef] border-[2.5px] sm:border-[3px] border-[#00aeef] space-y-4 text-left">
                 <div className="inline-flex items-center gap-1.5 bg-[#ffe80a] text-[#042047] text-[10px] font-black uppercase px-3 py-1 rounded-full">
                   <Zap className="w-3.5 h-3.5 fill-[#042047]" />
                   <span>STILL HAVE QUESTIONS?</span>
@@ -449,7 +449,7 @@ export default function FaqExplorerSection() {
                   <button
                     onClick={() => openBookingModal()}
                     type="button"
-                    className="w-full flex items-center justify-center gap-2 bg-[#ffe80a] hover:bg-[#ffd600] text-[#042047] font-black py-3.5 rounded-xl text-xs sm:text-sm transition-all border-2 border-[#042047] cursor-pointer shadow-md hover:translate-x-0.5 hover:translate-y-0.5 uppercase tracking-wider"
+                    className="w-full flex items-center justify-center gap-2 bg-[#ffe80a] hover:bg-[#ffd600] text-[#042047] font-black py-3 sm:py-3.5 rounded-xl text-xs sm:text-sm transition-all border-2 border-[#042047] cursor-pointer shadow-md hover:translate-x-0.5 hover:translate-y-0.5 uppercase tracking-wider"
                   >
                     <Calendar className="w-4 h-4 text-[#042047]" />
                     <span>Book 30-Min Free Demo</span>
@@ -459,7 +459,7 @@ export default function FaqExplorerSection() {
                     href={getWhatsAppUrl("Hi Coach, I have a few questions about AIM Chess Academy courses.")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center gap-1.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-3 rounded-xl text-xs transition-colors shadow-xs uppercase tracking-wider"
+                    className="w-full flex items-center justify-center gap-1.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2.5 sm:py-3 rounded-xl text-xs transition-colors shadow-xs uppercase tracking-wider"
                   >
                     <MessageCircle className="w-4 h-4 fill-white" />
                     <span>Chat on WhatsApp</span>
@@ -476,7 +476,7 @@ export default function FaqExplorerSection() {
               </div>
 
               {/* Card 2: Quick Highlights Badge */}
-              <div className="rounded-[24px] bg-white border-[2.5px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] p-5 text-left space-y-3">
+              <div className="rounded-2xl sm:rounded-[24px] bg-white border-[2.5px] border-[#042047] shadow-[3px_3px_0px_0px_#042047] sm:shadow-[4px_4px_0px_0px_#042047] p-4 xs:p-5 text-left space-y-3">
                 <div className="text-xs font-black uppercase tracking-wider text-[#0c71c3]">
                   AIM CHESS GUARANTEE
                 </div>

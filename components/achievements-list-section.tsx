@@ -149,7 +149,7 @@ export default function AchievementsListSection() {
     },
     {
       id: 5,
-      image: "/images/prize-5.jpg",
+      image: "/images/prize-6.jpg",
       medal: "🥈 Runner-Up Trophy",
       medalColor: "bg-[#0c71c3] text-white",
       category: "state",
@@ -213,29 +213,29 @@ export default function AchievementsListSection() {
         {/* ========================================================================= */}
         {/* SUMMARY STATS BAR (4 Pillars)                                             */}
         {/* ========================================================================= */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-          <div className="rounded-[24px] bg-white border-[2.5px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] p-5 text-center space-y-1">
-            <div className="text-3xl sm:text-4xl font-black text-[#042047]">20+</div>
-            <div className="text-xs sm:text-sm font-bold text-slate-500 uppercase tracking-wider">Podium Winners 2024</div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
+          <div className="rounded-2xl sm:rounded-[24px] bg-white border-2 sm:border-[2.5px] border-[#042047] shadow-[3px_3px_0px_0px_#042047] sm:shadow-[4px_4px_0px_0px_#042047] p-3.5 sm:p-5 text-center space-y-1">
+            <div className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#042047]">20+</div>
+            <div className="text-[10px] xs:text-xs sm:text-sm font-bold text-slate-500 uppercase tracking-wider">Podium Winners 2024</div>
           </div>
-          <div className="rounded-[24px] bg-[#042047] text-white border-[2.5px] border-[#042047] shadow-[4px_4px_0px_0px_#00aeef] p-5 text-center space-y-1">
-            <div className="text-3xl sm:text-4xl font-black text-[#ffe80a]">15+</div>
-            <div className="text-xs sm:text-sm font-bold text-slate-300 uppercase tracking-wider">FIDE Rated Champions</div>
+          <div className="rounded-2xl sm:rounded-[24px] bg-[#042047] text-white border-2 sm:border-[2.5px] border-[#042047] shadow-[3px_3px_0px_0px_#00aeef] sm:shadow-[4px_4px_0px_0px_#00aeef] p-3.5 sm:p-5 text-center space-y-1">
+            <div className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#ffe80a]">15+</div>
+            <div className="text-[10px] xs:text-xs sm:text-sm font-bold text-slate-300 uppercase tracking-wider">FIDE Rated Champions</div>
           </div>
-          <div className="rounded-[24px] bg-white border-[2.5px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] p-5 text-center space-y-1">
-            <div className="text-3xl sm:text-4xl font-black text-[#0c71c3]">3+</div>
-            <div className="text-xs sm:text-sm font-bold text-slate-500 uppercase tracking-wider">Major Academy Tournaments</div>
+          <div className="rounded-2xl sm:rounded-[24px] bg-white border-2 sm:border-[2.5px] border-[#042047] shadow-[3px_3px_0px_0px_#042047] sm:shadow-[4px_4px_0px_0px_#042047] p-3.5 sm:p-5 text-center space-y-1">
+            <div className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#0c71c3]">3+</div>
+            <div className="text-[10px] xs:text-xs sm:text-sm font-bold text-slate-500 uppercase tracking-wider">Major Academy Tournaments</div>
           </div>
-          <div className="rounded-[24px] bg-[#ffe80a] text-[#042047] border-[2.5px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] p-5 text-center space-y-1">
-            <div className="text-3xl sm:text-4xl font-black text-[#042047]">500+</div>
-            <div className="text-xs sm:text-sm font-bold text-[#042047]/80 uppercase tracking-wider">Students Coached</div>
+          <div className="rounded-2xl sm:rounded-[24px] bg-[#ffe80a] text-[#042047] border-2 sm:border-[2.5px] border-[#042047] shadow-[3px_3px_0px_0px_#042047] sm:shadow-[4px_4px_0px_0px_#042047] p-3.5 sm:p-5 text-center space-y-1">
+            <div className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#042047]">500+</div>
+            <div className="text-[10px] xs:text-xs sm:text-sm font-bold text-[#042047]/80 uppercase tracking-wider">Students Coached</div>
           </div>
         </div>
 
         {/* ========================================================================= */}
         {/* FILTER CATEGORY PILLS                                                     */}
         {/* ========================================================================= */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 bg-white p-3 sm:p-4 rounded-[28px] border-[2.5px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] max-w-2xl mx-auto">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 bg-white p-2.5 sm:p-4 rounded-2xl sm:rounded-[28px] border-2 sm:border-[2.5px] border-[#042047] shadow-[3px_3px_0px_0px_#042047] sm:shadow-[4px_4px_0px_0px_#042047] max-w-2xl mx-auto">
           {filterTabs.map((tab) => {
             const isSelected = activeFilter === tab.id;
             return (
@@ -243,9 +243,9 @@ export default function AchievementsListSection() {
                 key={tab.id}
                 onClick={() => setActiveFilter(tab.id)}
                 type="button"
-                className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-black transition-all cursor-pointer border-[2px] ${
+                className={`px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-black transition-all cursor-pointer border-[2px] ${
                   isSelected
-                    ? "bg-[#042047] text-[#ffe80a] border-[#042047] shadow-[3px_3px_0px_0px_#ffe80a]"
+                    ? "bg-[#042047] text-[#ffe80a] border-[#042047] shadow-[2px_2px_0px_0px_#ffe80a] sm:shadow-[3px_3px_0px_0px_#ffe80a]"
                     : "bg-slate-50 text-[#042047] border-slate-200 hover:border-[#042047] hover:bg-slate-100"
                 }`}
               >
@@ -262,7 +262,7 @@ export default function AchievementsListSection() {
           {filteredAchievements.map((item, index) => (
             <div
               key={item.id}
-              className="rounded-[28px] sm:rounded-[32px] border-[3px] border-[#042047] bg-white shadow-[6px_6px_0px_0px_#042047] hover:shadow-[10px_10px_0px_0px_#042047] hover:-translate-y-0.5 transition-all duration-300 overflow-hidden text-left"
+              className="rounded-2xl sm:rounded-[32px] border-2 sm:border-[3px] border-[#042047] bg-white shadow-[4px_4px_0px_0px_#042047] sm:shadow-[6px_6px_0px_0px_#042047] hover:shadow-[10px_10px_0px_0px_#042047] hover:-translate-y-0.5 transition-all duration-300 overflow-hidden text-left"
             >
               
               {/* Card Container: 2-Column Responsive Layout */}

@@ -33,20 +33,20 @@ export function LocationSection() {
             <span>TRAINING CENTERS & REACH</span>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
             Our Centers & <span className="text-[#00aeef]">Global Reach</span>
           </h2>
 
-          <p className="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-slate-600 text-xs sm:text-base leading-relaxed px-1">
             Offline academy in Barasat, Kolkata & interactive online batches connecting aspiring grandmasters across the world.
           </p>
         </div>
 
         {/* 2-Column: Physical Center + Global Online */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
           
           {/* Card 1: Barasat Offline Academy */}
-          <div className="rounded-3xl bg-slate-50 border-2 border-slate-200 p-7 sm:p-8 hover:border-[#00aeef] transition-all shadow-xs flex flex-col justify-between">
+          <div className="rounded-2xl sm:rounded-3xl bg-slate-50 border-2 border-slate-200 p-5 xs:p-7 sm:p-8 hover:border-[#00aeef] transition-all shadow-xs flex flex-col justify-between">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="bg-[#042047] text-[#ffe80a] text-[11px] font-black uppercase px-3 py-1 rounded-full tracking-wider">
@@ -105,7 +105,7 @@ export function LocationSection() {
           </div>
 
           {/* Card 2: Global Online Academy */}
-          <div className="rounded-3xl bg-[#042047] text-white p-7 sm:p-8 border-2 border-[#00aeef]/40 shadow-xl flex flex-col justify-between">
+          <div className="rounded-2xl sm:rounded-3xl bg-[#042047] text-white p-5 xs:p-7 sm:p-8 border-2 border-[#00aeef]/40 shadow-xl flex flex-col justify-between">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="bg-[#ffe80a] text-[#042047] text-[11px] font-black uppercase px-3 py-1 rounded-full tracking-wider">

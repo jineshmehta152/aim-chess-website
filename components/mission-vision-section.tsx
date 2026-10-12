@@ -20,14 +20,14 @@ export default function MissionVisionSection() {
             <span>OUR CORE PURPOSE</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#042047] tracking-tight">
+          <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black text-[#042047] tracking-tight">
             Guiding Mission &amp;{" "}
-            <span className="bg-[#ffe80a] text-[#042047] px-3 py-0.5 rounded-xl inline-block shadow-xs">
+            <span className="bg-[#ffe80a] text-[#042047] px-2.5 xs:px-3 py-0.5 rounded-xl inline-block shadow-xs">
               Future Vision
             </span>
           </h2>
 
-          <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed">
+          <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed px-1">
             Empowering every student with strategic foresight, mental resilience, and the champion mindset.
           </p>
         </div>
@@ -36,7 +36,7 @@ export default function MissionVisionSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-7">
           
           {/* Card 1: Our Mission (Yellow Card - Compact) */}
-          <div className="relative rounded-[28px] bg-gradient-to-br from-[#ffe80a] via-[#ffd600] to-[#f59e0b] border-2.5 border-[#042047] shadow-[0_6px_0_0_#042047] p-6 sm:p-7 flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1 group">
+          <div className="relative rounded-2xl sm:rounded-[28px] bg-gradient-to-br from-[#ffe80a] via-[#ffd600] to-[#f59e0b] border-2 sm:border-2.5 border-[#042047] shadow-[0_4px_0_0_#042047] sm:shadow-[0_6px_0_0_#042047] p-5 xs:p-6 sm:p-7 flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1 group">
             
             <div className="space-y-4">
               {/* Header Row */}
@@ -96,7 +96,7 @@ export default function MissionVisionSection() {
           </div>
 
           {/* Card 2: Our Vision (Blue Card - Compact) */}
-          <div className="relative rounded-[28px] bg-gradient-to-br from-[#042047] via-[#092c5c] to-[#041935] text-white border-2.5 border-[#00aeef] shadow-[0_6px_0_0_#042047] p-6 sm:p-7 flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1 group">
+          <div className="relative rounded-2xl sm:rounded-[28px] bg-gradient-to-br from-[#042047] via-[#092c5c] to-[#041935] text-white border-2 sm:border-2.5 border-[#00aeef] shadow-[0_4px_0_0_#042047] sm:shadow-[0_6px_0_0_#042047] p-5 xs:p-6 sm:p-7 flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1 group">
             
             {/* Ambient Inner Glow */}
             <div className="absolute top-0 right-0 w-48 h-48 bg-[#00aeef]/15 rounded-full blur-2xl pointer-events-none" />

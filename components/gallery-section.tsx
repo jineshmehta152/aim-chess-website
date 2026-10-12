@@ -102,26 +102,26 @@ export default function GallerySection() {
           <span>PHOTO GALLERY &amp; MOMENTS OF GLORY</span>
         </div>
 
-        <h2 className="text-3xl xs:text-4xl sm:text-4xl font-black text-[#042047] tracking-tight leading-[1.2]">
+        <h2 className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#042047] tracking-tight leading-[1.2]">
           Moments of Victory &amp;{" "}
-          <span className="bg-[#ffe80a] text-[#042047] font-black px-4 py-1 rounded-2xl inline-block shadow-xs">
+          <span className="bg-[#ffe80a] text-[#042047] font-black px-3.5 sm:px-4 py-0.5 sm:py-1 rounded-2xl inline-block shadow-xs">
             Academy Life
           </span>
         </h2>
 
-        <p className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed font-medium max-w-2xl mx-auto">
+        <p className="mt-3 text-slate-600 text-xs sm:text-base leading-relaxed font-medium max-w-2xl mx-auto">
           Hover over any photo to pause and explore our proudest tournament triumphs, trophy ceremonies, and vibrant classroom moments.
         </p>
       </div>
 
       {/* Single Line Continuous Auto-Scrolling Marquee */}
       <div className="relative w-full overflow-hidden group py-4">
-        <div className="flex gap-7 animate-marquee hover:[animation-play-state:paused] w-max px-4">
+        <div className="flex gap-4 sm:gap-7 animate-marquee hover:[animation-play-state:paused] w-max px-4">
           {marqueeItems.map((item, idx) => (
             <div
               key={`item-${idx}`}
               onClick={() => setActiveLightboxIndex(idx % galleryItems.length)}
-              className="w-[320px] sm:w-[420px] md:w-[480px] h-[340px] sm:h-[400px] md:h-[440px] rounded-[36px] overflow-hidden border-3 border-[#042047] bg-white shadow-[0_8px_0_0_#042047] hover:shadow-[0_14px_0_0_#042047] hover:-translate-y-2 transition-all duration-300 relative cursor-pointer shrink-0 group/card"
+              className="w-[280px] xs:w-[340px] sm:w-[420px] md:w-[480px] h-[300px] xs:h-[350px] sm:h-[400px] md:h-[440px] rounded-[28px] sm:rounded-[36px] overflow-hidden border-3 border-[#042047] bg-white shadow-[0_6px_0_0_#042047] sm:shadow-[0_8px_0_0_#042047] hover:shadow-[0_14px_0_0_#042047] hover:-translate-y-2 transition-all duration-300 relative cursor-pointer shrink-0 group/card"
             >
               <Image
                 src={item.src}

@@ -142,22 +142,22 @@ export function WhyChooseUsSection() {
           </div>
 
           {/* Center Circular Logo Emblem */}
-          <div className="lg:col-span-4 flex items-center justify-center relative py-6 lg:py-0">
+          <div className="lg:col-span-4 flex items-center justify-center relative py-6 lg:py-0 overflow-hidden sm:overflow-visible">
             
             {/* Outer Dotted Orbit Circle */}
-            <div className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] rounded-full border-2 border-dashed border-[#00aeef]/40 absolute inset-0 m-auto flex items-center justify-center pointer-events-none animate-spin-slow duration-[30000ms]" />
+            <div className="w-[250px] h-[250px] xs:w-[280px] xs:h-[280px] sm:w-[320px] sm:h-[320px] rounded-full border-2 border-dashed border-[#00aeef]/40 absolute inset-0 m-auto flex items-center justify-center pointer-events-none animate-spin-slow duration-[30000ms]" />
 
             {/* Main Central Yellow Circle */}
-            <div className="w-60 h-60 sm:w-72 sm:h-72 rounded-full bg-[#ffe80a] border-4 border-[#042047] shadow-2xl flex flex-col items-center justify-center relative p-6 transition-transform duration-300 hover:scale-105 z-10">
+            <div className="w-52 h-52 xs:w-60 xs:h-60 sm:w-72 sm:h-72 rounded-full bg-[#ffe80a] border-4 border-[#042047] shadow-2xl flex flex-col items-center justify-center relative p-4 xs:p-6 transition-transform duration-300 hover:scale-105 z-10">
               
               {/* White Inner Logo Card */}
-              <div className="w-28 h-28 sm:w-34 sm:h-34 rounded-3xl bg-white border-3 border-[#042047] shadow-md flex items-center justify-center p-3 relative">
+              <div className="w-24 h-24 xs:w-28 xs:h-28 sm:w-34 sm:h-34 rounded-2xl xs:rounded-3xl bg-white border-3 border-[#042047] shadow-md flex items-center justify-center p-2.5 xs:p-3 relative">
                 <Image 
                   src="/logo.png" 
                   alt="AIM Chess Academy" 
                   width={110} 
                   height={110} 
-                  className="w-auto h-20 sm:h-24 object-contain"
+                  className="w-auto h-16 xs:h-20 sm:h-24 object-contain"
                   priority
                 />
 
@@ -168,7 +168,7 @@ export function WhyChooseUsSection() {
               </div>
 
               {/* Bottom Pill Badge */}
-              <div className="mt-3 bg-[#042047] text-white text-[10px] sm:text-xs font-black uppercase tracking-wider px-4 py-1 rounded-full shadow-md whitespace-nowrap">
+              <div className="mt-2 xs:mt-3 bg-[#042047] text-white text-[9px] xs:text-[10px] sm:text-xs font-black uppercase tracking-wider px-3 xs:px-4 py-1 rounded-full shadow-md whitespace-nowrap">
                 AIM CHESS ACADEMY
               </div>
 

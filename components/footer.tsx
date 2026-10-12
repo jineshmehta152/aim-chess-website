@@ -231,12 +231,12 @@ export default function Footer() {
             </div>
 
             {/* Social Channels Row */}
-            <div className="flex items-center gap-2.5 pt-1">
+            <div className="flex flex-wrap items-center gap-2 xs:gap-2.5 pt-1">
               <a
                 href={facebook_url || "https://www.facebook.com/profile.php?id=100083211338280"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#00aeef] hover:text-white text-slate-200 flex items-center justify-center transition-colors border border-white/15"
+                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#00aeef] hover:text-white text-slate-200 flex items-center justify-center transition-colors border border-white/15 shrink-0"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
@@ -246,7 +246,7 @@ export default function Footer() {
                 href={instagram_url || "https://www.instagram.com/aimchessacademy/"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#00aeef] hover:text-white text-slate-200 flex items-center justify-center transition-colors border border-white/15"
+                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#00aeef] hover:text-white text-slate-200 flex items-center justify-center transition-colors border border-white/15 shrink-0"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
@@ -256,7 +256,7 @@ export default function Footer() {
                 href={linkedin_url || "https://www.linkedin.com/in/soumen-banerjee-43532b1ab/"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#00aeef] hover:text-white text-slate-200 flex items-center justify-center transition-colors border border-white/15"
+                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#00aeef] hover:text-white text-slate-200 flex items-center justify-center transition-colors border border-white/15 shrink-0"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
@@ -266,7 +266,7 @@ export default function Footer() {
                 href={youtube_url || "https://www.youtube.com/@Aimchessacademy"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#00aeef] hover:text-white text-slate-200 flex items-center justify-center transition-colors border border-white/15"
+                className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#00aeef] hover:text-white text-slate-200 flex items-center justify-center transition-colors border border-white/15 shrink-0"
                 aria-label="YouTube"
               >
                 <Youtube className="w-4 h-4" />
@@ -276,7 +276,7 @@ export default function Footer() {
                 href="https://g.co/kgs/y9aG7qE"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-3 py-2 rounded-xl bg-[#ffe80a] text-[#042047] font-black text-xs shadow-sm hover:scale-105 transition-transform flex items-center gap-1"
+                className="px-3 py-2 rounded-xl bg-[#ffe80a] text-[#042047] font-black text-xs shadow-sm hover:scale-105 transition-transform flex items-center gap-1 shrink-0"
               >
                 <span>5.0★ Google</span>
                 <ExternalLink className="w-3 h-3" />
@@ -393,8 +393,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar: Copyright, Accreditations & Scroll to Top */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <div className="flex items-center gap-3">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 text-center sm:text-left">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-3">
             <span>© {currentYear} AIM Chess Academy. All rights reserved.</span>
             <span className="hidden md:inline">·</span>
             <span className="hidden md:inline text-slate-300">ISO Certified &amp; FIDE Trainers</span>
@@ -402,7 +402,7 @@ export default function Footer() {
 
           <button
             onClick={scrollToTop}
-            className="inline-flex items-center gap-2 bg-white/10 hover:bg-[#ffe80a] hover:text-[#042047] text-white px-4 py-2 rounded-full border border-white/20 transition-all cursor-pointer font-bold"
+            className="inline-flex items-center gap-2 bg-white/10 hover:bg-[#ffe80a] hover:text-[#042047] text-white px-4 py-2 rounded-full border border-white/20 transition-all cursor-pointer font-bold shrink-0"
           >
             <span>Back to top</span>
             <ArrowUp className="w-3.5 h-3.5" />

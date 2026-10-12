@@ -68,7 +68,7 @@ export function ContactSection() {
   };
 
   return (
-    <section className="relative py-16 sm:py-24 bg-slate-50 text-[#042047] overflow-hidden">
+    <section className="relative py-12 sm:py-24 bg-slate-50 text-[#042047] overflow-hidden">
       
       {/* Background Glows */}
       <div className="absolute top-1/4 -right-20 w-96 h-96 bg-[#00aeef]/10 rounded-full blur-3xl pointer-events-none" />
@@ -77,26 +77,26 @@ export function ContactSection() {
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#00aeef]/30 text-[#0c71c3] text-xs sm:text-sm font-black mb-3 shadow-xs">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white border border-[#00aeef]/30 text-[#0c71c3] text-xs sm:text-sm font-black mb-3 shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-[#00aeef]" />
             <span>CONTACT AIM CHESS ACADEMY</span>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
             Start Your Chess Journey <span className="text-[#00aeef]">With Us</span>
           </h2>
 
-          <p className="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-slate-600 text-xs sm:text-base leading-relaxed px-2">
             Have questions about batches, demo sessions, or FIDE rating tournaments? Reach out to our team today.
           </p>
         </div>
 
         {/* 2-Column: Left Brand Card + Right Form */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
           {/* Left Column: Direct Academy Contact Details */}
-          <div className="lg:col-span-5 rounded-3xl bg-gradient-to-br from-[#042047] via-[#092c5c] to-[#041935] text-white p-7 sm:p-9 shadow-2xl border-4 border-[#00aeef]/30 flex flex-col justify-between space-y-6">
+          <div className="lg:col-span-5 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#042047] via-[#092c5c] to-[#041935] text-white p-5 xs:p-7 sm:p-9 shadow-2xl border-2 sm:border-4 border-[#00aeef]/30 flex flex-col justify-between space-y-6">
             <div className="space-y-5">
               <div className="inline-block bg-white p-2.5 rounded-2xl shadow-sm">
                 <Image 
@@ -166,7 +166,7 @@ export function ContactSection() {
           </div>
 
           {/* Right Column: Admission & Free Demo Form */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-7 sm:p-9 shadow-xl border border-slate-200">
+          <div className="lg:col-span-7 bg-white rounded-2xl sm:rounded-3xl p-5 xs:p-7 sm:p-9 shadow-xl border border-slate-200">
             {submitted ? (
               <div className="py-12 text-center space-y-4 animate-in fade-in">
                 <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
@@ -193,7 +193,7 @@ export function ContactSection() {
                   <span className="text-[11px] font-black uppercase text-[#0c71c3] tracking-wider">
                     Free Trial Session
                   </span>
-                  <h3 className="text-2xl font-black text-[#042047]">
+                  <h3 className="text-xl sm:text-2xl font-black text-[#042047]">
                     Book Your 30-Minute Free Demo
                   </h3>
                   <p className="text-xs text-slate-500 mt-1">

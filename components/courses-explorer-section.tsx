@@ -33,7 +33,7 @@ export default function CoursesExplorerSection() {
       title: "BEGINNER COURSE",
       subtitle: "Master piece movement, fundamental rules, spatial reasoning, and basic checkmate patterns under expert guidance.",
       detailsSummary: "Weekly 2 classes · Fundamentals · FIDE Certified Trainer",
-      image: "/aim1.jpg",
+      image: "/beginner.jpeg",
       cognitiveFocus: "SPATIAL REASONING",
       masteryCurve: "85%",
       outcomes: [
@@ -58,7 +58,7 @@ export default function CoursesExplorerSection() {
       title: "INTERMEDIATE COURSE",
       subtitle: "Eliminate blunder habits, calculate combinations with confidence, and execute winning positional middle-game plans.",
       detailsSummary: "Weekly 2 classes · Advanced strategies · FIDE Certified Trainer",
-      image: "/aim2.jpg",
+      image: "/inter.jpg",
       cognitiveFocus: "TACTICAL PATTERN RECOGNITION",
       masteryCurve: "90%",
       outcomes: [
@@ -83,7 +83,7 @@ export default function CoursesExplorerSection() {
       title: "ADVANCED COURSE",
       subtitle: "Deepen calculation trees, master theoretical endgames, and prepare tournament repertoires against rated opponents.",
       detailsSummary: "In-depth tactics · Endgames · Competitive Prep",
-      image: "/images/achievement-1.jpg",
+      image: "/adv.jpg",
       cognitiveFocus: "DEEP CALCULATION & ENDGAMES",
       masteryCurve: "94%",
       outcomes: [
@@ -237,10 +237,10 @@ export default function CoursesExplorerSection() {
         {/* ========================================================================= */}
         {/* MAIN BRAND NEO-BRUTALIST COURSE SELECTOR CARD                             */}
         {/* ========================================================================= */}
-        <div className="rounded-[32px] sm:rounded-[40px] bg-white border-[3.5px] border-[#042047] shadow-[8px_8px_0px_0px_#042047] overflow-hidden">
+        <div className="rounded-[28px] sm:rounded-[40px] bg-white border-[3.5px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] sm:shadow-[8px_8px_0px_0px_#042047] overflow-hidden">
           
           {/* TOP HORIZONTAL PROGRAM SELECTOR TABS BAR (Brand Navy & Yellow Theme) */}
-          <div className="bg-[#042047] border-b-[3.5px] border-[#042047] overflow-x-auto scrollbar-none">
+          <div className="bg-[#042047] border-b-[3.5px] border-[#042047] overflow-x-auto scrollbar-none touch-pan-x">
             <div className="flex items-stretch min-w-max divide-x-2 divide-[#00aeef]/20">
               {programs.map((prog, idx) => {
                 const isActive = activeTab === idx;
@@ -249,7 +249,7 @@ export default function CoursesExplorerSection() {
                     key={prog.id}
                     onClick={() => setActiveTab(idx)}
                     type="button"
-                    className={`px-5 sm:px-7 py-3.5 sm:py-4.5 text-left transition-all cursor-pointer flex flex-col justify-center min-w-[170px] sm:min-w-[190px] relative ${
+                    className={`px-4 xs:px-5 sm:px-7 py-3 xs:py-3.5 sm:py-4.5 text-left transition-all cursor-pointer flex flex-col justify-center min-w-[155px] xs:min-w-[170px] sm:min-w-[190px] relative ${
                       isActive
                         ? "bg-[#ffe80a] text-[#042047] shadow-inner"
                         : "bg-[#042047] text-slate-300 hover:bg-[#092c5c] hover:text-white"
@@ -260,7 +260,7 @@ export default function CoursesExplorerSection() {
                       <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#00aeef]" />
                     )}
 
-                    <span className={`text-[10px] font-black uppercase tracking-wider ${
+                    <span className={`text-[9px] xs:text-[10px] font-black uppercase tracking-wider ${
                       isActive ? "text-[#042047]/75" : "text-[#00aeef]"
                     }`}>
                       {prog.programNumber}
@@ -278,14 +278,14 @@ export default function CoursesExplorerSection() {
           </div>
 
           {/* MAIN CARD BODY: 2-COLUMN DISPLAY */}
-          <div className="p-6 sm:p-10 lg:p-12">
+          <div className="p-5 xs:p-7 sm:p-10 lg:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               
               {/* LEFT COLUMN: Featured Image + Floating Program Badge + Cognitive Focus Bar */}
               <div className="lg:col-span-5 space-y-4">
                 
                 {/* Image Frame */}
-                <div className="relative w-full aspect-[4/3.5] rounded-[28px] overflow-hidden border-[3px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] bg-slate-100 group">
+                <div className="relative w-full aspect-[4/3.5] rounded-[24px] sm:rounded-[28px] overflow-hidden border-[3px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] bg-slate-100 group">
                   <Image
                     src={currentProgram.image}
                     alt={currentProgram.title}
@@ -306,7 +306,7 @@ export default function CoursesExplorerSection() {
                 </div>
 
                 {/* Bottom Cognitive Focus & Mastery Curve Bar */}
-                <div className="rounded-2xl border-[2.5px] border-[#042047] p-3.5 sm:p-4 bg-white shadow-[3px_3px_0px_0px_#042047] flex items-center justify-between gap-4">
+                <div className="rounded-2xl border-[2.5px] border-[#042047] p-3.5 sm:p-4 bg-white shadow-[3px_3px_0px_0px_#042047] flex flex-col xs:flex-row items-start xs:items-center justify-between gap-3 xs:gap-4">
                   
                   {/* Cognitive Focus */}
                   <div className="flex items-center gap-2.5 min-w-0">

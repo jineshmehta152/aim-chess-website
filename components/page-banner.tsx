@@ -23,7 +23,7 @@ export default function PageBanner({ badge, title, subtitle, breadcrumb, bgImage
   const finalBgImage = bgImage || "/images/hero.jpg";
 
   return (
-    <div className="relative overflow-hidden bg-[#041935] text-white pt-28 sm:pt-36 lg:pt-44 pb-28 sm:pb-36 lg:pb-44 flex flex-col justify-center text-center select-none min-h-[460px] sm:min-h-[520px] lg:min-h-[580px]">
+    <div className="relative overflow-hidden bg-[#041935] text-white pt-20 xs:pt-24 sm:pt-36 lg:pt-44 pb-20 xs:pb-24 sm:pb-36 lg:pb-44 flex flex-col justify-center text-center select-none min-h-[360px] xs:min-h-[420px] sm:min-h-[520px] lg:min-h-[580px]">
       
       {/* Real High-Resolution Photographic Chess Background - Clearly Visible */}
       <div className="absolute inset-0 z-0">
@@ -70,13 +70,13 @@ export default function PageBanner({ badge, title, subtitle, breadcrumb, bgImage
       <div className="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Eyebrow Pill Badge */}
-        <div className="mb-4 inline-flex items-center gap-2 px-4 sm:px-5 py-1.5 rounded-full bg-[#042047]/80 backdrop-blur-md border-2 border-[#00aeef]/60 text-[#ffe80a] text-xs sm:text-sm font-black shadow-xl">
-          <Sparkles className="w-4 h-4 text-[#ffe80a] animate-pulse" />
-          <span className="tracking-wide uppercase">{eyebrowText}</span>
+        <div className="mb-3 sm:mb-4 inline-flex items-center gap-1.5 sm:gap-2 px-3 xs:px-4 sm:px-5 py-1 sm:py-1.5 rounded-full bg-[#042047]/80 backdrop-blur-md border-2 border-[#00aeef]/60 text-[#ffe80a] text-[11px] xs:text-xs sm:text-sm font-black shadow-xl">
+          <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#ffe80a] animate-pulse shrink-0" />
+          <span className="tracking-wide uppercase line-clamp-1">{eyebrowText}</span>
         </div>
 
         {/* Main Banner Headline with Heavy Drop Shadow */}
-        <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] max-w-4xl mx-auto drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
+        <h1 className="text-2xl xs:text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15] max-w-4xl mx-auto drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
           <span className="text-white drop-shadow-md">{firstWord} </span>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ffe80a] via-[#fed100] to-[#00aeef] drop-shadow-md">
             {restOfTitle}
@@ -85,28 +85,28 @@ export default function PageBanner({ badge, title, subtitle, breadcrumb, bgImage
 
         {/* Subtitle with Dark Backdrop Pill for Maximum Readability */}
         {subtitle && (
-          <div className="mt-4 max-w-2xl mx-auto">
-            <p className="inline-block text-xs sm:text-sm md:text-base text-slate-100 font-medium px-4 py-1.5 rounded-2xl bg-[#042047]/60 backdrop-blur-sm border border-white/10 leading-relaxed shadow-lg drop-shadow-md">
+          <div className="mt-3 sm:mt-4 max-w-2xl mx-auto px-2">
+            <p className="inline-block text-xs sm:text-sm md:text-base text-slate-100 font-medium px-3.5 py-1.5 rounded-2xl bg-[#042047]/60 backdrop-blur-sm border border-white/10 leading-relaxed shadow-lg drop-shadow-md">
               {subtitle}
             </p>
           </div>
         )}
 
         {/* Interactive Breadcrumb Card */}
-        <div className="mt-6 inline-flex items-center justify-center">
+        <div className="mt-5 sm:mt-6 inline-flex items-center justify-center max-w-full">
           <nav 
             aria-label="Breadcrumb" 
-            className="flex items-center gap-2 text-xs font-black bg-[#042047]/85 backdrop-blur-md px-5 py-2.5 rounded-full border-2 border-white/20 shadow-xl text-slate-200"
+            className="flex items-center gap-1.5 sm:gap-2 text-[11px] xs:text-xs font-black bg-[#042047]/85 backdrop-blur-md px-3.5 xs:px-5 py-2 xs:py-2.5 rounded-full border-2 border-white/20 shadow-xl text-slate-200 overflow-hidden text-ellipsis whitespace-nowrap max-w-full"
           >
             <Link 
               href="/" 
-              className="flex items-center gap-1.5 hover:text-[#ffe80a] transition-colors text-slate-300 hover:scale-105"
+              className="flex items-center gap-1 sm:gap-1.5 hover:text-[#ffe80a] transition-colors text-slate-300 hover:scale-105 shrink-0"
             >
               <Home className="w-3.5 h-3.5 text-[#00aeef]" />
               <span>Home</span>
             </Link>
-            <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-            <span className="text-[#ffe80a] font-black tracking-wide">{breadcrumbText}</span>
+            <ChevronRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+            <span className="text-[#ffe80a] font-black tracking-wide truncate">{breadcrumbText}</span>
           </nav>
         </div>
 

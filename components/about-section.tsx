@@ -30,10 +30,10 @@ export default function AboutSection() {
           
           {/* Left Column: Featured Image Card with Arch Curve & Floating Badges */}
           <div className="lg:col-span-6 relative flex items-center justify-center">
-            <div className="relative w-full max-w-[480px] aspect-[4/4.5] rounded-[44px] rounded-tl-[110px] overflow-hidden shadow-2xl border-4 border-[#00aeef]/20 bg-slate-50 group">
+            <div className="relative w-full max-w-[340px] xs:max-w-[420px] sm:max-w-[480px] aspect-[4/4.5] rounded-3xl xs:rounded-[36px] sm:rounded-[44px] rounded-tl-[70px] xs:rounded-tl-[90px] sm:rounded-tl-[110px] overflow-hidden shadow-2xl border-4 border-[#00aeef]/20 bg-slate-50 group">
               
               <Image 
-                src="/images/arch_center.jpg" 
+                src="/aim1.jpg" 
                 alt="AIM Chess Academy Training Session"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -44,21 +44,21 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#042047]/60 via-transparent to-transparent pointer-events-none" />
 
               {/* Top Right Pill Badge on Image */}
-              <div className="absolute top-4 right-4 z-20 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[#042047] text-xs font-black shadow-lg border border-[#00aeef]/30">
+              <div className="absolute top-3 xs:top-4 right-3 xs:right-4 z-20 inline-flex items-center gap-1.5 px-3 xs:px-3.5 py-1 xs:py-1.5 rounded-full bg-white/95 backdrop-blur-md text-[#042047] text-[11px] xs:text-xs font-black shadow-lg border border-[#00aeef]/30">
                 <Sparkles className="w-3.5 h-3.5 text-[#ffe80a] fill-[#ffe80a]" />
                 <span>300+ Students Coached</span>
               </div>
 
               {/* Bottom Left Star Medal Badge */}
-              <div className="absolute bottom-4 left-4 z-20 pointer-events-none">
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center filter drop-shadow-xl animate-bounce-slow">
+              <div className="absolute bottom-3 xs:bottom-4 left-3 xs:left-4 z-20 pointer-events-none">
+                <div className="relative w-14 h-14 sm:w-20 sm:h-20 flex items-center justify-center filter drop-shadow-xl animate-bounce-slow">
                   {/* Cyan / Navy Badge Background */}
                   <svg className="w-full h-full text-[#00aeef]" viewBox="0 0 100 100" fill="currentColor">
                     <path d="M50 0 L61 35 L98 35 L68 57 L79 91 L50 70 L21 91 L32 57 L2 35 L39 35 Z" stroke="#ffffff" strokeWidth="4" strokeLinejoin="round" />
                   </svg>
                   {/* Center Star Icon */}
                   <div className="absolute inset-0 flex items-center justify-center text-[#ffe80a]">
-                    <svg className="w-7 h-7 sm:w-8 sm:h-8 fill-current" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 sm:w-8 sm:h-8 fill-current" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
                   </div>
@@ -78,14 +78,14 @@ export default function AboutSection() {
             </div>
 
             {/* Main Headline with Pill Highlights */}
-            <h2 className="text-3xl xs:text-4xl sm:text-4xl font-black text-[#042047] tracking-tight leading-[1.2]">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#042047] tracking-tight leading-[1.2]">
               Master The Game{" "}
-              <span className="bg-[#ffe80a] text-[#042047] font-black px-4 py-1 rounded-2xl inline-block shadow-xs">
+              <span className="bg-[#ffe80a] text-[#042047] font-black px-3 sm:px-4 py-0.5 sm:py-1 rounded-2xl inline-block shadow-xs">
                 Step By Step
               </span>
               <br className="hidden sm:inline" />
               Build Your{" "}
-              <span className="bg-[#00aeef] text-white font-black px-4 py-1 rounded-2xl inline-block shadow-xs mt-1">
+              <span className="bg-[#00aeef] text-white font-black px-3 sm:px-4 py-0.5 sm:py-1 rounded-2xl inline-block shadow-xs mt-1">
                 Winning Mindset
               </span>
             </h2>

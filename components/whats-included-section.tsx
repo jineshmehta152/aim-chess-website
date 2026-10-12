@@ -98,26 +98,26 @@ export default function WhatsIncludedSection() {
             <span>TRANSPARENT VALUE · NO HIDDEN FEES</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
             What&apos;s Included in{" "}
-            <span className="bg-[#ffe80a] text-[#042047] px-4 py-1 rounded-2xl inline-block shadow-sm">
+            <span className="bg-[#ffe80a] text-[#042047] px-2.5 xs:px-4 py-0.5 xs:py-1 rounded-xl xs:rounded-2xl inline-block shadow-sm">
               Every Program
             </span>
           </h2>
 
-          <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-600 text-xs sm:text-base font-medium leading-relaxed max-w-2xl mx-auto px-1">
             A comprehensive, all-inclusive chess training ecosystem provided with every course enrollment.
           </p>
         </div>
 
         {/* 9-Item Clean Checklist Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-5 sm:gap-6">
           {includedItems.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.id}
-                className="relative rounded-[24px] bg-slate-50/70 border-[2.5px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] hover:shadow-[1px_1px_0px_0px_#042047] hover:translate-x-0.5 hover:translate-y-0.5 transition-all p-5 sm:p-6 flex items-start gap-4 group"
+                className="relative rounded-2xl sm:rounded-[24px] bg-slate-50/70 border-2 sm:border-[2.5px] border-[#042047] shadow-[3px_3px_0px_0px_#042047] sm:shadow-[4px_4px_0px_0px_#042047] hover:shadow-[1px_1px_0px_0px_#042047] hover:translate-x-0.5 hover:translate-y-0.5 transition-all p-4 xs:p-5 sm:p-6 flex items-start gap-3.5 sm:gap-4 group"
               >
                 {/* Green/Cyan Check Icon Box */}
                 <div className="w-10 h-10 rounded-xl bg-[#042047] text-[#ffe80a] border-2 border-[#042047] flex items-center justify-center shrink-0 shadow-xs group-hover:rotate-6 transition-transform">

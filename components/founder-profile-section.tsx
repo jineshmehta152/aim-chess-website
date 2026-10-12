@@ -123,11 +123,11 @@ export default function FounderProfileSection() {
               </div>
 
               {/* Bottom-Right Circular Badge */}
-              <div className="absolute -bottom-5 -right-4 sm:-right-6 z-20 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-[#042047] text-white border-[3px] border-[#ffe80a] shadow-[4px_4px_0px_0px_#ffe80a] flex flex-col items-center justify-center text-center p-2 transform hover:rotate-6 transition-transform">
-                <span className="text-xl sm:text-2xl font-black text-[#ffe80a] leading-none">
+              <div className="absolute -bottom-4 xs:-bottom-5 -right-2 xs:-right-4 sm:-right-6 z-20 w-20 h-20 xs:w-24 xs:h-24 sm:w-28 sm:h-28 rounded-full bg-[#042047] text-white border-[3px] border-[#ffe80a] shadow-[3px_3px_0px_0px_#ffe80a] sm:shadow-[4px_4px_0px_0px_#ffe80a] flex flex-col items-center justify-center text-center p-2 transform hover:rotate-6 transition-transform">
+                <span className="text-lg xs:text-xl sm:text-2xl font-black text-[#ffe80a] leading-none">
                   12+
                 </span>
-                <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-wider text-slate-200 mt-0.5 leading-tight">
+                <span className="text-[8px] xs:text-[9px] sm:text-[10px] font-black uppercase tracking-wider text-slate-200 mt-0.5 leading-tight">
                   Years<br />Expertise
                 </span>
               </div>
@@ -153,8 +153,8 @@ export default function FounderProfileSection() {
             {/* Name Block with Yellow Offset Shadow */}
             <div className="pt-1">
               <div className="inline-block relative">
-                <div className="absolute inset-0 bg-[#ffe80a] rounded-xl translate-x-2 translate-y-2" />
-                <div className="relative bg-[#042047] text-white font-black text-2xl sm:text-3xl lg:text-4xl px-5 sm:px-7 py-2 sm:py-2.5 rounded-xl border-2 border-[#042047] uppercase tracking-wide">
+                <div className="absolute inset-0 bg-[#ffe80a] rounded-xl translate-x-1.5 xs:translate-x-2 translate-y-1.5 xs:translate-y-2" />
+                <div className="relative bg-[#042047] text-white font-black text-xl xs:text-2xl sm:text-3xl lg:text-4xl px-4 xs:px-5 sm:px-7 py-2 sm:py-2.5 rounded-xl border-2 border-[#042047] uppercase tracking-wide">
                   SOUMEN BANERJEE
                 </div>
               </div>

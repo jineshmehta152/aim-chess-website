@@ -180,14 +180,14 @@ export default function PhotoGridGallerySection() {
             <span>AUTHENTIC ACADEMY MOMENTS</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
             Photo Gallery &amp;{" "}
-            <span className="bg-[#ffe80a] text-[#042047] px-4 py-1 rounded-2xl inline-block shadow-sm">
+            <span className="bg-[#ffe80a] text-[#042047] px-2.5 xs:px-4 py-0.5 xs:py-1 rounded-xl xs:rounded-2xl inline-block shadow-sm">
               Trophy Showcase
             </span>
           </h2>
 
-          <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-600 text-xs sm:text-base font-medium leading-relaxed max-w-2xl mx-auto px-1">
             Explore all tournament triumphs, award ceremonies, and live classroom coaching sessions. Click any image to view in high resolution.
           </p>
         </div>
@@ -195,13 +195,13 @@ export default function PhotoGridGallerySection() {
         {/* ========================================================================= */}
         {/* CATEGORY FILTER TABS                                                      */}
         {/* ========================================================================= */}
-        <div className="flex flex-wrap items-center justify-center gap-2.5">
+        <div className="flex flex-wrap items-center justify-center gap-2 xs:gap-2.5">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
               type="button"
-              className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-black transition-all cursor-pointer border-[2px] ${
+              className={`px-3.5 xs:px-4 sm:px-5 py-2 xs:py-2.5 rounded-xl text-xs sm:text-sm font-black transition-all cursor-pointer border-[2px] ${
                 activeCategory === cat.id
                   ? "bg-[#042047] text-[#ffe80a] border-[#042047] shadow-[3px_3px_0px_0px_#ffe80a]"
                   : "bg-white text-[#042047] border-slate-200 hover:border-[#042047] hover:bg-slate-50"
@@ -215,12 +215,12 @@ export default function PhotoGridGallerySection() {
         {/* ========================================================================= */}
         {/* STATIC NORMAL IMAGE GRID (NON-SCROLLING, ALL VISIBLE)                     */}
         {/* ========================================================================= */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {filteredItems.map((item) => (
             <div
               key={item.id}
               onClick={() => setActiveLightboxIndex(galleryItems.findIndex(g => g.id === item.id))}
-              className="relative rounded-[28px] bg-white border-[3px] border-[#042047] shadow-[6px_6px_0px_0px_#042047] hover:shadow-[2px_2px_0px_0px_#042047] hover:translate-x-0.5 hover:translate-y-0.5 transition-all p-4 sm:p-5 flex flex-col justify-between group overflow-hidden cursor-pointer"
+              className="relative rounded-2xl sm:rounded-[28px] bg-white border-[2.5px] sm:border-[3px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] sm:shadow-[6px_6px_0px_0px_#042047] hover:shadow-[2px_2px_0px_0px_#042047] hover:translate-x-0.5 hover:translate-y-0.5 transition-all p-3.5 xs:p-4 sm:p-5 flex flex-col justify-between group overflow-hidden cursor-pointer"
             >
               <div className="space-y-4 text-left">
                 
@@ -287,7 +287,7 @@ export default function PhotoGridGallerySection() {
           onClick={() => setActiveLightboxIndex(null)}
         >
           <div 
-            className="relative max-w-4xl w-full bg-[#042047] border-[3.5px] border-[#00aeef] rounded-[32px] overflow-hidden shadow-2xl p-4 sm:p-6 text-white"
+            className="relative max-w-4xl w-full bg-[#042047] border-[2.5px] sm:border-[3.5px] border-[#00aeef] rounded-2xl sm:rounded-[32px] overflow-hidden shadow-2xl p-3 xs:p-4 sm:p-6 text-white"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}

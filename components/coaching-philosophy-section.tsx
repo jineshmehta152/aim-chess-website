@@ -206,14 +206,14 @@ export default function CoachingPhilosophySection() {
             <span>PEDAGOGY &amp; METHODOLOGY</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight leading-tight">
             Our Coaching{" "}
-            <span className="bg-[#ffe80a] text-[#042047] px-4 py-1 rounded-2xl inline-block shadow-sm">
+            <span className="bg-[#ffe80a] text-[#042047] px-2.5 xs:px-4 py-0.5 xs:py-1 rounded-xl xs:rounded-2xl inline-block shadow-sm">
               Philosophy
             </span>
           </h2>
 
-          <p className="text-slate-600 text-sm sm:text-base font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-600 text-xs sm:text-base font-medium leading-relaxed max-w-2xl mx-auto px-1">
             We don’t just teach moves—we build intuitive, strategic minds. Discover how our structured 5-stage learning journey transforms beginners into tournament champions.
           </p>
 
@@ -222,7 +222,7 @@ export default function CoachingPhilosophySection() {
         {/* ========================================================================= */}
         {/* 1. THE 5-STAGE CHAMPION JOURNEY (Interactive Step Progression)            */}
         {/* ========================================================================= */}
-        <div className="rounded-[32px] bg-slate-50 border-[3px] border-[#042047] shadow-[6px_6px_0px_0px_#042047] p-6 sm:p-10 lg:p-12 space-y-10">
+        <div className="rounded-2xl sm:rounded-[32px] bg-slate-50 border-[2.5px] sm:border-[3px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] sm:shadow-[6px_6px_0px_0px_#042047] p-4 xs:p-6 sm:p-10 lg:p-12 space-y-8 sm:space-y-10">
           
           {/* Journey Header */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b-2 border-[#042047]/15 pb-6">
@@ -279,14 +279,14 @@ export default function CoachingPhilosophySection() {
           </div>
 
           {/* Active Step Showcase Card */}
-          <div className="bg-white rounded-2xl border-[2.5px] border-[#042047] p-6 sm:p-8 shadow-[4px_4px_0px_0px_#042047] relative overflow-hidden">
+          <div className="bg-white rounded-2xl border-[2.5px] border-[#042047] p-4 xs:p-6 sm:p-8 shadow-[3px_3px_0px_0px_#042047] sm:shadow-[4px_4px_0px_0px_#042047] relative overflow-hidden">
             <div className="absolute top-0 right-0 w-48 h-48 bg-[#ffe80a]/10 rounded-full blur-2xl pointer-events-none" />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10">
               
               {/* Left Column (Details) */}
               <div className="lg:col-span-8 space-y-4 text-left">
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                   <span className="px-3 py-1 rounded-full bg-[#00aeef]/10 text-[#0c71c3] font-black text-xs border border-[#00aeef]/30 uppercase">
                     STAGE {journeySteps[activeStep].num}: {journeySteps[activeStep].step.toUpperCase()}
                   </span>
@@ -317,9 +317,9 @@ export default function CoachingPhilosophySection() {
               </div>
 
               {/* Right Column (Visual Icon & Progress CTA) */}
-              <div className="lg:col-span-4 flex flex-col items-center justify-center p-6 bg-slate-50 rounded-2xl border-2 border-[#042047]/10 text-center">
-                <div className="w-16 h-16 rounded-2xl bg-[#042047] text-[#ffe80a] border-2 border-[#042047] shadow-[3px_3px_0px_0px_#ffe80a] flex items-center justify-center mb-3">
-                  {React.createElement(journeySteps[activeStep].icon, { className: "w-8 h-8 stroke-[2.2]" })}
+              <div className="lg:col-span-4 flex flex-col items-center justify-center p-5 xs:p-6 bg-slate-50 rounded-2xl border-2 border-[#042047]/10 text-center">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#042047] text-[#ffe80a] border-2 border-[#042047] shadow-[3px_3px_0px_0px_#ffe80a] flex items-center justify-center mb-3">
+                  {React.createElement(journeySteps[activeStep].icon, { className: "w-7 h-7 sm:w-8 sm:h-8 stroke-[2.2]" })}
                 </div>
                 
                 <div className="text-sm font-black text-[#042047]">
@@ -372,7 +372,7 @@ export default function CoachingPhilosophySection() {
               return (
                 <div
                   key={index}
-                  className="relative rounded-[28px] bg-white border-[2.5px] border-[#042047] shadow-[5px_5px_0px_0px_#042047] hover:shadow-[2px_2px_0px_0px_#042047] hover:translate-x-0.5 hover:translate-y-0.5 transition-all p-6 sm:p-7 flex flex-col justify-between group"
+                  className="relative rounded-2xl sm:rounded-[28px] bg-white border-[2.5px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] sm:shadow-[5px_5px_0px_0px_#042047] hover:shadow-[2px_2px_0px_0px_#042047] hover:translate-x-0.5 hover:translate-y-0.5 transition-all p-5 xs:p-6 sm:p-7 flex flex-col justify-between group"
                 >
                   <div className="space-y-4 text-left">
                     
@@ -431,7 +431,7 @@ export default function CoachingPhilosophySection() {
         {/* ========================================================================= */}
         {/* 3. BOTTOM MASTER CTA BOX                                                  */}
         {/* ========================================================================= */}
-        <div className="relative rounded-[32px] bg-gradient-to-br from-[#042047] via-[#082b59] to-[#041a38] text-white border-[3px] border-[#00aeef] shadow-[6px_6px_0px_0px_#042047] p-8 sm:p-10 lg:p-12 overflow-hidden">
+        <div className="relative rounded-2xl sm:rounded-[32px] bg-gradient-to-br from-[#042047] via-[#082b59] to-[#041a38] text-white border-[2.5px] sm:border-[3px] border-[#00aeef] shadow-[4px_4px_0px_0px_#042047] sm:shadow-[6px_6px_0px_0px_#042047] p-5 xs:p-7 sm:p-10 lg:p-12 overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#00aeef]/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
@@ -442,7 +442,7 @@ export default function CoachingPhilosophySection() {
                 <span>START YOUR CHAMPION JOURNEY</span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
+              <h3 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
                 Ready to Experience Our Teaching in Action?
               </h3>
 

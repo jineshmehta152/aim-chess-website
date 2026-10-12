@@ -98,22 +98,22 @@ export default function BookingModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6 bg-[#042047]/80 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2.5 xs:p-3 sm:p-4 md:p-6 bg-[#042047]/80 backdrop-blur-sm animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-white rounded-3xl shadow-2xl border-2 border-[#00aeef]/30 grid grid-cols-1 lg:grid-cols-12 overflow-hidden"
+        className="relative w-full max-w-4xl max-h-[94vh] sm:max-h-[92vh] overflow-y-auto bg-white rounded-2xl sm:rounded-3xl shadow-2xl border-2 border-[#00aeef]/30 grid grid-cols-1 lg:grid-cols-12 overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={closeBookingModal}
-          className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-[#042047] flex items-center justify-center transition-colors cursor-pointer"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-[#042047] flex items-center justify-center transition-colors cursor-pointer"
           aria-label="Close modal"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
 
         {/* Left Column: Brand & Direct Contact */}
-        <div className="lg:col-span-5 bg-gradient-to-br from-[#042047] via-[#092c5c] to-[#041935] text-white p-6 sm:p-8 flex flex-col justify-between space-y-6">
+        <div className="lg:col-span-5 bg-gradient-to-br from-[#042047] via-[#092c5c] to-[#041935] text-white p-5 xs:p-6 sm:p-8 flex flex-col justify-between space-y-5 sm:space-y-6">
           <div className="space-y-4">
             <div className="inline-block bg-white p-2 rounded-2xl shadow-sm">
               <Image 
@@ -185,7 +185,7 @@ export default function BookingModal() {
         </div>
 
         {/* Right Column: Interactive Demo Form */}
-        <div className="lg:col-span-7 p-6 sm:p-8 bg-white text-[#042047]">
+        <div className="lg:col-span-7 p-4 xs:p-6 sm:p-8 bg-white text-[#042047]">
           {isSubmitted ? (
             <div className="py-12 text-center space-y-4 animate-in fade-in">
               <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">

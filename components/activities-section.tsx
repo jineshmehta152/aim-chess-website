@@ -85,7 +85,7 @@ export default function ActivitiesSection() {
     },
     {
       id: 5,
-      image: "/images/prize-5.jpg",
+      image: "/images/prize-6.jpg",
       medal: "🥈 Runner-Up Trophy",
       medalColor: "bg-[#0c71c3] text-white",
       category: "REGIONAL GRAND PRIX",
@@ -162,19 +162,19 @@ export default function ActivitiesSection() {
               <span>PROVEN TOURNAMENT SUCCESS</span>
             </div>
 
-            <h2 className="text-3xl xs:text-4xl sm:text-4xl font-black text-[#042047] tracking-tight leading-[1.2]">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#042047] tracking-tight leading-[1.2]">
               Celebrating Our{" "}
-              <span className="bg-[#ffe80a] text-[#042047] font-black px-4 py-1 rounded-2xl inline-block shadow-xs">
+              <span className="bg-[#ffe80a] text-[#042047] font-black px-3.5 sm:px-4 py-0.5 sm:py-1 rounded-2xl inline-block shadow-xs">
                 Young Champions
               </span>
               <br />
               And Their{" "}
-              <span className="bg-[#00aeef] text-white font-black px-4 py-1 rounded-2xl inline-block shadow-xs mt-1">
+              <span className="bg-[#00aeef] text-white font-black px-3.5 sm:px-4 py-0.5 sm:py-1 rounded-2xl inline-block shadow-xs mt-1">
                 Glorious Victories
               </span>
             </h2>
 
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-medium">
+            <p className="text-slate-600 text-xs sm:text-base leading-relaxed font-medium">
               Over 20+ podium winners in 2024, 15+ official FIDE-rated champions, and 3 successful Inter-Academy Tournaments. Here is a glimpse of our students&apos; excellence.
             </p>
           </div>
@@ -184,22 +184,22 @@ export default function ActivitiesSection() {
             <button
               onClick={handlePrev}
               aria-label="Previous achievements slide"
-              className="w-12 h-12 rounded-2xl border-2 border-[#042047] bg-white hover:bg-[#ffe80a] text-[#042047] flex items-center justify-center shadow-[0_4px_0_0_#042047] hover:shadow-[0_6px_0_0_#042047] hover:-translate-y-0.5 transition-all cursor-pointer"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl border-2 border-[#042047] bg-white hover:bg-[#ffe80a] text-[#042047] flex items-center justify-center shadow-[0_4px_0_0_#042047] hover:shadow-[0_6px_0_0_#042047] hover:-translate-y-0.5 transition-all cursor-pointer"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
             <button
               onClick={handleNext}
               aria-label="Next achievements slide"
-              className="w-12 h-12 rounded-2xl border-2 border-[#042047] bg-[#ffe80a] hover:bg-[#fed100] text-[#042047] flex items-center justify-center shadow-[0_4px_0_0_#042047] hover:shadow-[0_6px_0_0_#042047] hover:-translate-y-0.5 transition-all cursor-pointer"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl border-2 border-[#042047] bg-[#ffe80a] hover:bg-[#fed100] text-[#042047] flex items-center justify-center shadow-[0_4px_0_0_#042047] hover:shadow-[0_6px_0_0_#042047] hover:-translate-y-0.5 transition-all cursor-pointer"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
           </div>
         </div>
 
         {/* 2 Cards Per Row Carousel Track */}
-        <div className="relative overflow-hidden -mx-3 sm:-mx-4 px-3 sm:px-4 pt-3 pb-6">
+        <div className="relative overflow-hidden -mx-2 xs:-mx-3 sm:-mx-4 px-2 xs:px-3 sm:px-4 pt-3 pb-6">
           <div 
             className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -207,21 +207,21 @@ export default function ActivitiesSection() {
             {slides.map((pair, slideIdx) => (
               <div 
                 key={slideIdx} 
-                className="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 px-2 py-2"
+                className="w-full shrink-0 grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 px-1 xs:px-2 py-2"
               >
                 {pair.map((item) => (
                   <div
                     key={item.id}
-                    className="rounded-[32px] border-3 border-[#042047] bg-white shadow-[0_8px_0_0_#042047] hover:shadow-[0_12px_0_0_#042047] hover:-translate-y-1 transition-all duration-300 p-5 sm:p-6 flex flex-col sm:flex-row gap-5 relative overflow-hidden group cursor-pointer"
+                    className="rounded-[24px] sm:rounded-[32px] border-3 border-[#042047] bg-white shadow-[0_6px_0_0_#042047] sm:shadow-[0_8px_0_0_#042047] hover:shadow-[0_12px_0_0_#042047] hover:-translate-y-1 transition-all duration-300 p-4 xs:p-5 sm:p-6 flex flex-col sm:flex-row gap-4 sm:gap-5 relative overflow-hidden group cursor-pointer"
                     onClick={() => openBookingModal()}
                   >
                     
                     {/* Left Column: Image with Rank Medal Badge */}
-                    <div className="w-full sm:w-[44%] aspect-[4/3] sm:aspect-auto sm:min-h-[320px] rounded-2xl sm:rounded-3xl overflow-hidden relative border-2 border-slate-200 bg-slate-100 shrink-0">
+                    <div className="w-full sm:w-[44%] aspect-[16/10] xs:aspect-[4/3] sm:aspect-auto sm:min-h-[320px] rounded-xl sm:rounded-3xl overflow-hidden relative border-2 border-slate-200 bg-slate-100 shrink-0">
                       <Image 
                         src={item.image} 
-                        alt={item.student}
-                        fill
+                        alt={item.student} 
+                        fill 
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, 400px"
                       />

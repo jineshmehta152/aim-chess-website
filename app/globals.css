@@ -91,6 +91,7 @@
 }
 
 @theme inline {
+  --breakpoint-xs: 480px;
   --font-sans: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
   --font-mono: var(--font-geist-mono, ui-monospace, monospace);
   --color-background: var(--background);

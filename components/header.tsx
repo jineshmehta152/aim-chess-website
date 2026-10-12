@@ -46,23 +46,23 @@ export default function Header() {
   return (
     <>
       {/* Top Notification Bar - Deep Navy with Bright Yellow Accent */}
-      <div className="bg-[#042047] text-white text-xs sm:text-sm py-1.5 px-4 border-b border-[#00aeef]/30">
-        <div className="max-w-[1380px] mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-4">
-            <span className="flex items-center gap-1.5 font-medium">
-              <Sparkles className="w-3.5 h-3.5 text-[#ffe80a] animate-pulse" />
+      <div className="bg-[#042047] text-white text-[11px] sm:text-xs md:text-sm py-1.5 px-3 sm:px-4 border-b border-[#00aeef]/30">
+        <div className="max-w-[1380px] mx-auto flex justify-between items-center gap-2">
+          <div className="flex items-center min-w-0">
+            <span className="flex items-center gap-1.5 font-medium truncate">
+              <Sparkles className="w-3.5 h-3.5 text-[#ffe80a] animate-pulse shrink-0" />
               {isBannerVisible && banner_notice ? (
-                <span className="text-white/95 font-medium">{banner_notice}</span>
+                <span className="text-white/95 font-medium truncate">{banner_notice}</span>
               ) : (
                 <>
                   <span className="hidden sm:inline">AIM Chess Academy · Empowering Children&apos;s Minds · FIDE Certified Trainers</span>
-                  <span className="sm:hidden">AIM Chess Academy · Online & Offline</span>
+                  <span className="sm:hidden truncate">AIM Chess Academy · Online & Offline</span>
                 </>
               )}
             </span>
           </div>
 
-          <div className="flex items-center space-x-4 text-xs">
+          <div className="flex items-center space-x-2 sm:space-x-4 text-xs shrink-0">
             <a 
               href={getPhoneUrl()} 
               className="hidden md:flex items-center gap-1 text-[#00aeef] hover:text-[#ffe80a] transition-colors font-semibold"
@@ -74,7 +74,7 @@ export default function Header() {
               href={getWhatsAppUrl()} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-1 bg-[#00aeef] hover:bg-[#009cd7] text-white font-bold px-3 py-0.5 rounded-full transition-colors shadow-xs"
+              className="flex items-center gap-1 bg-[#00aeef] hover:bg-[#009cd7] text-white font-bold px-2.5 sm:px-3 py-0.5 rounded-full transition-colors shadow-xs text-[11px] sm:text-xs"
             >
               <MessageCircle className="w-3 h-3" />
               <span>WhatsApp</span>
@@ -87,14 +87,14 @@ export default function Header() {
       <header 
         className={`sticky top-0 z-40 transition-all duration-300 ${
           isScrolled 
-            ? "py-2.5 px-3 sm:px-6" 
-            : "py-3 px-4 sm:px-6 lg:px-8 bg-white/95 backdrop-blur-md border-b border-slate-100/90 shadow-xs"
+            ? "py-2 sm:py-2.5 px-3 sm:px-6" 
+            : "py-2.5 sm:py-3 px-3 sm:px-6 lg:px-8 bg-white/95 backdrop-blur-md border-b border-slate-100/90 shadow-xs"
         }`}
       >
         <div 
           className={`max-w-[1440px] mx-auto flex items-center justify-between gap-1.5 2xl:gap-4 transition-all duration-300 ${
             isScrolled 
-              ? "bg-white/98 backdrop-blur-md border border-[#00aeef]/30 rounded-full px-4 sm:px-6 2xl:px-8 py-2 shadow-xl shadow-[#042047]/5" 
+              ? "bg-white/98 backdrop-blur-md border border-[#00aeef]/30 rounded-full px-3.5 sm:px-6 2xl:px-8 py-1.5 sm:py-2 shadow-xl shadow-[#042047]/5" 
               : ""
           }`}
         >
@@ -102,13 +102,13 @@ export default function Header() {
           {/* Left: Official AIM Chess Academy Logo */}
           <div className="flex items-center shrink-0">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="h-10 sm:h-12 w-auto flex items-center">
+              <div className="h-9 xs:h-10 sm:h-12 w-auto flex items-center">
                 <Image 
                   src="/logo.png" 
                   alt="AIM Chess Academy Logo" 
                   width={180} 
                   height={180} 
-                  className="h-10 sm:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                  className="h-9 xs:h-10 sm:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
                   priority
                 />
               </div>

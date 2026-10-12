@@ -97,13 +97,13 @@ export default function BlogListClient({ posts, locale }: BlogListClientProps) {
         {/* FEATURED HERO ARTICLE                                                     */}
         {/* ========================================================================= */}
         {featuredPost && (
-          <div className="relative rounded-[36px] bg-white border-[3.5px] border-[#042047] shadow-[8px_8px_0px_0px_#042047] overflow-hidden group">
+          <div className="relative rounded-[28px] sm:rounded-[36px] bg-white border-[3px] sm:border-[3.5px] border-[#042047] shadow-[5px_5px_0px_0px_#042047] sm:shadow-[8px_8px_0px_0px_#042047] overflow-hidden group">
             
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 sm:p-10 lg:p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center p-4 xs:p-6 sm:p-10 lg:p-12">
               
               {/* Left Column: Image */}
               <div className="lg:col-span-6">
-                <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-[24px] overflow-hidden border-[2.5px] border-[#042047] shadow-[4px_4px_0px_0px_#042047] bg-slate-100">
+                <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-[20px] sm:rounded-[24px] overflow-hidden border-[2.5px] border-[#042047] shadow-[3px_3px_0px_0px_#042047] sm:shadow-[4px_4px_0px_0px_#042047] bg-slate-100">
                   <Image
                     src={featuredPost.coverImage}
                     alt={featuredPost.title}
@@ -112,8 +112,8 @@ export default function BlogListClient({ posts, locale }: BlogListClientProps) {
                     sizes="(max-width: 768px) 100vw, 600px"
                     priority
                   />
-                  <div className="absolute top-3.5 left-3.5 z-10">
-                    <div className="bg-[#ffe80a] text-[#042047] font-black text-xs uppercase px-3.5 py-1 rounded-lg border-2 border-[#042047] shadow-sm flex items-center gap-1.5">
+                  <div className="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 z-10">
+                    <div className="bg-[#ffe80a] text-[#042047] font-black text-[11px] sm:text-xs uppercase px-2.5 sm:px-3.5 py-1 rounded-lg border-2 border-[#042047] shadow-sm flex items-center gap-1.5">
                       <Flame className="w-3.5 h-3.5 fill-[#042047]" />
                       <span>FEATURED MASTER GUIDE</span>
                     </div>
@@ -122,23 +122,23 @@ export default function BlogListClient({ posts, locale }: BlogListClientProps) {
               </div>
 
               {/* Right Column: Content */}
-              <div className="lg:col-span-6 space-y-4 text-left">
+              <div className="lg:col-span-6 space-y-3.5 sm:space-y-4 text-left">
                 
-                <div className="flex flex-wrap items-center gap-3 text-xs font-bold text-slate-500">
-                  <span className="px-3 py-1 rounded-full bg-[#00aeef]/15 text-[#0c71c3] font-black uppercase text-[11px] border border-[#00aeef]/30">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs font-bold text-slate-500">
+                  <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-[#00aeef]/15 text-[#0c71c3] font-black uppercase text-[10px] sm:text-[11px] border border-[#00aeef]/30">
                     {featuredPost.category}
                   </span>
-                  <span className="flex items-center gap-1">
+                  <span className="flex items-center gap-1 text-[11px] sm:text-xs">
                     <Calendar className="w-3.5 h-3.5" />
                     {featuredPost.publishedDate}
                   </span>
-                  <span className="flex items-center gap-1">
+                  <span className="flex items-center gap-1 text-[11px] sm:text-xs">
                     <Clock className="w-3.5 h-3.5" />
                     {featuredPost.readTime}
                   </span>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#042047] tracking-tight leading-tight group-hover:text-[#0c71c3] transition-colors">
+                <h3 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-black text-[#042047] tracking-tight leading-tight group-hover:text-[#0c71c3] transition-colors">
                   <Link href={`/blog/${featuredPost.slug}`}>
                     {featuredPost.title}
                   </Link>
@@ -149,9 +149,9 @@ export default function BlogListClient({ posts, locale }: BlogListClientProps) {
                 </p>
 
                 {/* Author Info */}
-                <div className="pt-2 flex items-center justify-between border-t border-slate-100">
+                <div className="pt-3 sm:pt-4 flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-3 xs:gap-0 border-t border-slate-100">
                   <div className="flex items-center gap-3">
-                    <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-[#042047] bg-slate-200 shrink-0">
+                    <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border-2 border-[#042047] bg-slate-200 shrink-0">
                       <Image
                         src={featuredPost.author.avatar}
                         alt={featuredPost.author.name}
@@ -172,7 +172,7 @@ export default function BlogListClient({ posts, locale }: BlogListClientProps) {
 
                   <Link
                     href={`/blog/${featuredPost.slug}`}
-                    className="inline-flex items-center gap-2 bg-[#ffe80a] hover:bg-[#ffd600] text-[#042047] font-black text-xs sm:text-sm px-5 py-2.5 rounded-xl border-2 border-[#042047] shadow-[2px_2px_0px_0px_#042047] hover:translate-x-0.5 hover:translate-y-0.5 transition-all uppercase tracking-wider"
+                    className="inline-flex items-center justify-center gap-2 bg-[#ffe80a] hover:bg-[#ffd600] text-[#042047] font-black text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl border-2 border-[#042047] shadow-[2px_2px_0px_0px_#042047] hover:translate-x-0.5 hover:translate-y-0.5 transition-all uppercase tracking-wider"
                   >
                     <span>Read Article</span>
                     <ArrowRight className="w-4 h-4 stroke-[3]" />
@@ -205,7 +205,7 @@ export default function BlogListClient({ posts, locale }: BlogListClientProps) {
               {regularPosts.map((post) => (
                 <article
                   key={post.id}
-                  className="rounded-[28px] bg-white border-[3px] border-[#042047] shadow-[5px_5px_0px_0px_#042047] hover:shadow-[2px_2px_0px_0px_#042047] hover:translate-x-0.5 hover:translate-y-0.5 transition-all p-5 sm:p-6 flex flex-col justify-between group overflow-hidden"
+                  className="rounded-2xl sm:rounded-[28px] bg-white border-[2.5px] sm:border-[3px] border-[#042047] shadow-[3px_3px_0px_0px_#042047] sm:shadow-[5px_5px_0px_0px_#042047] hover:shadow-[2px_2px_0px_0px_#042047] hover:translate-x-0.5 hover:translate-y-0.5 transition-all p-4 xs:p-5 sm:p-6 flex flex-col justify-between group overflow-hidden"
                 >
                   <div className="space-y-4 text-left">
                     

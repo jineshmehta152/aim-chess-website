@@ -8,7 +8,7 @@ export default function StickyWhatsApp() {
   const { whatsapp_display, getWhatsAppUrl } = useSiteSettings();
 
   return (
-    <aside aria-label="WhatsApp quick chat" className="fixed bottom-6 right-6 z-40">
+    <aside aria-label="WhatsApp quick chat" className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40">
       <a
         href={getWhatsAppUrl("Hello AIM Chess Academy! I would like to inquire about chess classes and book a Free Demo Session.")}
         target="_blank"

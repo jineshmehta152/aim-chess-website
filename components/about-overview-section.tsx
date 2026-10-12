@@ -50,7 +50,7 @@ export default function AboutOverviewSection() {
               {/* Bottom Right Overlapping Image Card (Live Chess Coaching Classroom) */}
               <div className="absolute -bottom-2 sm:bottom-2 right-0 w-[74%] xs:w-[70%] sm:w-[68%] aspect-[4/3.4] rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(4,32,71,0.22)] border-4 border-white bg-slate-100 z-20 group">
                 <Image 
-                  src="/images/arch_center.jpg" 
+                  src="/images/achievement-3.jpg" 
                   alt="AIM Chess Academy Live Classroom Training" 
                   fill 
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -60,15 +60,15 @@ export default function AboutOverviewSection() {
               </div>
 
               {/* Floating 100% Success Rate Badge */}
-              <div className="absolute bottom-8 sm:bottom-12 left-0 sm:-left-2 z-30 bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_12px_32px_rgba(4,32,71,0.15)] p-3.5 sm:p-4 border border-slate-100 flex items-center gap-3.5 transition-transform hover:scale-105">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#ffe80a] to-[#f59e0b] flex items-center justify-center text-[#042047] shadow-sm shrink-0">
-                  <Award className="w-6 h-6 stroke-[2.5]" />
+              <div className="absolute top-4 -left-2 xs:top-6 sm:top-auto sm:bottom-12 sm:-left-2 z-30 bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_12px_32px_rgba(4,32,71,0.15)] p-2.5 xs:p-3 sm:p-4 border border-slate-100 flex items-center gap-2.5 xs:gap-3.5 transition-transform hover:scale-105">
+                <div className="w-10 h-10 xs:w-12 xs:h-12 rounded-xl bg-gradient-to-br from-[#ffe80a] to-[#f59e0b] flex items-center justify-center text-[#042047] shadow-sm shrink-0">
+                  <Award className="w-5 h-5 xs:w-6 xs:h-6 stroke-[2.5]" />
                 </div>
                 <div>
-                  <div className="text-2xl sm:text-3xl font-black text-[#042047] leading-none tracking-tight">
+                  <div className="text-xl xs:text-2xl sm:text-3xl font-black text-[#042047] leading-none tracking-tight">
                     100%
                   </div>
-                  <div className="text-[11px] sm:text-xs text-slate-500 font-bold mt-1 uppercase tracking-wider">
+                  <div className="text-[10px] xs:text-[11px] sm:text-xs text-slate-500 font-bold mt-1 uppercase tracking-wider">
                     Success Rate
                   </div>
                 </div>
