@@ -26,12 +26,14 @@ export default function BookingModal() {
   const { phone, email, address, getPhoneUrl, getEmailUrl, getWhatsAppUrl } = useSiteSettings();
 
   const [formData, setFormData] = useState({
-    name: "",
+    parentName: "",
+    childName: "",
     email: "",
     phone: "",
     country: "India",
     childAge: "8-10 years",
-    level: selectedEventType || "Beginner",
+    level: selectedEventType || "Beginner (BG1-BG3)",
+    coachingMode: "Online Coaching (Worldwide)",
     device: "Laptop",
     date: "",
     timeSlot: "evening",
@@ -76,14 +78,18 @@ export default function BookingModal() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: formData.name,
+          parentName: formData.parentName,
+          childName: formData.childName,
+          name: `${formData.parentName} (Parent) / ${formData.childName} (Child)`,
           email: formData.email,
           phone: formData.phone,
-          eventType: `${formData.level} - ${formData.childAge} (${formData.country}, ${formData.device})`,
+          eventType: `Trial: ${formData.level} - ${formData.childAge} [${formData.coachingMode}]`,
           date: formData.date || new Date().toISOString().split("T")[0],
           timeSlot: formData.timeSlot,
           guests: formData.childAge,
           package: formData.level,
+          coachingMode: formData.coachingMode,
+          country: formData.country,
           message: formData.message,
         }),
       });
@@ -228,21 +234,37 @@ export default function BookingModal() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label className="block font-bold text-slate-700 mb-1">
-                      Student / Parent Name *
+                      Parent / Guardian Name *
                     </label>
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Sourav Banerjee"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      placeholder="e.g. Soumen Banerjee"
+                      value={formData.parentName}
+                      onChange={(e) => setFormData({ ...formData, parentName: e.target.value })}
                       className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/20 outline-none text-xs"
                     />
                   </div>
 
                   <div>
                     <label className="block font-bold text-slate-700 mb-1">
-                      WhatsApp / Phone Number *
+                      Child&apos;s Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="e.g. Aarav Banerjee"
+                      value={formData.childName}
+                      onChange={(e) => setFormData({ ...formData, childName: e.target.value })}
+                      className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/20 outline-none text-xs"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className="block font-bold text-slate-700 mb-1">
+                      WhatsApp / Mobile Number *
                     </label>
                     <input
                       type="tel"
@@ -253,30 +275,83 @@ export default function BookingModal() {
                       className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/20 outline-none text-xs"
                     />
                   </div>
-                </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label className="block font-bold text-slate-700 mb-1">
-                      Email Address
+                      Email Address *
                     </label>
                     <input
                       type="email"
-                      placeholder="your-email@example.com"
+                      required
+                      placeholder="parent-email@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/20 outline-none text-xs"
                     />
                   </div>
+                </div>
+
+                {/* Age & Level */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className="block font-bold text-slate-700 mb-1">
+                      Child&apos;s Age Group *
+                    </label>
+                    <select
+                      value={formData.childAge}
+                      onChange={(e) => setFormData({ ...formData, childAge: e.target.value })}
+                      className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] outline-none text-xs bg-slate-50 font-semibold"
+                    >
+                      <option value="5-7 years">5–7 years (Young Beginners)</option>
+                      <option value="8-10 years">8–10 years (Junior)</option>
+                      <option value="11-14 years">11–14 years (Cadet / Intermediate)</option>
+                      <option value="15+ years">15+ years & Adults</option>
+                    </select>
+                  </div>
 
                   <div>
                     <label className="block font-bold text-slate-700 mb-1">
-                      Select Country
+                      Current Playing Level *
+                    </label>
+                    <select
+                      value={formData.level}
+                      onChange={(e) => setFormData({ ...formData, level: e.target.value })}
+                      className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] outline-none text-xs bg-slate-50 font-semibold"
+                    >
+                      <option value="Beginner (BG1-BG3)">Beginner Course (BG1, BG2, BG3)</option>
+                      <option value="Intermediate (IM1-IM6)">Intermediate Course (IM1–IM6)</option>
+                      <option value="Advanced (Adv 1-3)">Advanced Course (Adv 1–3)</option>
+                      <option value="Expert (Exp 1-6)">Expert Master Course (Exp 1–6)</option>
+                      <option value="Individual 1-on-1">Individual 1-on-1 Classes</option>
+                      <option value="FIDE Rating Accelerator">FIDE Rating Accelerator</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Coaching Mode & Country */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className="block font-bold text-slate-700 mb-1">
+                      Coaching Preference *
+                    </label>
+                    <select
+                      value={formData.coachingMode}
+                      onChange={(e) => setFormData({ ...formData, coachingMode: e.target.value })}
+                      className="w-full px-3 py-2 rounded-xl border border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/20 outline-none text-xs bg-sky-50 font-bold text-[#042047]"
+                    >
+                      <option value="Online Coaching (Worldwide)">🌐 Online Coaching (Worldwide Classrooms)</option>
+                      <option value="Offline Coaching (Barasat Centre)">📍 Offline Coaching (Barasat Academy Centre)</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block font-bold text-slate-700 mb-1">
+                      Country of Residence
                     </label>
                     <select
                       value={formData.country}
                       onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                      className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/20 outline-none text-xs bg-slate-50 font-semibold"
+                      className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] outline-none text-xs bg-slate-50 font-semibold"
                     >
                       <option value="India">India (₹)</option>
                       <option value="USA">USA ($)</option>
@@ -285,77 +360,41 @@ export default function BookingModal() {
                       <option value="Canada">Canada (C$)</option>
                       <option value="Singapore">Singapore (S$)</option>
                       <option value="UAE">UAE (AED)</option>
+                      <option value="Other">Other Country</option>
                     </select>
                   </div>
                 </div>
 
-                {/* Age & Level */}
+                {/* Batch Time & Device */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label className="block font-bold text-slate-700 mb-1">
-                      Child&apos;s Age
-                    </label>
-                    <select
-                      value={formData.childAge}
-                      onChange={(e) => setFormData({ ...formData, childAge: e.target.value })}
-                      className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] outline-none text-xs bg-slate-50 font-semibold"
-                    >
-                      <option value="5-7 years">5-7 years</option>
-                      <option value="8-10 years">8-10 years</option>
-                      <option value="11-15 years">11-15 years</option>
-                      <option value="Above 15 years">Above 15 years</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block font-bold text-slate-700 mb-1">
-                      Desired Course / Skill Level
-                    </label>
-                    <select
-                      value={formData.level}
-                      onChange={(e) => setFormData({ ...formData, level: e.target.value })}
-                      className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] outline-none text-xs bg-slate-50 font-semibold"
-                    >
-                      <option value="Beginner">Beginner Course (Age 5+)</option>
-                      <option value="Intermediate">Intermediate Course</option>
-                      <option value="Advanced">Advanced Course</option>
-                      <option value="Individual">Individual 1-on-1 Classes</option>
-                      <option value="Expert">Expert Master Course</option>
-                      <option value="FIDE Rating">FIDE Rating Course</option>
-                    </select>
-                  </div>
-                </div>
-
-                {/* Device & TimeSlot */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div>
-                    <label className="block font-bold text-slate-700 mb-1">
-                      Device For Classes
-                    </label>
-                    <select
-                      value={formData.device}
-                      onChange={(e) => setFormData({ ...formData, device: e.target.value })}
-                      className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] outline-none text-xs bg-slate-50 font-semibold"
-                    >
-                      <option value="Laptop">Laptop</option>
-                      <option value="Desktop">Desktop</option>
-                      <option value="Tablet">Tablet / iPad</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block font-bold text-slate-700 mb-1">
-                      Preferred Batch Time
+                      Preferred Batch Timing
                     </label>
                     <select
                       value={formData.timeSlot}
                       onChange={(e) => setFormData({ ...formData, timeSlot: e.target.value })}
                       className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] outline-none text-xs bg-slate-50 font-semibold"
                     >
-                      <option value="evening">Evening Batch (5:00 PM - 7:00 PM)</option>
-                      <option value="morning">Morning Batch (10:00 AM - 12:00 PM)</option>
-                      <option value="weekend">Weekend Batch (Sat / Sun)</option>
-                      <option value="custom">Custom International Time Slot</option>
+                      <option value="evening">Evening Batch (5:00 PM – 7:30 PM IST)</option>
+                      <option value="morning">Morning Batch (10:00 AM – 12:30 PM IST)</option>
+                      <option value="weekend">Weekend Batch (Sat & Sun)</option>
+                      <option value="international">Custom International Timezone</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block font-bold text-slate-700 mb-1">
+                      Device / Class Format
+                    </label>
+                    <select
+                      value={formData.device}
+                      onChange={(e) => setFormData({ ...formData, device: e.target.value })}
+                      className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] outline-none text-xs bg-slate-50 font-semibold"
+                    >
+                      <option value="Laptop">Laptop / PC</option>
+                      <option value="Tablet">Tablet / iPad</option>
+                      <option value="Physical Board">Physical Demonstration at Barasat Centre</option>
                     </select>
                   </div>
                 </div>

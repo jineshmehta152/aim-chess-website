@@ -29,38 +29,41 @@ export default function StudentProgressSection() {
   const progressionStages = [
     {
       stage: "01",
-      title: "Starting Level",
-      badge: "DIAGNOSTIC ASSESSMENT",
-      badgeColor: "bg-slate-200 text-[#042047]",
-      desc: "Initial evaluation of rules, board vision, piece movement speed, and natural calculation instincts.",
+      title: "Beginner Foundation",
+      badge: "BG1, BG2 & BG3 TIERS",
+      badgeColor: "bg-[#00aeef] text-white",
+      desc: "From complete zero to solid board vision, piece movement, opening rules, basic checkmates and first tactical motifs.",
       milestones: [
-        "Diagnostic baseline assessment game with coach",
-        "Identification of tactical blindspots & opening habits",
-        "Placement into the ideal peer training cohort"
+        "BG1: Board coordinates, rules of check, checkmate & stalemate",
+        "BG2: Center control, castling, en passant & Queen/Rook ladder mates",
+        "BG3: First tactical motifs (forks, pins) & King-Pawn endgames",
+        "Promotion Rule: Diagnostic coach evaluation + internal Swiss match to enter IM1"
       ]
     },
     {
       stage: "02",
-      title: "Current Level",
-      badge: "ACTIVE EVOLUTION",
-      badgeColor: "bg-[#00aeef] text-white",
-      desc: "Structured weekly classes, tactics vault workouts, clock matches, and coach PGN reviews.",
+      title: "Intermediate Mastery",
+      badge: "IM1 TO IM6 ROADMAP",
+      badgeColor: "bg-[#ffe80a] text-[#042047]",
+      desc: "Eliminating blunders, multi-move tactical combinations, middlegame outposts, opening repertoires and clock tournament play.",
       milestones: [
-        "Continuous blunder heatmap reduction",
-        "Quarterly skill report cards and parent briefings",
-        "Internal academy tournament match experience"
+        "IM1–IM2: Combinations, decoys, double attacks & opening systems",
+        "IM3–IM4: Middlegame plans, pawn structures & theoretical Rook endgames",
+        "IM5–IM6: Candidate move trees, blunder rituals & notation sheets",
+        "Promotion Rule: Reach 1100–1200+ internal rating & coach sign-off for Advanced 1"
       ]
     },
     {
       stage: "03",
-      title: "Next Goal",
-      badge: "PODIUMS & FIDE RATING",
-      badgeColor: "bg-[#ffe80a] text-[#042047]",
-      desc: "Breaking rating thresholds (1000+, 1400+, 1800+ Elo) and achieving official FIDE recognition.",
+      title: "Competitive & FIDE Elo",
+      badge: "ADV 1–3 & EXP 1–6 ELITE",
+      badgeColor: "bg-[#042047] text-[#ffe80a]",
+      desc: "Pre-round opponent scouting, dynamic imbalances, Super-GM novelties, engine prep, and official international FIDE rating milestones.",
       milestones: [
-        "Official FIDE rating qualification and entry",
-        "State and National junior championship podiums",
-        "Mastery of tournament psychological stamina"
+        "Adv 1–3: Modern opening systems, positional sacrifices & Lucena conversions",
+        "Exp 1–6: Super-GM novelties, 4-hour classical stamina & engine lab prep",
+        "Target: Breaking official international FIDE Elo (1200, 1400, 1600+ Elo)",
+        "Promotion Rule: Attaining FIDE rating and earning official master diplomas"
       ]
     }
   ];

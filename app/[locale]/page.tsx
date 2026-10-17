@@ -5,6 +5,7 @@ import WhyChooseUsSection from "@/components/why-choose-us";
 import PartiesSection from "@/components/parties-section";
 import ActivitiesSection from "@/components/activities-section";
 import GallerySection from "@/components/gallery-section";
+import VideoTestimonialsSection from "@/components/video-testimonials-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import FaqSection from "@/components/faq-section";
 import CtaSection from "@/components/cta-section";
@@ -27,6 +28,7 @@ export default function HomePage({ params }: Props) {
       <PartiesSection />
       <ActivitiesSection />
       <GallerySection />
+      <VideoTestimonialsSection />
       <TestimonialsSection />
       <FaqSection />
       <CtaSection />

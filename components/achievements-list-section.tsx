@@ -31,7 +31,7 @@ interface AchievementItem {
   image: string;
   medal: string;
   medalColor: string;
-  category: "state" | "academy" | "fide" | "district" | "national" | "all";
+  category: "state" | "academy" | "fide" | "district" | "national" | "international" | "all";
   categoryLabel: string;
   student: string;
   tournament: string;
@@ -51,50 +51,182 @@ export default function AchievementsListSection() {
   const [activeFilter, setActiveFilter] = useState<string>("all");
 
   const filterTabs = [
-    { id: "all", label: "All Achievements (6)" },
-    { id: "state", label: "State & District" },
-    { id: "fide", label: "FIDE Ratings" },
-    { id: "academy", label: "Academy Cups" },
-    { id: "national", label: "National Qualifiers" }
+    { id: "all", label: "All Achievements (9)" },
+    { id: "fide", label: "Official FIDE Ratings" },
+    { id: "international", label: "International (Scotland/UK)" },
+    { id: "state", label: "State & All Bengal" },
+    { id: "academy", label: "Academy Cups & Showdowns" }
   ];
 
   const achievementsData: AchievementItem[] = [
     {
       id: 1,
-      image: "/images/achievement-1.jpg",
-      medal: "🥇 1st Place Champion",
-      medalColor: "bg-[#ffe80a] text-[#042047]",
-      category: "state",
-      categoryLabel: "STATE LEVEL TOURNAMENT",
-      student: "Aarav Mukherjee (Under-10)",
-      tournament: "West Bengal State Junior Rapid Championship",
-      location: "Kolkata, West Bengal",
-      date: "2024 Season",
-      score: "6.5 / 7 Points",
-      ratingChange: "+128 FIDE Elo Gain",
-      desc: "Dominated the tournament with an undefeated streak across 7 rounds, converting sharp tactical middle-games into precise rook-and-pawn endgame wins under strict time pressure.",
-      quote: "Coach Soumen taught me how to stay calm in complex positions and spot king safety weaknesses.",
+      image: "/images/achievements/debayan-majumder-fide.jpg",
+      medal: "🌟 FIDE Rating: 1489",
+      medalColor: "bg-[#042047] text-[#ffe80a]",
+      category: "fide",
+      categoryLabel: "WORLD CHESS FEDERATION (FIDE) RATING",
+      student: "Debayan Majumder (FIDE ID: 583058737)",
+      tournament: "KDCA Rating Tournament",
+      location: "West Bengal, India",
+      date: "Official FIDE Circuit",
+      score: "1489 RAPID ELO",
+      ratingChange: "First Official FIDE Rating",
+      desc: "Debayan earned his first official FIDE rating from the World Chess Federation (FIDE), which is NOT easy! Facing seasoned rated opponents in the KDCA Rating Tournament, his hard work, dedication, and patience delivered an outstanding debut rating of 1489 Rapid Elo.",
+      quote: "One thing we see in every successful chess player — PATIENCE. Yes, believe it & achieve it. Believe in the process, not just the result.",
       keyHighlights: [
-        "Undefeated run against 4 top-seeded rated juniors",
-        "Mastered the Italian Game attacking motifs and knight outposts",
-        "Gained +128 official rating points in a single championship weekend"
+        "Earned first official FIDE Rapid Rating of 1489 Elo (FIDE ID: 583058737, Birth Year: 2013)",
+        "Faced strong rated contenders in the competitive KDCA Rating Tournament",
+        "Trained under structured ISO opening and middle-game tactical frameworks at AIM"
       ],
-      coachReview: "Aarav showed exceptional board vision and patience in calculating 4 moves ahead during sudden-death time scrambles."
+      coachReview: "Team AIM Chess Academy is extremely happy & proud of your outstanding achievement! Many ways to go, many dreams to achieve! Keep up the patience and dedication."
     },
     {
       id: 2,
+      image: "/images/achievements/nishka-mandal-scotland-champion.jpg",
+      medal: "🥇 Rank 1 Champion (5/5)",
+      medalColor: "bg-[#ffe80a] text-[#042047]",
+      category: "international",
+      categoryLabel: "INTERNATIONAL TOURNAMENT (SCOTLAND, UK)",
+      student: "Nishka Mandal (Scotland, UK 🏴󠁧󠁢󠁳󠁣󠁴󠁿)",
+      tournament: "NEJCA Albyn Trophy 2024 (Scotland Chess Federation)",
+      location: "Aberdeen, Scotland, UK",
+      date: "Scottish Junior Circuit",
+      score: "Perfect 5 / 5 Wins (100%)",
+      ratingChange: "Rank 1 Trophy & Shield",
+      desc: "Our young champion Nishka Mandal from Scotland made the entire AIM Chess Academy proud by capturing Rank 1 in the Intermediate Girls Category at the NEJCA Albyn Trophy. She achieved a flawless clean sweep with 5 consecutive wins out of 5 games against Scottish junior contenders.",
+      quote: "Many children dream, but only a few have the discipline, dedication, consistency and determination to turn their dreams into reality. Nishka is one of those rare young players.",
+      keyHighlights: [
+        "Rank 1 Gold Champion & Albyn Shield Winner (Intermediate Girls Category)",
+        "Flawless 5/5 score defeating Aditi Desai, Ananya Vayyuru, Laasya Mopidevi, Liubomyla Chetverikova & Khushi Narra",
+        "Demonstrates the world-class standard of AIM Chess Academy's international online classrooms"
+      ],
+      coachReview: "The entire AIM Chess Academy family is incredibly proud of you! Her success is a reflection of hard work and commitment. This is only the beginning... Many more success stories await!"
+    },
+    {
+      id: 3,
+      image: "/images/achievements/samriddho-roy-champion.jpg",
+      medal: "🏆 Back-to-Back Champion",
+      medalColor: "bg-[#00aeef] text-white",
+      category: "state",
+      categoryLabel: "STATE LEVEL RAPID TOURNAMENTS",
+      student: "Samriddho Roy (Sandesh)",
+      tournament: "All Bengal Under-15 Rapid (SBDS) & International Chess Day",
+      location: "Kolkata, West Bengal",
+      date: "2024 Season",
+      score: "Double Championship Trophies",
+      ratingChange: "From Countless Losses to Champion",
+      desc: "Some victories take 3 years to arrive! Nearly three years ago, a little boy joined AIM Chess Academy with a big dream and faced countless tournament losses, moments of doubt, and times when he even thought of quitting. Supported unconditionally by his parents through family challenges, his perseverance turned setbacks into back-to-back championship victories!",
+      quote: "A loss doesn't mean you cannot do it. Sometimes, a loss simply means you haven't done it YET. Patience + Consistency + Learning + Belief = Victory.",
+      keyHighlights: [
+        "Champion: All Bengal Under-15 Rapid Chess Tournament under SBDS",
+        "Champion: International Chess Day Tournament (Back-to-Back Titles)",
+        "Overcame early setbacks through 3 years of persistent coaching and family belief"
+      ],
+      coachReview: "Sandesh, you may have taken a little longer than some others. But that's okay. Everyone has their own timeline. Keep playing. Keep learning. Keep fighting!"
+    },
+    {
+      id: 4,
+      image: "/images/achievements/riddhish-kanjilal-all-bengal.jpg",
+      medal: "🥈 4/5 Points Podium Trophy",
+      medalColor: "bg-[#ffe80a] text-[#042047]",
+      category: "state",
+      categoryLabel: "ALL BENGAL CHESS TOURNAMENT",
+      student: "Riddhish Kanjilal",
+      tournament: "All Bengal Chess Tournament (Organised by UEM Kolkata)",
+      location: "Kolkata, West Bengal",
+      date: "2024 Season",
+      score: "4 / 5 Points (Well Played!)",
+      ratingChange: "Defeated 1700+ Rated Players",
+      desc: "Scored an impressive 4/5 points in the prestigious All Bengal Chess Tournament organised by University of Engineering & Management (UEM), Kolkata. Riddhish has defeated 1700+ rated players in open events and is a multiple Inter-Academy tournament winner.",
+      quote: "The dream never vanished, it was just waiting for the right time to shine again. Once a champ, always a champ!",
+      keyHighlights: [
+        "Scored 4 / 5 points in high-stakes All Bengal Chess Tournament at UEM Kolkata",
+        "Defeated 1700+ rated players in competitive match play",
+        "Multiple Inter-Academy Tournament Winner known for relentless fighting spirit"
+      ],
+      coachReview: "At AIM Chess Academy, we don't just teach chess, we build a family. Riddhish's passion, hard work, and love for the game inspire us every single day."
+    },
+    {
+      id: 5,
+      image: "/images/achievements/dainika-sen-champion.png",
+      medal: "🥇 Rank 1 · Under 11 Champion",
+      medalColor: "bg-[#ffe80a] text-[#042047]",
+      category: "academy",
+      categoryLabel: "INTER ACADEMY GRAND CHESS SHOWDOWN",
+      student: "Dainika Sen",
+      tournament: "Inter Academy Grand Chess Showdown Edition 3.0 – Winner 2025",
+      location: "West Bengal, India",
+      date: "Edition 3.0 (2025)",
+      score: "RANK - 1 (Champion Trophy)",
+      ratingChange: "Under 11 Girls Champion",
+      desc: "Dainika Sen delivered an outstanding championship run to capture Rank 1 and become the Under 11 Girls Champion at the Inter Academy Grand Chess Showdown Edition 3.0. Holding her winner's trophy high in her official AIM Academy jersey, she showcased exceptional tactical calculation, cool composure under clock pressure, and true championship determination.",
+      quote: "Congratulations on your outstanding performance and for becoming under 11 girls champion! Keep playing and keep winning!",
+      keyHighlights: [
+        "Rank 1 Winner & Trophy Champion at Inter Academy Grand Chess Showdown Edition 3.0",
+        "Crowned Under 11 Girls Champion against top juniors from regional chess academies",
+        "Trained under structured tactical exercises and endgame technique at AIM Chess Academy"
+      ],
+      coachReview: "Congratulations Dainika on your outstanding performance and for becoming under 11 girls champion! Keep playing and keep winning!"
+    },
+    {
+      id: 6,
+      image: "/images/achievements/swastik-bhattacharya-winner.png",
+      medal: "🥇 Monthly Tournament Winner",
+      medalColor: "bg-[#ffe80a] text-[#042047]",
+      category: "academy",
+      categoryLabel: "AIM CHESS ACADEMY MONTHLY TOURNAMENT",
+      student: "Swastik Bhattacharya",
+      tournament: "Aim Chess Academy Monthly Tournament – May 2025",
+      location: "Sunday 4:00 PM Batch",
+      date: "May 2025",
+      score: "Gold Medalist (1st Place)",
+      ratingChange: "Sunday 4:00 PM Batch Winner",
+      desc: "Swastik Bhattacharya emerged as the proud Gold Medal Winner in the Aim Chess Academy Monthly Tournament (May 2025) for the Sunday 4:00 PM Batch. His attacking clarity, solid piece coordination, and tournament clock handling led him straight to 1st place.",
+      quote: "Congratulations from all of us at Aim Chess Academy – Keep aiming higher! ♟️💐",
+      keyHighlights: [
+        "Aim Chess Academy Monthly Tournament Winner – May 2025 (Gold Medal)",
+        "Champion of Sunday 4:00 PM Batch",
+        "Demonstrated sharp middle-game planning and resilient defensive technique"
+      ],
+      coachReview: "Congratulations from all of us at Aim Chess Academy – Keep aiming higher! ♟️💐"
+    },
+    {
+      id: 7,
+      image: "/images/achievements/aryaman-saha-winner.png",
+      medal: "🥇 Monthly Tournament Winner",
+      medalColor: "bg-[#ffe80a] text-[#042047]",
+      category: "academy",
+      categoryLabel: "AIM CHESS ACADEMY MONTHLY TOURNAMENT",
+      student: "Aryaman Saha",
+      tournament: "Aim Chess Academy Monthly Tournament – May 2025",
+      location: "Sunday 12:30 PM Batch",
+      date: "May 2025",
+      score: "Gold Medalist (1st Place)",
+      ratingChange: "Sunday 12:30 PM Batch Winner",
+      desc: "Aryaman Saha clinched 1st Place and the Gold Medal in the Aim Chess Academy Monthly Tournament (May 2025) for the Sunday 12:30 PM Batch. His joyful dedication, rapid calculation, and sporting attitude earned him top honors among his peers.",
+      quote: "Congratulations from all of us at Aim Chess Academy – Keep aiming higher! ♟️💐",
+      keyHighlights: [
+        "Aim Chess Academy Monthly Tournament Winner – May 2025 (Gold Medal)",
+        "Champion of Sunday 12:30 PM Batch",
+        "Exemplary sporting conduct, disciplined time management, and tactical precision"
+      ],
+      coachReview: "Congratulations from all of us at Aim Chess Academy – Keep aiming higher! ♟️💐"
+    },
+    {
+      id: 8,
       image: "/images/achievement-2.jpg",
-      medal: "🏆 Major Event Hosted",
+      medal: "🏆 3 Editions Hosted",
       medalColor: "bg-[#00aeef] text-white",
       category: "academy",
-      categoryLabel: "INTER-ACADEMY TOURNAMENT",
-      student: "AIM Inter-Academy Championship 2024",
-      tournament: "3 Inter-Academy Tournaments 2024",
-      location: "Barasat Academy Center & Global Online",
-      date: "Annual Event 2024",
+      categoryLabel: "INTER-ACADEMY TOURNAMENTS",
+      student: "AIM Inter-Academy Tournament Squad",
+      tournament: "3 Major Inter-Academy Tournaments 2024–2025",
+      location: "Barasat Academy Center & Online",
+      date: "Annual Events",
       score: "150+ Participants",
       ratingChange: "3 Editions Successfully Held",
-      desc: "Organized 3 major internal tournaments with official digital chess clocks, Swiss-system tournament pairing software, touch-move rules, and score sheet recording for realistic tournament readiness.",
+      desc: "Organized 3 major internal tournaments with official digital chess clocks, Swiss-system pairing software, touch-move rules, and score sheet recording for realistic tournament readiness.",
       quote: "Building sportsman spirit, resilience, and real clock decision-making skills in every child.",
       keyHighlights: [
         "150+ student participants across Beginner, Intermediate & Advanced divisions",
@@ -104,92 +236,26 @@ export default function AchievementsListSection() {
       coachReview: "Simulating authentic tournament pressure early eliminates competitive anxiety and turns training room skills into podium results."
     },
     {
-      id: 3,
+      id: 9,
       image: "/images/prize-1.jpg",
-      medal: "🌟 FIDE Milestone",
+      medal: "🎖️ 20+ Podium Winners",
       medalColor: "bg-[#042047] text-[#ffe80a]",
-      category: "fide",
-      categoryLabel: "INTERNATIONAL RATING",
-      student: "Rohan Sengupta & Academy Rated Squad",
-      tournament: "All India FIDE Rating Open Tournament",
-      location: "National Circuit",
-      date: "2024",
-      score: "15+ Rated Players",
-      ratingChange: "Initial Rating 1450+ Elo",
-      desc: "15 students from AIM Chess Academy successfully earned their official FIDE ratings through structured opening repertoires, daily calculation workouts, and endgame precision drills.",
-      quote: "Achieved his dream FIDE rating within 9 months of dedicated academy mentorship.",
-      keyHighlights: [
-        "15+ newly minted FIDE-rated junior players in 2024",
-        "Average initial rating exceeding 1450 Elo",
-        "Comprehensive repertoire preparation against 1.e4 and 1.d4 setups"
-      ],
-      coachReview: "The milestone of obtaining an international FIDE rating proves the efficacy of our concept-based ISO curriculum."
-    },
-    {
-      id: 4,
-      image: "/images/achievement-3.jpg",
-      medal: "🥇 Gold Medalist",
-      medalColor: "bg-[#ffe80a] text-[#042047]",
-      category: "district",
-      categoryLabel: "DISTRICT CHAMPIONSHIP",
-      student: "Sneha Das (Under-12)",
-      tournament: "North 24 Parganas District Chess Championship",
-      location: "Barasat, West Bengal",
-      date: "2024",
-      score: "5.5 / 6 Points",
-      ratingChange: "Podium 1st Place",
-      desc: "Secured top position in the girl's category with flawless Italian Game opening play and aggressive king-side attacking motifs, clinching the championship trophy in Round 6.",
-      quote: "The personalized PGN analysis after each round helped me eliminate blunder habits.",
-      keyHighlights: [
-        "1st Place Gold Medal winner in Under-12 Girls division",
-        "Flawless conversion of positional piece sacrifices into checkmates",
-        "Selected as district representative for the State Finals"
-      ],
-      coachReview: "Sneha's rapid improvement in tactical calculation and tactical puzzle solving has made her an aggressive and feared competitor."
-    },
-    {
-      id: 5,
-      image: "/images/prize-6.jpg",
-      medal: "🥈 Runner-Up Trophy",
-      medalColor: "bg-[#0c71c3] text-white",
-      category: "state",
-      categoryLabel: "REGIONAL GRAND PRIX",
-      student: "Aniket Roy (Under-14)",
-      tournament: "Kolkata City Rapid Chess Grand Prix",
-      location: "Kolkata, West Bengal",
-      date: "2024",
-      score: "5.0 / 6 Points",
-      ratingChange: "Top 3 Podium",
-      desc: "Outstanding performance against rated veterans, winning critical Rook and Pawn endgames with precise king centralization and passed-pawn technique.",
-      quote: "Mastering endgame precision from IM Vishal Sareen's masterclasses made all the difference.",
-      keyHighlights: [
-        "Podium finish against a field of 60+ senior and junior contenders",
-        "Won 3 critical technical endgames with less than 2 minutes on the clock",
-        "Demonstrated deep positional understanding learned in our Advanced Course"
-      ],
-      coachReview: "Aniket's transition from tactical slugger to mature endgame technician is a masterclass in positional growth."
-    },
-    {
-      id: 6,
-      image: "/images/prize-6.jpg",
-      medal: "🎖️ National Qualifiers",
-      medalColor: "bg-[#ffe80a] text-[#042047]",
       category: "national",
-      categoryLabel: "NATIONAL SCHOOL GAMES",
-      student: "Junior Champions Squad",
-      tournament: "National School Chess Championship Qualifiers",
+      categoryLabel: "NATIONAL & STATE JUNIOR CIRCUIT",
+      student: "AIM Champions Squad",
+      tournament: "State & National Junior Chess Qualifiers",
       location: "State Selection Trials",
-      date: "2024",
-      score: "5 Selected Players",
-      ratingChange: "State Representatives",
-      desc: "Multiple academy students qualified to represent their district and state at the National School Chess Olympiad rounds following rigorous trial matches.",
-      quote: "A testament to structured ISO curriculum and rigorous tactical training.",
+      date: "2024–2025",
+      score: "20+ Trophy Winners",
+      ratingChange: "50+ FIDE Rated Students",
+      desc: "Over 20 students secured podium prizes in prestigious external state and national tournaments, while more than 50 students across our online and offline classrooms actively maintain official FIDE ratings.",
+      quote: "A testament to structured ISO curriculum and dedicated FIDE certified coaching.",
       keyHighlights: [
-        "5 students qualified for national state squad selections",
-        "Comprehensive psychological and stamina preparation for 9-round Swiss events",
-        "Personalized pre-round scouting reports prepared by academy trainers"
+        "20+ external tournament winners across district, state, and national events",
+        "50+ students with official FIDE international Elo ratings",
+        "Comprehensive pre-round scouting reports and PGN blunder diagnostics"
       ],
-      coachReview: "Our team's collective discipline, opening preparation, and fighting spirit earned them the highest accolades in the state selection circuit."
+      coachReview: "Our team's collective discipline, opening preparation, and fighting spirit earned them the highest accolades in competitive chess."
     }
   ];
 

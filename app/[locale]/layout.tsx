@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import StickyWhatsApp from "@/components/sticky-whatsapp";
 import BookingModal from "@/components/booking-modal";
+import StudentLoginModal from "@/components/student-login-modal";
 import Ga4Tracker from "@/components/ga4-tracker";
 import { BookingModalProvider } from "@/context/booking-modal-context";
 import { SiteSettingsProvider } from "@/context/site-settings-context";
@@ -104,7 +105,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       "addressCountry": "IN"
     },
     "url": "https://aimchessacademy.com",
-    "priceRange": "₹1600 - ₹2600 / month",
+    "priceRange": "$$",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -132,6 +133,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             <Footer />
             <StickyWhatsApp />
             <BookingModal />
+            <StudentLoginModal />
             <Ga4Tracker />
           </div>
 

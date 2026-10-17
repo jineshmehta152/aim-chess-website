@@ -329,22 +329,22 @@ export default function Footer() {
 
             <ul className="space-y-2.5 text-xs sm:text-sm font-medium">
               <li>
-                <Link href="/courses" className="text-slate-300 hover:text-[#00aeef] hover:translate-x-1 inline-block transition-all">Beginner Chess Fundamentals</Link>
+                <Link href="/courses/beginner" className="text-slate-300 hover:text-[#00aeef] hover:translate-x-1 inline-block transition-all">Beginner Course (BG1–BG3)</Link>
               </li>
               <li>
-                <Link href="/courses" className="text-slate-300 hover:text-[#00aeef] hover:translate-x-1 inline-block transition-all">Intermediate Tactics &amp; Strategy</Link>
+                <Link href="/courses/intermediate" className="text-slate-300 hover:text-[#00aeef] hover:translate-x-1 inline-block transition-all">Intermediate Course (IM1–IM6)</Link>
               </li>
               <li>
-                <Link href="/courses" className="text-slate-300 hover:text-[#00aeef] hover:translate-x-1 inline-block transition-all">Advanced &amp; FIDE Rating Prep</Link>
+                <Link href="/courses/advanced" className="text-slate-300 hover:text-[#00aeef] hover:translate-x-1 inline-block transition-all">Advanced Course (ADV 1–3)</Link>
               </li>
               <li>
-                <Link href="/courses" className="text-slate-300 hover:text-[#00aeef] hover:translate-x-1 inline-block transition-all">1-on-1 Master Classes</Link>
+                <Link href="/courses/expert" className="text-slate-300 hover:text-[#00aeef] hover:translate-x-1 inline-block transition-all">Expert Course (EXP 1–6)</Link>
               </li>
               <li>
-                <Link href="/achievements" className="text-slate-300 hover:text-[#00aeef] hover:translate-x-1 inline-block transition-all">Monthly Practice Tournaments</Link>
+                <Link href="/courses/individual" className="text-slate-300 hover:text-[#00aeef] hover:translate-x-1 inline-block transition-all">Individual 1-on-1 Coaching</Link>
               </li>
               <li>
-                <Link href="/contact" className="text-slate-300 hover:text-[#00aeef] hover:translate-x-1 inline-block transition-all">Global Online Batches</Link>
+                <Link href="/courses/fide-group" className="text-slate-300 hover:text-[#00aeef] hover:translate-x-1 inline-block transition-all">FIDE Rating Course (Group &amp; 1-on-1)</Link>
               </li>
             </ul>
           </div>

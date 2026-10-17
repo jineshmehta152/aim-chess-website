@@ -114,7 +114,7 @@
     "items": [
       {
         "id": "beginner",
-        "name": "Beginner Course",
+        "name": "Beginner Course (BG1, BG2, BG3)",
         "inrPrice": 1600,
         "usdPrice": 25,
         "gbpPrice": 20,
@@ -122,18 +122,18 @@
         "audPrice": 35,
         "sgdPrice": 32,
         "aedPrice": 90,
-        "tagline": "Ideal for children & beginners starting their chess journey.",
+        "tagline": "Master piece movement, fundamental rules & basic checkmates across BG1, BG2 & BG3 (24 Wks).",
         "features": [
-          "Weekly 2 live classes",
-          "Focused on learning the fundamentals of chess",
+          "Weekly 2 live classes (24 Weeks / 48 Sessions)",
+          "Structured progression across levels BG1, BG2 & BG3",
           "Piece movements, special rules & board vision",
-          "Basic checkmates, pins & forks",
-          "FIDE Certified Trainer guidance"
+          "Basic checkmates, pins, forks & clock basics",
+          "Official ISO 9001:2015 Course Completion Certificate"
         ]
       },
       {
         "id": "intermediate",
-        "name": "Intermediate Course",
+        "name": "Intermediate Course (IM1 – IM6)",
         "inrPrice": 1600,
         "usdPrice": 25,
         "gbpPrice": 20,
@@ -141,18 +141,18 @@
         "audPrice": 35,
         "sgdPrice": 32,
         "aedPrice": 90,
-        "tagline": "Deepen your strategic understanding & tactical calculation.",
+        "tagline": "Tactical combinations, middlegame outposts & endgames across IM1 to IM6 (36 Wks).",
         "features": [
-          "Weekly 2 live classes",
-          "Advanced understanding of strategies and openings",
-          "Middle game tactical combinations & planning",
-          "Essential king & pawn endgames",
-          "FIDE Certified Trainer guidance"
+          "Weekly 2 live classes (36 Weeks / 72 Sessions)",
+          "Structured progression across levels IM1 through IM6",
+          "Combinations, decoys, double attacks & opening systems",
+          "Essential king & pawn and theoretical rook endgames",
+          "Personalized move-by-move PGN game reviews"
         ]
       },
       {
         "id": "advanced",
-        "name": "Advanced Course",
+        "name": "Advanced Course (Adv 1 – Adv 3)",
         "inrPrice": 1800,
         "usdPrice": 30,
         "gbpPrice": 25,
@@ -160,18 +160,18 @@
         "audPrice": 42,
         "sgdPrice": 38,
         "aedPrice": 105,
-        "tagline": "Master deep calculation, complex endgames & tournament prep.",
+        "tagline": "Master deep calculation, complex endgames & tournament prep across Adv 1 to Adv 3 (24 Wks).",
         "features": [
-          "Weekly 2 live classes",
-          "In-depth lessons on advanced tactics and endgames",
-          "Attacking king safety & positional piece sacrifices",
-          "Comprehensive tournament psychological prep",
-          "FIDE Certified Trainer guidance"
+          "Weekly 2 intensive live classes (24 Weeks / 48 Sessions)",
+          "Structured progression across levels Adv 1, Adv 2 & Adv 3",
+          "Deep opening repertoires, space strategy & prophylaxis",
+          "Theoretical endgame mastery (Lucena & Philidor)",
+          "Pre-round opponent scouting & FIDE rating preparation"
         ]
       },
       {
         "id": "individual",
-        "name": "Individual 1-on-1 Classes",
+        "name": "Individual 1-on-1 Classes (BG1 to Exp 6)",
         "inrPrice": 2000,
         "usdPrice": 35,
         "gbpPrice": 28,
@@ -179,18 +179,18 @@
         "audPrice": 50,
         "sgdPrice": 45,
         "aedPrice": 125,
-        "tagline": "Personalized 1-on-1 coaching tailored solely to the student.",
+        "tagline": "Personalized 1-on-1 coaching tailored solely to the student at their own learning pace.",
         "features": [
-          "Weekly 1-on-1 dedicated session",
-          "One-on-one training directly with FIDE Certified Trainers",
+          "Weekly 1-on-1 dedicated session (60 mins)",
+          "One-on-one training directly with senior FIDE Certified Trainers",
           "Customized tournament game analysis & opening repertoire",
-          "Exclusive strategies, weaknesses diagnosis & rapid growth",
-          "FIDE Certified Trainer guidance"
+          "100% flexible scheduling across international time zones",
+          "Direct coach WhatsApp support & monthly parent reviews"
         ]
       },
       {
         "id": "expert",
-        "name": "Expert Course",
+        "name": "Expert Course (Exp 1 – Exp 6)",
         "inrPrice": 2600,
         "usdPrice": 40,
         "gbpPrice": 32,
@@ -198,13 +198,13 @@
         "audPrice": 58,
         "sgdPrice": 52,
         "aedPrice": 145,
-        "tagline": "High-level master classes & titled player analysis.",
+        "tagline": "High-level master classes, titled player novelties & engine lab across Exp 1 to Exp 6.",
         "features": [
-          "Weekly 2 advanced classes",
-          "Titled Player Analysis Sessions",
-          "Exclusive grandmaster strategies and high-level practice",
-          "Complex endgame studies & prophylaxis",
-          "FIDE Certified Trainer guidance"
+          "Weekly 2 advanced classes + Special Masterclass Sessions",
+          "Structured progression across levels Expert 1 through Expert 6",
+          "Modern Super-GM game novelties & imbalanced structures",
+          "Complex endgame conversions & classical tournament stamina",
+          "Target: 1600–2000+ official international FIDE Elo"
         ]
       },
       {

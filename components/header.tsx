@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
@@ -12,17 +12,73 @@ import {
   Phone, 
   MessageCircle, 
   Sparkles, 
-  GraduationCap
+  GraduationCap,
+  UserCheck,
+  ChevronDown
 } from "lucide-react";
 
 export default function Header() {
   const t = useTranslations("nav");
   const pathname = usePathname();
-  const { openBookingModal } = useBookingModal();
+  const { openBookingModal, openStudentLoginModal } = useBookingModal();
   const { phone, getPhoneUrl, getWhatsAppUrl, banner_notice, isBannerVisible, whatsapp_display } = useSiteSettings();
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);
+  const [desktopCoursesOpen, setDesktopCoursesOpen] = useState(false);
+  const desktopCoursesRef = useRef<HTMLDivElement>(null);
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleCoursesMouseEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setDesktopCoursesOpen(true);
+  };
+
+  const handleCoursesMouseLeave = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+    }
+    closeTimeoutRef.current = setTimeout(() => {
+      setDesktopCoursesOpen(false);
+    }, 200);
+  };
+
+  // Close dropdown on click outside or escape key
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        desktopCoursesRef.current && 
+        !desktopCoursesRef.current.contains(event.target as Node)
+      ) {
+        setDesktopCoursesOpen(false);
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setDesktopCoursesOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  // Close dropdown on route change
+  useEffect(() => {
+    setDesktopCoursesOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +87,16 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const courseSubLinks = [
+    { href: "/courses", label: "All Courses Overview", badge: "Overview" },
+    { href: "/courses/beginner", label: "Beginner (BG1–BG3)", badge: "Ages 5+" },
+    { href: "/courses/intermediate", label: "Intermediate (IM1–IM6)", badge: "Tactics" },
+    { href: "/courses/advanced", label: "Advanced (ADV 1–3)", badge: "FIDE Prep" },
+    { href: "/courses/expert", label: "Expert (EXP 1–6)", badge: "Masters" },
+    { href: "/courses/individual", label: "Individual 1-on-1", badge: "Personalized" },
+    { href: "/courses/fide-group", label: "FIDE Rating Course", badge: "Elo Cohort" },
+  ];
 
   const navLinks = [
     { href: "/", label: t("home") || "Home" },
@@ -125,7 +191,68 @@ export default function Header() {
           >
             <nav className="flex items-center space-x-1.5 2xl:space-x-3.5">
               {navLinks.map((link) => {
-                const isActive = pathname === link.href;
+                const isActive = pathname === link.href || (link.href === "/courses" && pathname.startsWith("/courses"));
+
+                if (link.href === "/courses") {
+                  return (
+                    <div 
+                      key={link.href} 
+                      ref={desktopCoursesRef}
+                      className="relative group/courses"
+                      onMouseEnter={handleCoursesMouseEnter}
+                      onMouseLeave={handleCoursesMouseLeave}
+                    >
+                      <button
+                        type="button"
+                        onClick={() => setDesktopCoursesOpen((prev) => !prev)}
+                        aria-expanded={desktopCoursesOpen}
+                        aria-haspopup="true"
+                        aria-label="Toggle courses menu"
+                        className={`transition-colors duration-150 whitespace-nowrap text-[12px] xl:text-[12.5px] 2xl:text-[14px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1 cursor-pointer select-none ${
+                          isActive || desktopCoursesOpen
+                            ? "text-white bg-[#042047] shadow-xs"
+                            : "text-[#042047] hover:text-[#00aeef] hover:bg-white"
+                        }`}
+                      >
+                        <span>{link.label}</span>
+                        <ChevronDown 
+                          className={`w-3 h-3 opacity-70 transition-transform duration-200 ${
+                            desktopCoursesOpen ? "rotate-180" : "group-hover/courses:rotate-180"
+                          }`} 
+                        />
+                      </button>
+
+                      {/* Dropdown Menu Container with seamless zero-gap bridge */}
+                      <div 
+                        className={`absolute top-full left-0 pt-2 w-72 z-50 transition-all duration-200 ${
+                          desktopCoursesOpen
+                            ? "opacity-100 translate-y-0 pointer-events-auto visible"
+                            : "opacity-0 translate-y-1 pointer-events-none invisible group-hover/courses:opacity-100 group-hover/courses:translate-y-0 group-hover/courses:pointer-events-auto group-hover/courses:visible"
+                        }`}
+                      >
+                        {/* Visual Card with pseudo-element top bridge */}
+                        <div className="relative bg-[#042047] border-2 border-[#00aeef] rounded-2xl p-2 shadow-2xl before:absolute before:-top-3 before:left-0 before:right-0 before:h-3 before:content-['']">
+                          <div className="space-y-1 text-left">
+                            {courseSubLinks.map((sub) => (
+                              <Link
+                                key={sub.href}
+                                href={sub.href}
+                                onClick={() => setDesktopCoursesOpen(false)}
+                                className="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold text-white hover:bg-white/10 hover:text-[#ffe80a] transition-colors"
+                              >
+                                <span>{sub.label}</span>
+                                <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded-md bg-[#00aeef]/30 text-[#00aeef]">
+                                  {sub.badge}
+                                </span>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={link.href}
@@ -143,8 +270,18 @@ export default function Header() {
             </nav>
           </div>
 
-          {/* Right: Enroll For Free Demo CTA Button */}
+          {/* Right: Student Login + Enroll For Free Demo CTA Buttons */}
           <div className="hidden sm:flex items-center space-x-2 2xl:space-x-3 shrink-0">
+            <a
+              href="https://classroom.aimchessacademy.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 bg-[#042047] hover:bg-[#082b5d] text-white font-bold px-3.5 2xl:px-4 py-2 rounded-full text-xs 2xl:text-sm border border-[#00aeef]/40 shadow-xs hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
+            >
+              <UserCheck className="w-3.5 h-3.5 text-[#ffe80a]" />
+              <span>Student Login</span>
+            </a>
+
             <button
               onClick={() => openBookingModal()}
               type="button"
@@ -172,7 +309,48 @@ export default function Header() {
           <div className="xl:hidden bg-white/98 backdrop-blur-md border-b border-slate-200 px-4 pt-3 pb-6 space-y-2 animate-in slide-in-from-top-4 duration-200 shadow-xl rounded-b-3xl mt-2 border border-[#00aeef]/20">
             <div className="grid grid-cols-1 gap-1 max-h-[60vh] overflow-y-auto">
               {navLinks.map((link) => {
-                const isActive = pathname === link.href;
+                const isActive = pathname === link.href || (link.href === "/courses" && pathname.startsWith("/courses"));
+
+                if (link.href === "/courses") {
+                  return (
+                    <div key={link.href} className="space-y-1">
+                      <div className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-bold bg-slate-50 text-[#042047]">
+                        <Link
+                          href="/courses"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="flex-1 hover:text-[#00aeef]"
+                        >
+                          {link.label}
+                        </Link>
+                        <button
+                          type="button"
+                          onClick={() => setMobileCoursesOpen(!mobileCoursesOpen)}
+                          className="p-1 text-[#042047] hover:text-[#00aeef] cursor-pointer"
+                          aria-label="Toggle Course Levels"
+                        >
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileCoursesOpen ? "rotate-180" : ""}`} />
+                        </button>
+                      </div>
+
+                      {mobileCoursesOpen && (
+                        <div className="pl-3 pr-1 py-1 space-y-1">
+                          {courseSubLinks.map((sub) => (
+                            <Link
+                              key={sub.href}
+                              href={sub.href}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold text-slate-700 hover:bg-sky-50"
+                            >
+                              <span>{sub.label}</span>
+                              <span className="text-[10px] font-black uppercase text-[#0c71c3]">{sub.badge}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={link.href}
@@ -191,6 +369,17 @@ export default function Header() {
             </div>
 
             <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
+              <a
+                href="https://classroom.aimchessacademy.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full flex items-center justify-center gap-2 bg-[#042047] hover:bg-[#092c5c] text-white font-bold py-3 rounded-full text-sm shadow-md transition-colors cursor-pointer border border-[#00aeef]/40"
+              >
+                <UserCheck className="w-4 h-4 text-[#ffe80a]" />
+                <span>Student & Parent Login</span>
+              </a>
+
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);

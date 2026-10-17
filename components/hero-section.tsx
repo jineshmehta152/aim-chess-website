@@ -106,34 +106,38 @@ export function HeroSection() {
 
           </div>
 
-          {/* Right Column: Iconic Arch / Capsule Collage with Playful Doodles */}
+          {/* Right Column: Balanced Arch Trio Showcase with Playful Doodles & Floating Badges */}
           <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end mt-6 lg:mt-0">
-            <div className="relative w-full max-w-[290px] xs:max-w-[380px] sm:max-w-[520px] h-[330px] xs:h-[420px] sm:h-[540px]">
+            <div className="relative w-full max-w-[340px] xs:max-w-[420px] sm:max-w-[530px] lg:max-w-[560px] h-[380px] xs:h-[450px] sm:h-[520px] lg:h-[550px]">
               
+              {/* Ambient Glow behind cards */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-80 h-64 sm:h-80 bg-[#00aeef]/25 rounded-full blur-3xl pointer-events-none -z-10" />
+              <div className="absolute bottom-4 right-4 w-48 sm:w-60 h-48 sm:h-60 bg-[#ffe80a]/20 rounded-full blur-2xl pointer-events-none -z-10" />
+
               {/* Doodle 1: Yellow Star above center arch */}
-              <div className="absolute top-2 left-[18%] sm:left-[20%] z-20 animate-pulse pointer-events-none">
-                <svg className="w-7 h-7 xs:w-10 xs:h-10 sm:w-12 sm:h-12 text-[#ffe80a]" viewBox="0 0 100 100" fill="currentColor">
+              <div className="absolute -top-1 sm:top-0 left-[26%] sm:left-[28%] z-30 animate-pulse pointer-events-none">
+                <svg className="w-7 h-7 sm:w-10 sm:h-10 text-[#ffe80a] drop-shadow-md" viewBox="0 0 100 100" fill="currentColor">
                   <path d="M50 0 C52 35 65 48 100 50 C65 52 52 65 50 100 C48 65 35 52 0 50 C35 48 48 35 50 0 Z" />
                 </svg>
               </div>
 
-              {/* Doodle 2: Light Cyan / White Hand-drawn Loop Scribble ("lee") */}
-              <div className="absolute top-[32%] left-[2%] sm:left-[6%] z-20 pointer-events-none">
-                <svg className="w-10 h-7 xs:w-16 xs:h-12 sm:w-20 sm:h-14 text-[#00aeef]/85" viewBox="0 0 120 70" fill="none" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round">
+              {/* Doodle 2: Light Cyan Loop Scribble on left margin */}
+              <div className="absolute top-[24%] -left-3 sm:-left-6 z-30 pointer-events-none">
+                <svg className="w-10 h-7 xs:w-14 xs:h-10 sm:w-18 sm:h-12 text-[#00aeef]/85 drop-shadow-sm" viewBox="0 0 120 70" fill="none" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M10 45 C15 20, 30 15, 40 30 C50 45, 35 60, 25 50 C15 40, 25 15, 55 25 C75 32, 85 55, 70 60 C55 65, 60 30, 95 35 C108 37, 115 45, 110 55" />
                 </svg>
               </div>
 
-              {/* Doodle 3: Yellow Star below center arch */}
-              <div className="absolute bottom-8 xs:bottom-12 sm:bottom-14 left-[20%] sm:left-[24%] z-20 pointer-events-none">
-                <svg className="w-5 h-5 sm:w-8 sm:h-8 text-[#ffe80a]" viewBox="0 0 100 100" fill="currentColor">
+              {/* Doodle 3: Small Yellow Sparkle Star at top right */}
+              <div className="absolute top-1 right-2 sm:right-4 z-30 pointer-events-none">
+                <svg className="w-5 h-5 sm:w-7 sm:h-7 text-[#ffe80a] drop-shadow-sm" viewBox="0 0 100 100" fill="currentColor">
                   <path d="M50 0 C52 35 65 48 100 50 C65 52 52 65 50 100 C48 65 35 52 0 50 C35 48 48 35 50 0 Z" />
                 </svg>
               </div>
 
               {/* Doodle 4: White Radiating Sunburst Doodle at bottom right */}
-              <div className="absolute bottom-2 right-[20%] xs:right-[24%] sm:right-[32%] z-20 pointer-events-none">
-                <svg className="w-10 h-10 xs:w-16 xs:h-16 sm:w-20 sm:h-20 text-white/90" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round">
+              <div className="absolute bottom-1 right-1 sm:right-3 z-10 pointer-events-none opacity-80">
+                <svg className="w-10 h-10 sm:w-16 sm:h-16 text-white" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round">
                   <line x1="8" y1="50" x2="28" y2="50" />
                   <line x1="14" y1="30" x2="30" y2="38" />
                   <line x1="24" y1="14" x2="38" y2="30" />
@@ -145,46 +149,75 @@ export function HeroSection() {
                 </svg>
               </div>
 
-              {/* Arch 1: Top Right Arch Card */}
-              <div className="absolute top-0 right-0 sm:right-2 w-24 xs:w-32 sm:w-40 lg:w-44 h-32 xs:h-44 sm:h-56 rounded-t-full rounded-b-[20px] xs:rounded-b-[24px] sm:rounded-b-[32px] overflow-hidden bg-[#00aeef] shadow-2xl z-0 flex items-end justify-center transition-transform duration-300 hover:scale-105 border-2 border-white/20">
+              {/* Card 1: Left Stepped Arch (Tournament Celebration & Trophy) */}
+              <div className="absolute bottom-3 sm:bottom-5 -left-2 w-[42%] sm:w-[40%] h-[58%] sm:h-[62%] rounded-t-full rounded-b-[24px] sm:rounded-b-[32px] overflow-hidden bg-slate-900/60 shadow-2xl z-10 -rotate-2 hover:rotate-0 transition-transform duration-300 border-4 border-white/85">
                 <div className="relative w-full h-full">
                   <Image 
-                    src="/images/prize-1.jpg" 
-                    alt="Chess Training in Action"
+                    src="/21.png" 
+                    alt="AIM Chess Tournament Winners"
                     fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 150px, 200px"
+                    className="object-cover object-center"
+                    sizes="(max-width: 640px) 150px, 220px"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#042047]/60 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#042047]/60 via-transparent to-transparent pointer-events-none" />
                 </div>
               </div>
 
-              {/* Arch 2: Center Main Tall Arch Card */}
-              <div className="absolute top-5 xs:top-6 sm:top-8 left-8 xs:left-14 sm:left-20 w-32 xs:w-44 sm:w-56 lg:w-64 h-48 xs:h-64 sm:h-84 lg:h-96 rounded-t-full rounded-b-[24px] xs:rounded-b-[28px] sm:rounded-b-[36px] overflow-hidden bg-[#0c71c3] shadow-2xl z-10 flex items-end justify-center transition-transform duration-300 hover:scale-105 border-4 border-white/30">
+              {/* Card 2: Center Main Hero Arch (Coach Somnath & Students Squad) */}
+              <div className="absolute top-4 sm:top-5 left-[24%] sm:left-[25%] w-[52%] sm:w-[50%] h-[82%] sm:h-[84%] rounded-t-full rounded-b-[32px] sm:rounded-b-[40px] overflow-hidden bg-slate-900 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.65)] z-20 transition-transform duration-300 hover:scale-[1.02] border-4 border-white">
                 <div className="relative w-full h-full">
                   <Image 
-                    src="/images/prize-6.jpg" 
-                    alt="AIM Chess Academy Grandmaster Session"
+                    src="/26.png" 
+                    alt="AIM Chess Academy Mentors and Students"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     priority
-                    sizes="(max-width: 768px) 250px, 320px"
+                    sizes="(max-width: 640px) 200px, 300px"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#042047]/70 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#042047]/75 via-transparent to-transparent pointer-events-none" />
+                  
+                  {/* Subtle caption pill at the bottom of the main card */}
+                  <div className="absolute bottom-2.5 inset-x-2 sm:inset-x-3 text-center pointer-events-none">
+                    <span className="inline-block bg-[#042047]/85 backdrop-blur-md text-white text-[9px] xs:text-[10px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-white/20 shadow-sm truncate max-w-full">
+                      AIM Chess Champions
+                    </span>
+                  </div>
                 </div>
               </div>
 
-              {/* Arch 3: Bottom Left Arch Card */}
-              <div className="absolute bottom-3 xs:bottom-5 sm:bottom-8 left-0 sm:left-2 w-24 xs:w-32 sm:w-40 lg:w-44 h-32 xs:h-44 sm:h-56 rounded-t-full rounded-b-[18px] xs:rounded-b-[20px] sm:rounded-b-[28px] overflow-hidden bg-[#ffe80a] shadow-xl z-0 flex items-end justify-center transition-transform duration-300 hover:scale-105 border-2 border-white/20">
+              {/* Card 3: Right Stepped Arch (Young Trophy Winner) */}
+              <div className="absolute top-2 sm:top-3 -right-3 w-[42%] sm:w-[40%] h-[58%] sm:h-[62%] rounded-t-full rounded-b-[24px] sm:rounded-b-[32px] overflow-hidden bg-slate-900/60 shadow-2xl z-10 rotate-2 hover:rotate-0 transition-transform duration-300 border-4 border-white/85">
                 <div className="relative w-full h-full">
                   <Image 
-                    src="/images/achievement-2.jpg" 
-                    alt="Chess Tournament Winners"
+                    src="/20.png" 
+                    alt="Young Chess Champion"
                     fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 150px, 200px"
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 150px, 220px"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#042047]/60 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#042047]/60 via-transparent to-transparent pointer-events-none" />
+                </div>
+              </div>
+
+              {/* Floating Badge 1: Top Left - 50+ Trophies */}
+              <div className="absolute top-4 -left-2 sm:-left-4 z-30 flex items-center gap-2 bg-[#042047]/95 backdrop-blur-md border border-white/25 text-white px-2.5 sm:px-3.5 py-1.5 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-200">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-gradient-to-br from-[#ffe80a] to-[#f59e0b] flex items-center justify-center text-[#042047] shadow-sm shrink-0">
+                  <Trophy className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
+                </div>
+                <div>
+                  <div className="text-[11px] sm:text-xs font-black text-white leading-tight">50+ Trophies</div>
+                  <div className="text-[8px] sm:text-[9px] text-[#ffe80a] font-bold leading-none">State &amp; National</div>
+                </div>
+              </div>
+
+              {/* Floating Badge 2: Bottom Right - FIDE Certified */}
+              <div className="absolute -bottom-2 sm:bottom-0 right-1 sm:-right-3 z-30 flex items-center gap-2 bg-[#042047]/95 backdrop-blur-md border border-white/25 text-white px-2.5 sm:px-3.5 py-1.5 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-200">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-gradient-to-br from-[#00aeef] to-[#0284c7] flex items-center justify-center text-white shadow-sm shrink-0">
+                  <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
+                </div>
+                <div>
+                  <div className="text-[11px] sm:text-xs font-black text-white leading-tight">FIDE Certified</div>
+                  <div className="text-[8px] sm:text-[9px] text-sky-300 font-bold leading-none">Top Mentorship</div>
                 </div>
               </div>
 

@@ -17,7 +17,12 @@ import {
   UserCheck,
   Flame,
   Target,
-  Quote
+  Quote,
+  Clock,
+  Calendar,
+  Users,
+  MapPin,
+  Phone
 } from "lucide-react";
 import { useBookingModal } from "@/context/booking-modal-context";
 import { useSiteSettings } from "@/context/site-settings-context";
@@ -51,6 +56,30 @@ export default function FounderProfileSection() {
 
   const coaches = [
     {
+      name: "IM PRANTIK ROY",
+      role: "International Master & Masterclass Mentor",
+      ratingBadge: "INTERNATIONAL MASTER (IM)",
+      fullHeading: "IM Prantik Roy – Cross 1800+ Initiative Leader",
+      image: "/images/coaches/im-prantik-roy.jpg",
+      experience: "15+ YRS",
+      tag: "MASTERCLASS LEADER",
+      bio: "Renowned International Master heading the exclusive 'Cross 1800+ Initiative' Master Sessions at AIM Chess Academy Barasat. Mentors ambitious tournament contenders in advanced opening repertoire, middlegame strategies, calculation depth, and psychological resilience.",
+      pillars: ["Cross 1800+ Initiative", "Deep Tactical Calculation", "Grandmaster Opening Prep"],
+      whatsappMsg: "Hi IM Prantik Roy, I would like to inquire about the Cross 1800+ Master Session at AIM Chess Academy Barasat."
+    },
+    {
+      name: "SOUVICK ROY CHOWDHURY",
+      role: "Senior Tournament Coach & Tactical Strategist",
+      ratingBadge: "FIDE RATING: 1966",
+      fullHeading: "Souvick Roy Chowdhury (FIDE Rating: 1966)",
+      image: "/souvick.jpeg",
+      experience: "10+ YRS",
+      tag: "ELITE TOURNAMENT COACH",
+      bio: "Accomplished tournament player and senior trainer boasting an impressive 1966 FIDE rating. Souvick specializes in competitive match preparation, middlegame tactical sharpness, calculation trees, and tournament clock psychology.",
+      pillars: ["1966 FIDE Peak Mastery", "Advanced Tactical Calculation", "Tournament Clock Psychology"],
+      whatsappMsg: "Hi Coach Souvick, I would like to inquire about competitive tournament coaching batches at AIM Chess Academy."
+    },
+    {
       name: "SOMNATH BANERJEE",
       role: "Strategic Coach & Foundation Specialist",
       ratingBadge: "FIDE RATING: 1646",
@@ -59,8 +88,32 @@ export default function FounderProfileSection() {
       experience: "8+ YRS",
       tag: "FOUNDATION SPECIALIST",
       bio: "An experienced chess coach with a proven track record of developing numerous FIDE-rated players. His strategic training methods help students build a strong foundation and excel in competitive chess.",
-      pillars: ["Opening Repertoire", "FIDE Rating Preparation"],
+      pillars: ["Opening Repertoire", "FIDE Rating Preparation", "Interactive Analysis"],
       whatsappMsg: "Hi Coach Somnath, I would like to inquire about foundation and competitive chess coaching."
+    },
+    {
+      name: "COACH GANESH VENNA",
+      role: "Competitive Coach & Positional Specialist",
+      ratingBadge: "FIDE RATING: 1601",
+      fullHeading: "Coach Ganesh Venna (FIDE Rating: 1601)",
+      image: "/ganesh.jpeg",
+      experience: "7+ YRS",
+      tag: "POSITIONAL SPECIALIST",
+      bio: "A dedicated competitive trainer with a 1601 FIDE rating, Coach Ganesh focuses on helping students develop sound positional understanding, active piece coordination, and resilient endgame technique to cross key rating thresholds.",
+      pillars: ["Positional Understanding", "Middlegame Strategy", "Active Piece Play & Defense"],
+      whatsappMsg: "Hi Coach Ganesh, I would like to inquire about coaching batches at AIM Chess Academy."
+    },
+    {
+      name: "SARBOJEET BHOWMICK",
+      role: "Development Coach & Foundation Specialist",
+      ratingBadge: "FIDE RATING: 1567",
+      fullHeading: "Sarbojeet Bhowmick (FIDE Rating: 1567)",
+      image: "/sabojit.jpeg",
+      experience: "6+ YRS",
+      tag: "FOUNDATION & TACTICS",
+      bio: "Holding an active 1567 FIDE rating, Sarbojeet specializes in nurturing young minds with structured tactical foundations, error diagnostics, and patient habit-building required to graduate from beginner to rated tournament player.",
+      pillars: ["Tactical Awareness & Calculation", "Junior Tournament Foundations", "Patience & Blunder Prevention"],
+      whatsappMsg: "Hi Coach Sarbojeet, I would like to inquire about foundation and junior chess training at AIM Chess Academy."
     },
     {
       name: "IM VISHAL SAREEN",
@@ -71,7 +124,7 @@ export default function FounderProfileSection() {
       experience: "20+ YRS",
       tag: "NATIONAL TEAM COACH",
       bio: "A renowned international master, Vishal Sareen is the Indian Women's Team Coach and a leading chess curriculum designer. His expert classes provide high-level training, making him one of the best coaches in the country.",
-      pillars: ["National Team Pedagogy", "Elite Masterclasses"],
+      pillars: ["National Team Pedagogy", "Elite Masterclasses", "High Performance Guidance"],
       whatsappMsg: "Hi IM Vishal Sareen, I would like to know more about the advanced masterclasses."
     }
   ];
@@ -223,7 +276,165 @@ export default function FounderProfileSection() {
         </div>
 
         {/* ========================================================================= */}
-        {/* 2. SIDE-BY-SIDE COACH PROFILES (Matching Bold Sporty Design)              */}
+        {/* 2. BARASAT OFFLINE MASTER SESSION WITH IM PRANTIK ROY (Authentic Event)  */}
+        {/* ========================================================================= */}
+        <div className="relative rounded-[32px] bg-[#042047] text-white border-[3.5px] border-[#ffe80a] shadow-[8px_8px_0px_0px_#ffe80a] p-6 sm:p-10 overflow-hidden">
+          
+          {/* Subtle background glow */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#00aeef]/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#ffe80a]/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            {/* Left Content */}
+            <div className="lg:col-span-8 space-y-6 text-left">
+              
+              <div className="flex flex-wrap items-center gap-2.5">
+                <span className="px-3.5 py-1 rounded-full bg-[#ffe80a] text-[#042047] text-xs font-black uppercase tracking-wider border border-[#042047]">
+                  FOR THE FIRST TIME AT AIM CHESS ACADEMY BARASAT
+                </span>
+                <span className="px-3.5 py-1 rounded-full bg-white/10 text-[#ffe80a] text-xs font-black uppercase tracking-wider border border-white/20">
+                  🎯 CROSS 1800+ INITIATIVE
+                </span>
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="text-2xl sm:text-4xl font-black text-white tracking-tight uppercase leading-tight">
+                  Master Session with <span className="text-[#ffe80a]">IM Prantik Roy</span>
+                </h3>
+                <p className="text-slate-300 text-sm sm:text-base font-medium max-w-2xl leading-relaxed">
+                  Take your game to the next level with expert guidance. Learn, Improve, and Achieve through intensive 3-hour offline masterclasses designed to break through the 1800+ Elo barrier.
+                </p>
+              </div>
+
+              {/* 4 Feature Badges */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <div className="p-3 rounded-2xl bg-white/5 border border-white/15 text-center">
+                  <div className="flex items-center justify-center gap-1.5 text-[11px] font-bold text-[#ffe80a] uppercase tracking-wider">
+                    <Clock className="w-3.5 h-3.5 text-[#ffe80a]" />
+                    <span>Per Session</span>
+                  </div>
+                  <div className="text-base sm:text-lg font-black text-white mt-0.5">3 Hours Long</div>
+                </div>
+
+                <div className="p-3 rounded-2xl bg-white/5 border border-white/15 text-center">
+                  <div className="flex items-center justify-center gap-1.5 text-[11px] font-bold text-[#ffe80a] uppercase tracking-wider">
+                    <Calendar className="w-3.5 h-3.5 text-[#ffe80a]" />
+                    <span>Total Format</span>
+                  </div>
+                  <div className="text-base sm:text-lg font-black text-white mt-0.5">2 Sessions</div>
+                </div>
+
+                <div className="p-3 rounded-2xl bg-white/5 border border-white/15 text-center">
+                  <div className="flex items-center justify-center gap-1.5 text-[11px] font-bold text-[#ffe80a] uppercase tracking-wider">
+                    <Users className="w-3.5 h-3.5 text-[#ffe80a]" />
+                    <span>Class Size</span>
+                  </div>
+                  <div className="text-base sm:text-lg font-black text-white mt-0.5">Max 10 Only</div>
+                </div>
+
+                <div className="p-3 rounded-2xl bg-white/5 border border-white/15 text-center">
+                  <div className="flex items-center justify-center gap-1.5 text-[11px] font-bold text-[#ffe80a] uppercase tracking-wider">
+                    <MapPin className="w-3.5 h-3.5 text-[#ffe80a]" />
+                    <span>Format</span>
+                  </div>
+                  <div className="text-base sm:text-lg font-black text-white mt-0.5">Offline Barasat</div>
+                </div>
+              </div>
+
+              {/* What You Will Learn Bullets */}
+              <div className="p-4 rounded-2xl bg-black/25 border border-white/10 space-y-2">
+                <div className="text-xs font-black text-[#ffe80a] uppercase tracking-wider">
+                  What You Will Learn Under IM Prantik Roy:
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-medium text-slate-200">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#00aeef] shrink-0" />
+                    <span>Opening Repertoire & Preparation</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#00aeef] shrink-0" />
+                    <span>Middlegame Plans & Strategy</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#00aeef] shrink-0" />
+                    <span>Tactical Awareness & Calculation</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#00aeef] shrink-0" />
+                    <span>Positional Understanding & Strategy</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#00aeef] shrink-0" />
+                    <span>Endgame Techniques & Conversion</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#00aeef] shrink-0" />
+                    <span>Practical Rating Tips & Interactive Q&A</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Right Pricing & Booking Box */}
+            <div className="lg:col-span-4 bg-white text-[#042047] rounded-2xl sm:rounded-[28px] border-[3px] border-[#ffe80a] p-6 text-center space-y-5 shadow-xl">
+              
+              <div className="inline-block px-3 py-1 rounded-full bg-red-100 text-red-700 text-[10px] font-black uppercase tracking-wider border border-red-300">
+                ⚠️ LIMITED SEATS · SERIOUS PLAYERS ONLY
+              </div>
+
+              <div className="space-y-3">
+                <div className="p-3.5 rounded-xl bg-sky-50 border border-[#00aeef]/40">
+                  <div className="text-[11px] font-black text-[#0c71c3] uppercase tracking-wider">
+                    AIM Chess Academy Players
+                  </div>
+                  <div className="text-lg sm:text-xl font-black text-[#042047] mt-0.5">
+                    Enrolled Academy Rate
+                  </div>
+                  <div className="text-xs font-bold text-slate-500">
+                    Contact for seat fee &amp; schedule
+                  </div>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-300">
+                  <div className="text-[11px] font-black text-amber-800 uppercase tracking-wider">
+                    Outside Players
+                  </div>
+                  <div className="text-lg sm:text-xl font-black text-[#042047] mt-0.5">
+                    Open Guest Rate
+                  </div>
+                  <div className="text-xs font-bold text-slate-500">
+                    Contact for seat fee &amp; schedule
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <a
+                  href={getWhatsAppUrl("Hi AIM Chess Academy, I would like to reserve a seat for the IM Prantik Roy Master Session (Cross 1800+ Initiative) at Barasat.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-[#042047] hover:bg-[#0c71c3] text-[#ffe80a] font-black text-sm py-3.5 px-4 rounded-xl shadow-md transition-all uppercase tracking-wider"
+                >
+                  <MessageCircle className="w-4 h-4 text-[#ffe80a]" />
+                  <span>Reserve Masterclass Seat</span>
+                </a>
+
+                <div className="flex items-center justify-center gap-1.5 text-xs font-bold text-slate-600">
+                  <Phone className="w-3.5 h-3.5 text-[#00aeef]" />
+                  <span>Call / WhatsApp: <a href="tel:9903452493" className="text-[#0c71c3] hover:underline font-black">9903452493</a></span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* ========================================================================= */}
+        {/* 3. EXPERT COACHING PANEL (FIDE-Certified & International Masters)          */}
         {/* ========================================================================= */}
         <div className="pt-4 space-y-8">
           
@@ -232,12 +443,12 @@ export default function FounderProfileSection() {
             <div className="h-[3px] bg-[#042047] flex-1" />
             <div className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-[#042047] text-white font-black text-xs sm:text-sm uppercase tracking-wider shadow-[3px_3px_0px_0px_#ffe80a]">
               <Sparkles className="w-4 h-4 text-[#ffe80a]" />
-              <span>EXPERT COACHING PANEL</span>
+              <span>EXPERT COACHING PANEL ({coaches.length} CERTIFIED MENTORS)</span>
             </div>
             <div className="h-[3px] bg-[#042047] flex-1" />
           </div>
 
-          {/* 2 Side-by-Side Cards */}
+          {/* Coach Cards Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {coaches.map((coach, index) => (
               <div

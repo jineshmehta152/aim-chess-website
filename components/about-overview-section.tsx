@@ -37,7 +37,7 @@ export default function AboutOverviewSection() {
               {/* Top Arched Image Card (Coaches & Winners Trophy Celebration) */}
               <div className="relative w-[76%] xs:w-[72%] sm:w-[70%] aspect-[4/4.6] rounded-[36px] rounded-tl-[120px] rounded-tr-[40px] overflow-hidden shadow-2xl border-4 border-white bg-slate-100 z-10 group">
                 <Image 
-                  src="/images/prize-1.jpg" 
+                  src="/14.png" 
                   alt="AIM Chess Academy Trophy Celebration" 
                   fill 
                   className="object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -50,7 +50,7 @@ export default function AboutOverviewSection() {
               {/* Bottom Right Overlapping Image Card (Live Chess Coaching Classroom) */}
               <div className="absolute -bottom-2 sm:bottom-2 right-0 w-[74%] xs:w-[70%] sm:w-[68%] aspect-[4/3.4] rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(4,32,71,0.22)] border-4 border-white bg-slate-100 z-20 group">
                 <Image 
-                  src="/images/achievement-3.jpg" 
+                  src="/16.png" 
                   alt="AIM Chess Academy Live Classroom Training" 
                   fill 
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -117,7 +117,7 @@ export default function AboutOverviewSection() {
 
             {/* Body Paragraph 2 */}
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
-              Led by a team of passionate FIDE-certified instructors, we offer expert-level coaching for students of all skill levels. Our curriculum is designed to not only teach the fundamentals but also to inspire creativity and critical thinking on the chessboard and beyond.
+              Led by a distinguished panel of FIDE-certified trainers, International Masters (IM Prantik Roy, IM Vishal Sareen), and tournament-rated coaches (Souvick Roy Chowdhury 1966, Somnath Banerjee 1646, Ganesh Venna 1601, Sarbojeet Bhowmick 1567), our curriculum is engineered to ignite tactical creativity and disciplined critical thinking on the board and in life.
             </p>
 
             {/* Trust Highlights Checklist */}

@@ -30,10 +30,10 @@ export default function AboutSection() {
           
           {/* Left Column: Featured Image Card with Arch Curve & Floating Badges */}
           <div className="lg:col-span-6 relative flex items-center justify-center">
-            <div className="relative w-full max-w-[340px] xs:max-w-[420px] sm:max-w-[480px] aspect-[4/4.5] rounded-3xl xs:rounded-[36px] sm:rounded-[44px] rounded-tl-[70px] xs:rounded-tl-[90px] sm:rounded-tl-[110px] overflow-hidden shadow-2xl border-4 border-[#00aeef]/20 bg-slate-50 group">
+            <div className="relative w-full max-w-[340px] xs:max-w-[420px] sm:max-w-[480px] aspect-[4/3] rounded-3xl xs:rounded-[36px] sm:rounded-[44px] rounded-tl-[70px] xs:rounded-tl-[90px] sm:rounded-tl-[110px] overflow-hidden shadow-2xl border-4 border-[#00aeef]/20 bg-slate-50 group">
               
               <Image 
-                src="/aim1.jpg" 
+                src="/1.png" 
                 alt="AIM Chess Academy Training Session"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
