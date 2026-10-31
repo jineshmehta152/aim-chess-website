@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useBookingModal } from "@/context/booking-modal-context";
 import { useSiteSettings } from "@/context/site-settings-context";
+import { GlobalFlagsTicker } from "@/components/global-flags-ticker";
 import { 
   Menu, 
   X, 
@@ -128,6 +129,11 @@ export default function Header() {
             </span>
           </div>
 
+          {/* Desktop/Tablet Moving Flags Ticker in Top Bar */}
+          <div className="hidden lg:flex items-center justify-center min-w-0 px-2 flex-1">
+            <GlobalFlagsTicker variant="topbar" />
+          </div>
+
           <div className="flex items-center space-x-2 sm:space-x-4 text-xs shrink-0">
             <a 
               href={getPhoneUrl()} 
@@ -179,6 +185,11 @@ export default function Header() {
                 />
               </div>
             </Link>
+          </div>
+
+          {/* Center (Mobile & Tablet): Moving Countries Flags Marquee (Placed in the exact circled header space) */}
+          <div className="flex xl:hidden flex-1 items-center justify-center min-w-0 mx-1 xs:mx-2 sm:mx-3">
+            <GlobalFlagsTicker variant="header" />
           </div>
 
           {/* Center: Main Navigation in Pill Structure with Logo Colors */}

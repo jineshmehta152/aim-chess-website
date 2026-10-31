@@ -211,3 +211,37 @@
 .chess-square-valid {
   background-color: #e8e18c !important;
 }
+
+/* Continuous Flag Marquee Animation */
+@keyframes flagTicker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-flag-ticker {
+  display: flex;
+  width: max-content;
+  animation: flagTicker 22s linear infinite;
+  will-change: transform;
+}
+
+.animate-flag-ticker:hover,
+.animate-flag-ticker:active {
+  animation-play-state: paused;
+}
+
+.animate-flag-ticker-slow {
+  display: flex;
+  width: max-content;
+  animation: flagTicker 36s linear infinite;
+  will-change: transform;
+}
+
+.animate-flag-ticker-slow:hover,
+.animate-flag-ticker-slow:active {
+  animation-play-state: paused;
+}

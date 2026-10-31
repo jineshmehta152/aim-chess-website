@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useBookingModal } from "@/context/booking-modal-context";
+import { GlobalFlagsTicker } from "@/components/global-flags-ticker";
 import { Calendar, ArrowRight, Sparkles, CheckCircle2, Trophy, Star, ShieldCheck } from "lucide-react";
 
 export function HeroSection() {
@@ -102,6 +103,11 @@ export function HeroSection() {
                 <span>{t("ctaExplore") || "Explore Courses"}</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </Link>
+            </div>
+
+            {/* Global Presence Trust Marquee */}
+            <div className="pt-2">
+              <GlobalFlagsTicker variant="hero" />
             </div>
 
           </div>
