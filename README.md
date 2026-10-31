@@ -14,6 +14,7 @@ Modern, responsive web application for **AIM Chess Academy** built with Next.js 
 
 ## 🛠️ Tech Stack
 
+
 - **Framework**: Next.js 14+ (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS / Vanilla CSS (Neo-Brutalist Sports Branding)
