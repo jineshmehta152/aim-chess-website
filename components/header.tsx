@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useBookingModal } from "@/context/booking-modal-context";
 import { useSiteSettings } from "@/context/site-settings-context";
-import { GlobalFlagsTicker } from "@/components/global-flags-ticker";
+import { useCountrySelector, COUNTRY_OPTIONS } from "@/components/country-selector-modal";
 import { 
   Menu, 
   X, 
@@ -15,14 +15,21 @@ import {
   Sparkles, 
   GraduationCap,
   UserCheck,
-  ChevronDown
+  ChevronDown,
+  Globe2
 } from "lucide-react";
 
 export default function Header() {
   const t = useTranslations("nav");
   const pathname = usePathname();
+
+  // If this is the marketing landing page (/lp), suppress the standard navigation bar
+  if (pathname === "/lp" || pathname.startsWith("/lp/")) {
+    return null;
+  }
   const { openBookingModal, openStudentLoginModal } = useBookingModal();
   const { phone, getPhoneUrl, getWhatsAppUrl, banner_notice, isBannerVisible, whatsapp_display } = useSiteSettings();
+  const { openSelector, selectedCountry } = useCountrySelector();
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -99,15 +106,17 @@ export default function Header() {
     { href: "/courses/fide-group", label: "FIDE Rating Course", badge: "Elo Cohort" },
   ];
 
+  // Primary navigation according to Launch Brief recommendation:
+  // Courses | Rated Players | Coaches | Student Portal | Tournaments | Franchise | About | Contact | Choose Country
   const navLinks = [
-    { href: "/", label: t("home") || "Home" },
-    { href: "/about", label: t("about") || "About Us" },
-    { href: "/courses", label: t("courses") || "Courses Offered" },
-    { href: "/achievements", label: "Achievements" },
-    { href: "/blog", label: "Blog" },
-    { href: "/gallery", label: t("gallery") || "Gallery" },
-    { href: "/faq", label: t("faq") || "FAQs" },
-    { href: "/contact", label: t("contact") || "Contact Us" },
+    { href: "/courses", label: "Courses" },
+    { href: "/achievements", label: "Rated Players" },
+    { href: "/about#coaches", label: "Coaches" },
+    { href: "/#portal-preview", label: "Student Portal" },
+    { href: "/achievements#tournaments", label: "Tournaments" },
+    { href: "/franchise", label: "Franchise" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -122,19 +131,22 @@ export default function Header() {
                 <span className="text-white/95 font-medium truncate">{banner_notice}</span>
               ) : (
                 <>
-                  <span className="hidden sm:inline">AIM Chess Academy · Empowering Children&apos;s Minds · FIDE Certified Trainers</span>
-                  <span className="sm:hidden truncate">AIM Chess Academy · Online & Offline</span>
+                  <span className="hidden sm:inline">AIM Chess Academy · International Online Chess Education · FIDE Certified Trainers</span>
+                  <span className="sm:hidden truncate">AIM Chess Academy · International Online Coaching</span>
                 </>
               )}
             </span>
           </div>
 
-          {/* Desktop/Tablet Moving Flags Ticker in Top Bar */}
-          <div className="hidden lg:flex items-center justify-center min-w-0 px-2 flex-1">
-            <GlobalFlagsTicker variant="topbar" />
-          </div>
-
           <div className="flex items-center space-x-2 sm:space-x-4 text-xs shrink-0">
+            <button
+              onClick={openSelector}
+              type="button"
+              className="hidden md:inline-flex items-center gap-1 text-[#ffe80a] hover:text-white transition-colors font-bold text-xs cursor-pointer"
+            >
+              <Globe2 className="w-3.5 h-3.5 text-[#00aeef]" />
+              <span>Choose Country: {selectedCountry.flag} {selectedCountry.name}</span>
+            </button>
             <a 
               href={getPhoneUrl()} 
               className="hidden md:flex items-center gap-1 text-[#00aeef] hover:text-[#ffe80a] transition-colors font-semibold"
@@ -187,20 +199,29 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Center (Mobile & Tablet): Moving Countries Flags Marquee (Placed in the exact circled header space) */}
-          <div className="flex xl:hidden flex-1 items-center justify-center min-w-0 mx-1 xs:mx-2 sm:mx-3">
-            <GlobalFlagsTicker variant="header" />
+          {/* Center (Mobile & Tablet): Compact Functional Country Selector per launch brief */}
+          <div className="flex xl:hidden items-center justify-center min-w-0 mx-1 xs:mx-2">
+            <button
+              type="button"
+              onClick={openSelector}
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-[#00aeef]/40 bg-white/95 hover:bg-sky-50 shadow-xs text-xs font-bold text-[#042047] cursor-pointer"
+              title="Select your country and timezone"
+            >
+              <span className="text-sm">{selectedCountry.flag}</span>
+              <span className="text-[11px] font-black">{selectedCountry.name}</span>
+              <ChevronDown className="w-3 h-3 text-[#00aeef]" />
+            </button>
           </div>
 
           {/* Center: Main Navigation in Pill Structure with Logo Colors */}
           <div 
-            className={`hidden xl:flex items-center rounded-full px-3 2xl:px-5 py-1.5 shadow-xs bg-slate-50/80 backdrop-blur-sm transition-all duration-300 ${
+            className={`hidden xl:flex items-center rounded-full px-2.5 2xl:px-4 py-1.5 shadow-xs bg-slate-50/80 backdrop-blur-sm transition-all duration-300 ${
               isScrolled
                 ? "border-2 border-[#00aeef]"
                 : "border-2 border-[#042047]/15"
             }`}
           >
-            <nav className="flex items-center space-x-1.5 2xl:space-x-3.5">
+            <nav className="flex items-center space-x-1 2xl:space-x-2.5">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href || (link.href === "/courses" && pathname.startsWith("/courses"));
 
@@ -219,7 +240,7 @@ export default function Header() {
                         aria-expanded={desktopCoursesOpen}
                         aria-haspopup="true"
                         aria-label="Toggle courses menu"
-                        className={`transition-colors duration-150 whitespace-nowrap text-[12px] xl:text-[12.5px] 2xl:text-[14px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1 cursor-pointer select-none ${
+                        className={`transition-colors duration-150 whitespace-nowrap text-[12px] xl:text-[12.5px] 2xl:text-[13.5px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1 cursor-pointer select-none ${
                           isActive || desktopCoursesOpen
                             ? "text-white bg-[#042047] shadow-xs"
                             : "text-[#042047] hover:text-[#00aeef] hover:bg-white"
@@ -268,7 +289,7 @@ export default function Header() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`transition-colors duration-150 whitespace-nowrap text-[12px] xl:text-[12.5px] 2xl:text-[14px] font-bold px-2 py-1 rounded-full ${
+                    className={`transition-colors duration-150 whitespace-nowrap text-[12px] xl:text-[12.5px] 2xl:text-[13.5px] font-bold px-2 py-1 rounded-full ${
                       isActive 
                         ? "text-white bg-[#042047] shadow-xs"
                         : "text-[#042047] hover:text-[#00aeef] hover:bg-white"
@@ -278,10 +299,22 @@ export default function Header() {
                   </Link>
                 );
               })}
+
+              {/* Functional Choose Country button in desktop navbar */}
+              <button
+                type="button"
+                onClick={openSelector}
+                className="transition-colors duration-150 whitespace-nowrap text-[12px] xl:text-[12.5px] 2xl:text-[13.5px] font-black px-2.5 py-1 rounded-full text-[#042047] hover:text-[#00aeef] hover:bg-white flex items-center gap-1 cursor-pointer bg-sky-50/80 border border-[#00aeef]/30"
+                title="Select country and timezone"
+              >
+                <span>{selectedCountry.flag}</span>
+                <span className="hidden 2xl:inline">{selectedCountry.name}</span>
+                <Globe2 className="w-3.5 h-3.5 text-[#00aeef]" />
+              </button>
             </nav>
           </div>
 
-          {/* Right: Student Login + Enroll For Free Demo CTA Buttons */}
+          {/* Right: Student Login + Book Free Assessment CTA Buttons */}
           <div className="hidden sm:flex items-center space-x-2 2xl:space-x-3 shrink-0">
             <a
               href="https://classroom.aimchessacademy.com"
@@ -296,10 +329,10 @@ export default function Header() {
             <button
               onClick={() => openBookingModal()}
               type="button"
-              className="inline-flex items-center gap-1.5 bg-[#ffe80a] hover:bg-[#fed100] text-[#042047] font-black px-4 2xl:px-5 py-2 rounded-full text-xs 2xl:text-sm border-2 border-[#042047] shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 bg-[#ffe80a] hover:bg-[#fed100] text-[#042047] font-black px-3.5 2xl:px-4.5 py-2 rounded-full text-xs 2xl:text-sm border-2 border-[#042047] shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 cursor-pointer whitespace-nowrap"
             >
               <GraduationCap className="w-4 h-4 shrink-0 text-[#042047]" />
-              <span>{t("bookNow") || "Book Free Demo"}</span>
+              <span>Book Free Assessment</span>
             </button>
           </div>
 
@@ -318,7 +351,29 @@ export default function Header() {
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
           <div className="xl:hidden bg-white/98 backdrop-blur-md border-b border-slate-200 px-4 pt-3 pb-6 space-y-2 animate-in slide-in-from-top-4 duration-200 shadow-xl rounded-b-3xl mt-2 border border-[#00aeef]/20">
-            <div className="grid grid-cols-1 gap-1 max-h-[60vh] overflow-y-auto">
+            
+            {/* Mobile Country Selector Quick Card */}
+            <div className="mb-2 p-3 rounded-2xl bg-sky-50/90 border border-[#00aeef]/30 flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <span className="text-2xl">{selectedCountry.flag}</span>
+                <div>
+                  <div className="text-[10px] uppercase font-black text-[#0c71c3] tracking-wider">Your Region &amp; Timezone</div>
+                  <div className="text-xs font-black text-[#042047]">{selectedCountry.name} · {selectedCountry.timezones}</div>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  openSelector();
+                }}
+                className="px-3 py-1 rounded-lg bg-[#042047] text-white text-[11px] font-bold hover:bg-[#00aeef] transition-colors cursor-pointer"
+              >
+                Change
+              </button>
+            </div>
+
+            <div className="grid grid-cols-1 gap-1 max-h-[55vh] overflow-y-auto">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href || (link.href === "/courses" && pathname.startsWith("/courses"));
 
@@ -400,7 +455,7 @@ export default function Header() {
                 className="w-full flex items-center justify-center gap-2 bg-[#ffe80a] hover:bg-[#fed100] text-[#042047] font-black py-3 rounded-full text-sm shadow-md transition-colors cursor-pointer border-2 border-[#042047]"
               >
                 <GraduationCap className="w-4 h-4" />
-                <span>{t("bookNow") || "Book Free Demo"}</span>
+                <span>Book a Free Assessment</span>
               </button>
               <Link
                 href="/contact"

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useSiteSettings } from "@/context/site-settings-context";
 import { 
   MapPin, 
@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 
 export default function Footer() {
+  const pathname = usePathname();
   const { 
     phone, 
     email, 
@@ -37,6 +38,11 @@ export default function Footer() {
   } = useSiteSettings();
 
   const currentYear = new Date().getFullYear();
+
+  // If this is the marketing landing page (/lp), suppress the standard website footer
+  if (pathname === "/lp" || pathname.startsWith("/lp/")) {
+    return null;
+  }
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -311,6 +317,18 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/blog" className="text-slate-300 hover:text-[#ffe80a] hover:translate-x-1 inline-block transition-all">Chess Blog &amp; Guides</Link>
+              </li>
+              <li>
+                <Link href="/franchise" className="text-[#ffe80a] font-bold hover:underline hover:translate-x-1 inline-block transition-all">Physical Academy Franchise</Link>
+              </li>
+              <li>
+                <Link href="/in" className="text-slate-300 hover:text-[#ffe80a] hover:translate-x-1 inline-block transition-all">🇮🇳 India Batches</Link>
+              </li>
+              <li>
+                <Link href="/us" className="text-slate-300 hover:text-[#ffe80a] hover:translate-x-1 inline-block transition-all">🇺🇸 USA &amp; Canada Batches</Link>
+              </li>
+              <li>
+                <Link href="/uk" className="text-slate-300 hover:text-[#ffe80a] hover:translate-x-1 inline-block transition-all">🇬🇧 UK &amp; European Batches</Link>
               </li>
               <li>
                 <Link href="/faq" className="text-slate-300 hover:text-[#ffe80a] hover:translate-x-1 inline-block transition-all">FAQs</Link>

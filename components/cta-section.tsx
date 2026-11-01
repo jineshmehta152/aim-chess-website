@@ -40,22 +40,21 @@ export default function CtaSection() {
               {/* Eyebrow Pill */}
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#00aeef]/20 border border-[#00aeef]/40 text-[#ffe80a] text-[11px] sm:text-xs font-black uppercase tracking-wider shadow-xs">
                 <Sparkles className="w-3.5 h-3.5 fill-[#ffe80a]" />
-                <span>ADMISSIONS OPEN · ALL AGE GROUPS (5+)</span>
+                <span>ONLINE ADMISSIONS OPEN · ALL AGES (5+)</span>
               </div>
 
               {/* Main Headline */}
               <h2 className="text-xl xs:text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight">
-                Unleash Your Inner{" "}
-                <span className="bg-[#ffe80a] text-[#042047] font-black px-3 py-0.5 rounded-xl inline-block shadow-xs">
-                  Grandmaster
-                </span>
+                World-Class Chess Training Starts Here.{" "}
                 <br className="hidden sm:inline" />
-                With A 30-Min Free Demo
+                <span className="bg-[#ffe80a] text-[#042047] font-black px-3 py-0.5 rounded-xl inline-block shadow-xs mt-1">
+                  Book Your Free Assessment
+                </span>
               </h2>
 
               {/* Subtitle */}
               <p className="text-xs sm:text-sm text-slate-200 font-medium leading-relaxed max-w-xl">
-                Experience engaging chess training under FIDE-Certified Trainers. We evaluate your child&apos;s level and provide a custom learning roadmap.
+                Evaluate your child&apos;s tactical level with a certified FIDE coach, discuss flexible time zones, and receive a personalized learning roadmap.
               </p>
 
               {/* Quick Trust Chips */}
@@ -86,7 +85,7 @@ export default function CtaSection() {
                 className="w-full py-4 px-6 rounded-2xl bg-[#ffe80a] hover:bg-[#fed100] text-[#042047] font-black text-sm sm:text-base border-2 border-[#042047] shadow-lg shadow-[#ffe80a]/20 transition-all hover:scale-[1.02] cursor-pointer flex items-center justify-center gap-2 text-center"
               >
                 <Calendar className="w-5 h-5 text-[#042047]" />
-                <span>Book 30-Min Free Demo</span>
+                <span>Book a Free Assessment</span>
               </button>
 
               {/* WhatsApp and Call Direct Action Buttons */}

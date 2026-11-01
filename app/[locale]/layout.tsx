@@ -10,6 +10,7 @@ import StudentLoginModal from "@/components/student-login-modal";
 import Ga4Tracker from "@/components/ga4-tracker";
 import { BookingModalProvider } from "@/context/booking-modal-context";
 import { SiteSettingsProvider } from "@/context/site-settings-context";
+import { CountrySelectorProvider } from "@/components/country-selector-modal";
 import { routing } from "@/i18n/routing";
 
 type Props = {
@@ -127,22 +128,24 @@ export default async function LocaleLayout({ children, params }: Props) {
     <NextIntlClientProvider locale={locale} messages={messages}>
       <SiteSettingsProvider>
         <BookingModalProvider>
-          <div className="flex min-h-screen flex-col bg-[#f8fafc] text-[#042047] antialiased selection:bg-[#ffe80a] selection:text-[#042047]">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-            <StickyWhatsApp />
-            <BookingModal />
-            <StudentLoginModal />
-            <Ga4Tracker />
-          </div>
+          <CountrySelectorProvider>
+            <div className="flex min-h-screen flex-col bg-[#f8fafc] text-[#042047] antialiased selection:bg-[#ffe80a] selection:text-[#042047]">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+              <StickyWhatsApp />
+              <BookingModal />
+              <StudentLoginModal />
+              <Ga4Tracker />
+            </div>
 
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(structuredData),
-            }}
-          />
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(structuredData),
+              }}
+            />
+          </CountrySelectorProvider>
         </BookingModalProvider>
       </SiteSettingsProvider>
     </NextIntlClientProvider>

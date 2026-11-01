@@ -31,12 +31,14 @@ export default function BookingModal() {
     email: "",
     phone: "",
     country: "India",
+    timezone: "IST (India Standard Time - GMT+5:30)",
     childAge: "8-10 years",
     level: selectedEventType || "Beginner (BG1-BG3)",
     coachingMode: "Online Coaching (Worldwide)",
     device: "Laptop",
     date: "",
     timeSlot: "evening",
+    preferredSchedule: "Weekday Evenings",
     message: "",
   });
 
@@ -136,7 +138,7 @@ export default function BookingModal() {
                 ACHIEVE • INSPIRE • MAINTAIN
               </div>
               <h3 className="text-xl sm:text-2xl font-black text-white">
-                Book a Free 30-Minute Demo Class
+                Book a Free Skill Assessment
               </h3>
               <p className="text-xs text-slate-200 mt-2 leading-relaxed">
                 Connect with our certified FIDE coaches. We evaluate your child&apos;s thinking, recommend the ideal batch, and guide their championship journey.
@@ -198,10 +200,10 @@ export default function BookingModal() {
                 <CheckCircle2 className="w-10 h-10" />
               </div>
               <h4 className="text-2xl font-black text-[#042047]">
-                Free Demo Request Received!
+                Free Assessment Request Received!
               </h4>
               <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-                Thank you for enrolling with AIM Chess Academy! Our coach will contact you within 24 hours to confirm your trial schedule.
+                Thank you for applying to AIM Chess Academy! Our FIDE-certified coaching coordinator will reach out within 24 hours to confirm your 1-on-1 assessment and trial schedule.
               </p>
               <div className="pt-4">
                 <button
@@ -219,13 +221,13 @@ export default function BookingModal() {
             <div>
               <div className="mb-5">
                 <span className="text-[11px] font-black uppercase text-[#0c71c3] tracking-wider">
-                  Admission Form
+                  Diagnostic Evaluation &amp; Placement
                 </span>
                 <h4 className="text-xl sm:text-2xl font-black text-[#042047]">
-                  Enroll For Free Demo Class
+                  Book a Free Assessment
                 </h4>
                 <p className="text-xs text-slate-500 mt-0.5">
-                  Fill in your details below to schedule your trial class.
+                  Evaluate your child&apos;s tactical level, board vision, and get matched to the right live coaching batch.
                 </p>
               </div>
 
@@ -305,13 +307,13 @@ export default function BookingModal() {
                       <option value="5-7 years">5–7 years (Young Beginners)</option>
                       <option value="8-10 years">8–10 years (Junior)</option>
                       <option value="11-14 years">11–14 years (Cadet / Intermediate)</option>
-                      <option value="15+ years">15+ years & Adults</option>
+                      <option value="15+ years">15+ years &amp; Adults</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block font-bold text-slate-700 mb-1">
-                      Current Playing Level *
+                      Current Chess Level *
                     </label>
                     <select
                       value={formData.level}
@@ -328,73 +330,84 @@ export default function BookingModal() {
                   </div>
                 </div>
 
-                {/* Coaching Mode & Country */}
+                {/* Country & Time Zone */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label className="block font-bold text-slate-700 mb-1">
-                      Coaching Preference *
-                    </label>
-                    <select
-                      value={formData.coachingMode}
-                      onChange={(e) => setFormData({ ...formData, coachingMode: e.target.value })}
-                      className="w-full px-3 py-2 rounded-xl border border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/20 outline-none text-xs bg-sky-50 font-bold text-[#042047]"
-                    >
-                      <option value="Online Coaching (Worldwide)">🌐 Online Coaching (Worldwide Classrooms)</option>
-                      <option value="Offline Coaching (Barasat Centre)">📍 Offline Coaching (Barasat Academy Centre)</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block font-bold text-slate-700 mb-1">
-                      Country of Residence
+                      Country of Residence *
                     </label>
                     <select
                       value={formData.country}
                       onChange={(e) => setFormData({ ...formData, country: e.target.value })}
                       className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] outline-none text-xs bg-slate-50 font-semibold"
                     >
-                      <option value="India">India (₹)</option>
-                      <option value="USA">USA ($)</option>
-                      <option value="UK">UK (£)</option>
-                      <option value="Australia">Australia (A$)</option>
-                      <option value="Canada">Canada (C$)</option>
-                      <option value="Singapore">Singapore (S$)</option>
-                      <option value="UAE">UAE (AED)</option>
-                      <option value="Other">Other Country</option>
+                      <option value="India">🇮🇳 India (₹ INR)</option>
+                      <option value="USA">🇺🇸 United States ($ USD)</option>
+                      <option value="UK">🇬🇧 United Kingdom (£ GBP)</option>
+                      <option value="UAE">🇦🇪 UAE / Gulf (AED)</option>
+                      <option value="Australia">🇦🇺 Australia (A$ AUD)</option>
+                      <option value="Canada">🇨🇦 Canada (C$ CAD)</option>
+                      <option value="Singapore">🇸🇬 Singapore (S$ SGD)</option>
+                      <option value="Oman">🇴🇲 Oman (OMR)</option>
+                      <option value="Qatar">🇶🇦 Qatar (QAR)</option>
+                      <option value="New Zealand">🇳🇿 New Zealand (NZD)</option>
+                      <option value="Netherlands">🇳🇱 Netherlands (EUR)</option>
+                      <option value="Other">🌐 Other International Country</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block font-bold text-slate-700 mb-1">
+                      Time Zone *
+                    </label>
+                    <select
+                      value={formData.timezone}
+                      onChange={(e) => setFormData({ ...formData, timezone: e.target.value })}
+                      className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] outline-none text-xs bg-slate-50 font-semibold"
+                    >
+                      <option value="IST (GMT+5:30)">IST (India - GMT+5:30)</option>
+                      <option value="EST (US Eastern - GMT-5)">EST (US Eastern - GMT-5)</option>
+                      <option value="CST (US Central - GMT-6)">CST (US Central - GMT-6)</option>
+                      <option value="PST (US Pacific - GMT-8)">PST (US Pacific - GMT-8)</option>
+                      <option value="GMT/BST (UK - GMT+0/+1)">GMT / BST (United Kingdom)</option>
+                      <option value="GST (Gulf/UAE - GMT+4)">GST (UAE &amp; Gulf - GMT+4)</option>
+                      <option value="AEST (Australia - GMT+10)">AEST (Australia - GMT+10)</option>
+                      <option value="SGT (Singapore - GMT+8)">SGT (Singapore - GMT+8)</option>
+                      <option value="CET (Europe - GMT+1)">CET (Central Europe - GMT+1)</option>
+                      <option value="Other Time Zone">Other Time Zone</option>
                     </select>
                   </div>
                 </div>
 
-                {/* Batch Time & Device */}
+                {/* Preferred Schedule & Coaching Mode */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label className="block font-bold text-slate-700 mb-1">
-                      Preferred Batch Timing
+                      Preferred Schedule *
                     </label>
                     <select
-                      value={formData.timeSlot}
-                      onChange={(e) => setFormData({ ...formData, timeSlot: e.target.value })}
+                      value={formData.preferredSchedule}
+                      onChange={(e) => setFormData({ ...formData, preferredSchedule: e.target.value })}
                       className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] outline-none text-xs bg-slate-50 font-semibold"
                     >
-                      <option value="evening">Evening Batch (5:00 PM – 7:30 PM IST)</option>
-                      <option value="morning">Morning Batch (10:00 AM – 12:30 PM IST)</option>
-                      <option value="weekend">Weekend Batch (Sat & Sun)</option>
-                      <option value="international">Custom International Timezone</option>
+                      <option value="Weekday Evenings">Weekday Evenings (After school)</option>
+                      <option value="Weekend Mornings">Weekend Mornings (Sat / Sun)</option>
+                      <option value="Weekend Afternoons">Weekend Afternoons</option>
+                      <option value="Flexible / 1-on-1 Schedule">Flexible / 1-on-1 Schedule</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block font-bold text-slate-700 mb-1">
-                      Device / Class Format
+                      Learning Format *
                     </label>
                     <select
-                      value={formData.device}
-                      onChange={(e) => setFormData({ ...formData, device: e.target.value })}
-                      className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] outline-none text-xs bg-slate-50 font-semibold"
+                      value={formData.coachingMode}
+                      onChange={(e) => setFormData({ ...formData, coachingMode: e.target.value })}
+                      className="w-full px-3 py-2 rounded-xl border border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/20 outline-none text-xs bg-sky-50 font-bold text-[#042047]"
                     >
-                      <option value="Laptop">Laptop / PC</option>
-                      <option value="Tablet">Tablet / iPad</option>
-                      <option value="Physical Board">Physical Demonstration at Barasat Centre</option>
+                      <option value="Online Coaching (Worldwide)">🌐 Live Online Coaching (Worldwide)</option>
+                      <option value="Offline Coaching (Barasat Centre)">📍 Physical Academy (Barasat Centre)</option>
                     </select>
                   </div>
                 </div>
@@ -406,7 +419,7 @@ export default function BookingModal() {
                   </label>
                   <textarea
                     rows={2}
-                    placeholder="Tell us if your child knows basic moves, has a FIDE rating, etc..."
+                    placeholder="Tell us if your child knows basic moves, has played tournaments, or has a FIDE / Chess.com rating..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/20 outline-none text-xs resize-none"
@@ -416,10 +429,10 @@ export default function BookingModal() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3 rounded-xl bg-[#ffe80a] hover:bg-[#fed100] text-[#042047] font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg transition-all border-2 border-[#042047] cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2"
+                  className="w-full py-3.5 rounded-xl bg-[#ffe80a] hover:bg-[#fed100] text-[#042047] font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg transition-all border-2 border-[#042047] cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2"
                 >
                   <Zap className="w-4 h-4 fill-current" />
-                  <span>{isSubmitting ? "Submitting Request..." : "Submit Form & Book Free Demo"}</span>
+                  <span>{isSubmitting ? "Submitting Assessment Request..." : "Book a Free Assessment"}</span>
                 </button>
 
                 <div className="text-center text-[10px] text-slate-500 font-medium">
