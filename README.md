@@ -4,7 +4,6 @@ Modern, responsive web application for **AIM Chess Academy** built with Next.js 
 
 ## 🚀 Key Features
 
-
 - **Interactive Course Hub**: Beginner, Intermediate, Advanced, FIDE Rating, and 1-on-1 Masterclasses with international currency switcher.
 - **Visual Curriculum & Student Progress**: Core chess skills roadmap (Openings, Tactics, Strategy, Calculation, Endgames, Game Analysis).
 - **Categorized FAQ Explorer**: Instant live search and category pill filtering with 25+ comprehensive questions.
