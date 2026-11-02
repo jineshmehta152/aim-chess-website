@@ -39,72 +39,75 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* Left Column: Typography & CTAs */}
-          <div className="lg:col-span-6 space-y-5 sm:space-y-6 text-left">
+          <div className="lg:col-span-6 space-y-6 text-left">
             
-            {/* Eyebrow Title per launch brief */}
-            <div className="inline-flex items-center gap-2 px-3.5 xs:px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-[#00aeef]/40 text-white text-[11px] xs:text-xs sm:text-sm font-black tracking-wide uppercase shadow-sm max-w-full">
+            {/* Eyebrow Title */}
+            <div className="inline-flex items-center gap-2 px-3.5 xs:px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-[#00aeef]/40 text-white text-[11px] xs:text-xs sm:text-sm font-extrabold shadow-sm max-w-full">
               <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#ffe80a] shrink-0" />
-              <span>International Online Chess Education</span>
+              <span className="truncate">AIM Chess Academy: <span className="text-[#ffe80a] font-bold">Empowering Young Minds</span></span>
             </div>
 
-            {/* Main Hero Headline per launch brief */}
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-[44px] font-black text-white tracking-tight leading-[1.12] drop-shadow-md">
-              <span className="block text-white">World-Class Chess Training.</span>
-              <span className="block font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#ffe80a] via-[#fcd116] to-[#00aeef] mt-1.5 drop-shadow-lg">
-                A Clear Path to Your Next Level.
+            {/* Main Hero Headline */}
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-[33px] font-black text-white tracking-tight leading-[1.08] sm:leading-[1.06] drop-shadow-md">
+              <span className="block">{t("title1") || "Unleash Your Inner Grandmaster with"}</span>
+              <span className="block font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#ffe80a] via-[#fcd116] to-[#00aeef] text-3xl xs:text-5xl sm:text-6xl lg:text-[45px] leading-tight mt-1 drop-shadow-lg break-words">
+                AIM Chess Academy
               </span>
             </h1>
 
-            {/* Supporting Copy per launch brief */}
-            <p className="text-white/90 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl font-medium">
-              Live online chess coaching, structured learning pathways, personalized game analysis and competitive practice for aspiring players worldwide.
-            </p>
+            {/* Location and Info Badge */}
+            <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 pt-1">
+              <span className="text-xs xs:text-sm sm:text-lg font-black text-white drop-shadow-xs">
+                Barasat, Kolkata
+              </span>
+              <span className="bg-[#ffe80a] text-[#042047] font-black px-2.5 xs:px-3 sm:px-3.5 py-1 rounded-full text-[11px] xs:text-xs sm:text-sm shadow-md">
+                Online &amp; Offline Batches Worldwide
+              </span>
+            </div>
 
-            {/* Feature Highlights Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs sm:text-sm font-bold text-white">
+            {/* Feature Pills */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-1 text-xs sm:text-sm font-bold text-white">
               <div className="flex items-center gap-2.5 bg-white/15 backdrop-blur-md px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl border border-white/25 shadow-sm">
                 <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#ffe80a] shrink-0" />
-                <span>FIDE-Certified Trainers &amp; Masters</span>
+                <span>Training by FIDE-Certified Trainers</span>
               </div>
               <div className="flex items-center gap-2.5 bg-white/15 backdrop-blur-md px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl border border-white/25 shadow-sm">
                 <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#00aeef] shrink-0" />
-                <span>Small Batches (1:4) &amp; 1-on-1 Mentorship</span>
+                <span>Regular Practice Tournaments</span>
               </div>
               <div className="flex items-center gap-2.5 bg-white/15 backdrop-blur-md px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl border border-white/25 shadow-sm">
                 <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#ffe80a] shrink-0" />
-                <span>Global Timezone-Friendly Batches</span>
+                <span>ISO-Certified Course Certificates</span>
               </div>
               <div className="flex items-center gap-2.5 bg-white/15 backdrop-blur-md px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl border border-white/25 shadow-sm">
                 <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#00aeef] shrink-0" />
-                <span>Dedicated Student Portal &amp; Puzzles</span>
+                <span>Affordable Global Online Batches</span>
               </div>
             </div>
 
-            {/* Dual Action Buttons per launch brief */}
-            <div className="space-y-3 pt-1">
-              <div className="flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4">
-                <button
-                  onClick={() => openBookingModal()}
-                  type="button"
-                  className="inline-flex items-center justify-center gap-2.5 bg-[#ffe80a] hover:bg-[#fed100] text-[#042047] font-black px-6 sm:px-8 py-3.5 rounded-full text-sm sm:text-base shadow-xl shadow-black/20 transition-all duration-200 hover:scale-105 cursor-pointer text-center border-2 border-[#042047]"
-                >
-                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-[#042047]" />
-                  <span>Book a Free Assessment</span>
-                </button>
-                
-                <a
-                  href="#portal-preview"
-                  className="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white font-bold px-6 sm:px-7 py-3.5 rounded-full text-sm sm:text-base border-2 border-white/50 backdrop-blur-md shadow-md transition-all duration-200 hover:scale-105 text-center"
-                >
-                  <span>Explore Student Portal</span>
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                </a>
-              </div>
+            {/* Dual Action Buttons */}
+            <div className="flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4 pt-3">
+              <button
+                onClick={() => openBookingModal()}
+                type="button"
+                className="inline-flex items-center justify-center gap-2.5 bg-[#ffe80a] hover:bg-[#fed100] text-[#042047] font-black px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm sm:text-lg shadow-xl shadow-black/20 transition-all duration-200 hover:scale-105 cursor-pointer text-center border-2 border-[#042047]"
+              >
+                <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-[#042047]" />
+                <span>{t("ctaBook") || "Book a Free Demo Class"}</span>
+              </button>
+              
+              <Link
+                href="/courses"
+                className="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white font-bold px-6 sm:px-7 py-3 sm:py-3.5 rounded-full text-sm sm:text-lg border-2 border-white/50 backdrop-blur-md shadow-md transition-all duration-200 hover:scale-105 text-center"
+              >
+                <span>{t("ctaExplore") || "Explore Courses"}</span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+              </Link>
+            </div>
 
-              {/* Small Supporting Line per launch brief */}
-              <p className="text-[11px] sm:text-xs text-white/80 font-semibold tracking-wide">
-                Structured courses <span className="text-[#00aeef]">●</span> Live coaching <span className="text-[#ffe80a]">●</span> Progress tracking <span className="text-[#00aeef]">●</span> Competitive practice
-              </p>
+            {/* Global Presence Trust Marquee */}
+            <div className="pt-2">
+              <GlobalFlagsTicker variant="hero" />
             </div>
 
           </div>
