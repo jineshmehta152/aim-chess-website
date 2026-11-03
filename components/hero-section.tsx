@@ -49,7 +49,7 @@ export function HeroSection() {
 
             {/* Main Hero Headline */}
             <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-[33px] font-black text-white tracking-tight leading-[1.08] sm:leading-[1.06] drop-shadow-md">
-              <span className="block">{t("title1") || "Unleash Your Inner Grandmaster with"}</span>
+              <span className="block">{t("title1") || "Online Chess Education Worldwide"}</span>
               <span className="block font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#ffe80a] via-[#fcd116] to-[#00aeef] text-3xl xs:text-5xl sm:text-6xl lg:text-[45px] leading-tight mt-1 drop-shadow-lg break-words">
                 AIM Chess Academy
               </span>
