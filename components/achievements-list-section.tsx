@@ -51,14 +51,36 @@ export default function AchievementsListSection() {
   const [activeFilter, setActiveFilter] = useState<string>("all");
 
   const filterTabs = [
-    { id: "all", label: "All Achievements (9)" },
+    { id: "all", label: "All Achievements (10)" },
     { id: "fide", label: "Official FIDE Ratings" },
-    { id: "international", label: "International (Scotland/UK)" },
+    { id: "international", label: "International (USA 🇺🇸 & Scotland/UK 🏴󠁧󠁢󠁳󠁣󠁴󠁿)" },
     { id: "state", label: "State & All Bengal" },
     { id: "academy", label: "Academy Cups & Showdowns" }
   ];
 
   const achievementsData: AchievementItem[] = [
+    {
+      id: 10,
+      image: "/images/achievements/mark-usa-trophy.jpg",
+      medal: "🏆 Tournament Winner",
+      medalColor: "bg-[#042047] text-[#ffe80a]",
+      category: "international",
+      categoryLabel: "INTERNATIONAL SCHOLASTIC TOURNAMENT (USA 🇺🇸)",
+      student: "Mark 🇺🇸",
+      tournament: "US Junior Scholastic Championship",
+      location: "United States (US Online Cohort)",
+      date: "2024 Season",
+      score: "Championship Trophy Winner",
+      ratingChange: "US Scholastic Podium",
+      desc: "Our young champion Mark from the United States proudly secured his championship trophy in his junior tournament! Coached live online by AIM Chess Academy's FIDE trainers, Mark mastered calculation depth, opening traps, and endgame composure to claim the winner's podium.",
+      quote: "AIM Chess Academy helped me spot tactical combinations fast, stay calm with the clock running, and win my tournament trophy!",
+      keyHighlights: [
+        "Championship Trophy Winner in competitive US junior scholastic chess circuit",
+        "Trained online through AIM's US time-zone evening batches with personalized coach review",
+        "Demonstrates tactical patience, blunder prevention, and active endgame technique"
+      ],
+      coachReview: "Team AIM is immensely proud of Mark! His dedication to solving weekly tactical puzzles and applying our opening frameworks delivered this wonderful tournament championship trophy."
+    },
     {
       id: 1,
       image: "/images/achievements/debayan-majumder-fide.jpg",

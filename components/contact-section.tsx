@@ -95,17 +95,27 @@ export function ContactSection() {
         {/* 2-Column: Left Brand Card + Right Form */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
-          {/* Left Column: Direct Academy Contact Details */}
+          {/* Left Column: Direct Academy Contact Details & Academy Office Photo */}
           <div className="lg:col-span-5 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#042047] via-[#092c5c] to-[#041935] text-white p-5 xs:p-7 sm:p-9 shadow-2xl border-2 sm:border-4 border-[#00aeef]/30 flex flex-col justify-between space-y-6">
             <div className="space-y-5">
-              <div className="inline-block bg-white p-2.5 rounded-2xl shadow-sm">
-                <Image 
-                  src="/logo.png" 
-                  alt="AIM Chess Academy" 
-                  width={150} 
-                  height={60} 
-                  className="h-11 w-auto object-contain"
+              
+              {/* Academy Office Consultation Image */}
+              <div className="relative w-full h-44 sm:h-52 rounded-2xl overflow-hidden border-2 border-white/20 shadow-md group">
+                <Image
+                  src="/images/contact-academy.jpg"
+                  alt="AIM Chess Academy Office & Coaching Consultation"
+                  fill
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  priority
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#042047]/80 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-[11px] font-black text-white bg-[#042047]/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                  <span className="flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-[#ffe80a]" />
+                    <span>Personalized Consultation</span>
+                  </span>
+                  <span className="text-[#00aeef]">FIDE Certified</span>
+                </div>
               </div>
 
               <div>

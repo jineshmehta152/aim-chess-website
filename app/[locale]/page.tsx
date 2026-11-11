@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { HeroSection } from "@/components/hero-section";
 import { MetricsStripSection } from "@/components/metrics-strip-section";
 import AboutSection from "@/components/about-section";
+import { FeaturedChampionVideoSection } from "@/components/featured-champion-video-section";
 import WhyChooseUsSection from "@/components/why-choose-us";
 import PartiesSection from "@/components/parties-section";
 import ActivitiesSection from "@/components/activities-section";
@@ -26,6 +27,8 @@ export default function HomePage({ params }: Props) {
       <HeroSection />
       <MetricsStripSection />
       <AboutSection />
+      {/* Featured Champion Video: Mark 🇺🇸 Tournament Winner */}
+      <FeaturedChampionVideoSection />
       <WhyChooseUsSection />
       <PartiesSection />
       <ActivitiesSection />

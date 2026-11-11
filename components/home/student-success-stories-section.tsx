@@ -8,6 +8,16 @@ import { Trophy, TrendingUp, Star, Quote, ArrowRight, CheckCircle2 } from "lucid
 export function StudentSuccessStoriesSection() {
   const stories = [
     {
+      name: "Mark 🇺🇸",
+      location: "United States 🇺🇸",
+      milestone: "US Junior Tournament Trophy Winner",
+      journeyTitle: "From Casual Home Play to US Tournament Champion",
+      image: "/images/achievements/mark-usa-trophy.jpg",
+      quote: "AIM coaching taught me how to think ahead before touching any piece and stay calm under tournament clock pressure.",
+      story: "Training remotely in AIM's US Eastern/Central evening cohorts, Mark applied disciplined opening theory and tactical calculation drills to defeat his scholastic peers and bring home the tournament championship trophy.",
+      verifiableEvidence: "Verified AIM US Online Cohort · Tournament Trophy Winner",
+    },
+    {
       name: "Debayan Majumder",
       location: "India",
       milestone: "1489 Official FIDE Rapid Elo",

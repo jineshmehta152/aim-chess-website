@@ -43,6 +43,15 @@ export function RatedPlayersCoachesSection() {
 
   const tournamentAchievers = [
     {
+      name: "Mark 🇺🇸",
+      event: "US Junior Scholastic Championship",
+      category: "US Scholastic Circuit (USA)",
+      year: "2024",
+      result: "🏆 Tournament Championship Trophy",
+      image: "/images/achievements/mark-usa-trophy.jpg",
+      highlight: "Trained live online in AIM's US evening batches, Mark mastered calculation depth and composure to win his tournament trophy.",
+    },
+    {
       name: "Nishka Mandal",
       event: "NEJCA Albyn Trophy (Scotland)",
       category: "Intermediate Girls Category",

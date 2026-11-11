@@ -39,8 +39,12 @@ export default function Footer() {
 
   const currentYear = new Date().getFullYear();
 
-  // If this is the marketing landing page (/lp), suppress the standard website footer
-  if (pathname === "/lp" || pathname.startsWith("/lp/")) {
+  // If this is a dedicated marketing landing page (/lp, /uae, /usa), suppress the standard website footer
+  if (
+    pathname === "/lp" || pathname.startsWith("/lp/") ||
+    pathname === "/uae" || pathname.startsWith("/uae/") ||
+    pathname === "/usa" || pathname.startsWith("/usa/")
+  ) {
     return null;
   }
 

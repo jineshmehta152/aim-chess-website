@@ -52,11 +52,11 @@ const usConfig: CountryLandingConfig = {
     ],
   },
   studentMilestone: {
-    name: "US Scholastic Cohort",
-    achievement: "Tournament Readiness & Elo Acceleration",
-    image: "/images/achievements/riddhish-kanjilal-all-bengal.jpg",
-    quote: "The personalized opening preparation and game reviews gave my son the edge in his state scholastic championship.",
-    location: "US Online Cohort",
+    name: "Mark 🇺🇸",
+    achievement: "US Tournament Championship Winner",
+    image: "/images/achievements/mark-usa-trophy.jpg",
+    quote: "AIM Chess Academy gave me the calculation discipline and tournament opening preparation to play with confidence and win the championship trophy!",
+    location: "United States (US Online Cohort)",
   },
   features: [
     "Preparation for USCF tournaments & scholastic championships",

@@ -23,7 +23,7 @@ export default async function ContactPage({ params }: Props) {
         title={t("bannerTitle")}
         subtitle={t("subtitle")}
         breadcrumb={t("breadcrumb")}
-        bgImage="/images/hero.jpg"
+        bgImage="/images/contact-academy.jpg"
       />
       <ContactSection />
       <LocationSection />

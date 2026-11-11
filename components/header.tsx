@@ -23,8 +23,12 @@ export default function Header() {
   const t = useTranslations("nav");
   const pathname = usePathname();
 
-  // If this is the marketing landing page (/lp), suppress the standard navigation bar
-  if (pathname === "/lp" || pathname.startsWith("/lp/")) {
+  // If this is a dedicated marketing landing page (/lp, /uae, /usa), suppress the standard navigation bar
+  if (
+    pathname === "/lp" || pathname.startsWith("/lp/") ||
+    pathname === "/uae" || pathname.startsWith("/uae/") ||
+    pathname === "/usa" || pathname.startsWith("/usa/")
+  ) {
     return null;
   }
   const { openBookingModal, openStudentLoginModal } = useBookingModal();
