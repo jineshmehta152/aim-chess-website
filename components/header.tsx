@@ -22,15 +22,6 @@ import {
 export default function Header() {
   const t = useTranslations("nav");
   const pathname = usePathname();
-
-  // If this is a dedicated marketing landing page (/lp, /uae, /usa), suppress the standard navigation bar
-  if (
-    pathname === "/lp" || pathname.startsWith("/lp/") ||
-    pathname === "/uae" || pathname.startsWith("/uae/") ||
-    pathname === "/usa" || pathname.startsWith("/usa/")
-  ) {
-    return null;
-  }
   const { openBookingModal, openStudentLoginModal } = useBookingModal();
   const { phone, getPhoneUrl, getWhatsAppUrl, banner_notice, isBannerVisible, whatsapp_display } = useSiteSettings();
   const { openSelector, selectedCountry } = useCountrySelector();
@@ -41,6 +32,11 @@ export default function Header() {
   const [desktopCoursesOpen, setDesktopCoursesOpen] = useState(false);
   const desktopCoursesRef = useRef<HTMLDivElement>(null);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const isMarketingLandingPage = 
+    pathname === "/lp" || pathname.startsWith("/lp/") ||
+    pathname === "/uae" || pathname.startsWith("/uae/") ||
+    pathname === "/usa" || pathname.startsWith("/usa/");
 
   const handleCoursesMouseEnter = () => {
     if (closeTimeoutRef.current) {
@@ -99,6 +95,11 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // If this is a dedicated marketing landing page (/lp, /uae, /usa), suppress the standard navigation bar
+  if (isMarketingLandingPage) {
+    return null;
+  }
 
   const courseSubLinks = [
     { href: "/courses", label: "All Courses Overview", badge: "Overview" },
@@ -211,7 +212,13 @@ export default function Header() {
               className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-[#00aeef]/40 bg-white/95 hover:bg-sky-50 shadow-xs text-xs font-bold text-[#042047] cursor-pointer"
               title="Select your country and timezone"
             >
-              <span className="text-sm">{selectedCountry.flag}</span>
+              <Image 
+                src={selectedCountry.flagSvg || "/flags/globe.svg"} 
+                alt={`${selectedCountry.name} flag`} 
+                width={16} 
+                height={11} 
+                className="w-4 h-2.5 object-cover rounded-xs border border-slate-300 shrink-0"
+              />
               <span className="text-[11px] font-black">{selectedCountry.name}</span>
               <ChevronDown className="w-3 h-3 text-[#00aeef]" />
             </button>
@@ -308,10 +315,16 @@ export default function Header() {
               <button
                 type="button"
                 onClick={openSelector}
-                className="transition-colors duration-150 whitespace-nowrap text-[12px] xl:text-[12.5px] 2xl:text-[13.5px] font-black px-2.5 py-1 rounded-full text-[#042047] hover:text-[#00aeef] hover:bg-white flex items-center gap-1 cursor-pointer bg-sky-50/80 border border-[#00aeef]/30"
+                className="transition-colors duration-150 whitespace-nowrap text-[12px] xl:text-[12.5px] 2xl:text-[13.5px] font-black px-2.5 py-1 rounded-full text-[#042047] hover:text-[#00aeef] hover:bg-white flex items-center gap-1.5 cursor-pointer bg-sky-50/80 border border-[#00aeef]/30"
                 title="Select country and timezone"
               >
-                <span>{selectedCountry.flag}</span>
+                <Image 
+                  src={selectedCountry.flagSvg || "/flags/globe.svg"} 
+                  alt={`${selectedCountry.name} flag`} 
+                  width={16} 
+                  height={11} 
+                  className="w-4 h-2.5 object-cover rounded-xs border border-slate-300 shrink-0"
+                />
                 <span className="hidden 2xl:inline">{selectedCountry.name}</span>
                 <Globe2 className="w-3.5 h-3.5 text-[#00aeef]" />
               </button>
@@ -359,7 +372,15 @@ export default function Header() {
             {/* Mobile Country Selector Quick Card */}
             <div className="mb-2 p-3 rounded-2xl bg-sky-50/90 border border-[#00aeef]/30 flex items-center justify-between">
               <div className="flex items-center gap-2.5">
-                <span className="text-2xl">{selectedCountry.flag}</span>
+                <div className="w-8 h-5.5 rounded-xs overflow-hidden border border-slate-300 shrink-0">
+                  <Image 
+                    src={selectedCountry.flagSvg || "/flags/globe.svg"} 
+                    alt={`${selectedCountry.name} flag`} 
+                    width={32} 
+                    height={22} 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div>
                   <div className="text-[10px] uppercase font-black text-[#0c71c3] tracking-wider">Your Region &amp; Timezone</div>
                   <div className="text-xs font-black text-[#042047]">{selectedCountry.name} · {selectedCountry.timezones}</div>

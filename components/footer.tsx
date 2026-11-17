@@ -326,13 +326,28 @@ export default function Footer() {
                 <Link href="/franchise" className="text-[#ffe80a] font-bold hover:underline hover:translate-x-1 inline-block transition-all">Physical Academy Franchise</Link>
               </li>
               <li>
-                <Link href="/in" className="text-slate-300 hover:text-[#ffe80a] hover:translate-x-1 inline-block transition-all">🇮🇳 India Batches</Link>
+                <Link href="/in" className="text-slate-300 hover:text-[#ffe80a] hover:translate-x-1 inline-flex items-center gap-2 transition-all group">
+                  <Image src="/flags/in.svg" alt="India flag" width={18} height={12} className="w-4.5 h-3 object-cover rounded-xs border border-white/20 shrink-0" />
+                  <span>India Batches</span>
+                </Link>
               </li>
               <li>
-                <Link href="/us" className="text-slate-300 hover:text-[#ffe80a] hover:translate-x-1 inline-block transition-all">🇺🇸 USA &amp; Canada Batches</Link>
+                <Link href="/uae" className="text-slate-300 hover:text-[#ffe80a] hover:translate-x-1 inline-flex items-center gap-2 transition-all group">
+                  <Image src="/flags/ae.svg" alt="UAE flag" width={18} height={12} className="w-4.5 h-3 object-cover rounded-xs border border-white/20 shrink-0" />
+                  <span>UAE &amp; Middle East Batches</span>
+                </Link>
               </li>
               <li>
-                <Link href="/uk" className="text-slate-300 hover:text-[#ffe80a] hover:translate-x-1 inline-block transition-all">🇬🇧 UK &amp; European Batches</Link>
+                <Link href="/usa" className="text-slate-300 hover:text-[#ffe80a] hover:translate-x-1 inline-flex items-center gap-2 transition-all group">
+                  <Image src="/flags/us.svg" alt="USA flag" width={18} height={12} className="w-4.5 h-3 object-cover rounded-xs border border-white/20 shrink-0" />
+                  <span>USA &amp; Canada Batches</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/uk" className="text-slate-300 hover:text-[#ffe80a] hover:translate-x-1 inline-flex items-center gap-2 transition-all group">
+                  <Image src="/flags/gb.svg" alt="UK flag" width={18} height={12} className="w-4.5 h-3 object-cover rounded-xs border border-white/20 shrink-0" />
+                  <span>UK &amp; European Batches</span>
+                </Link>
               </li>
               <li>
                 <Link href="/faq" className="text-slate-300 hover:text-[#ffe80a] hover:translate-x-1 inline-block transition-all">FAQs</Link>

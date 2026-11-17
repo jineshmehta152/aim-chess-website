@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useCountrySelector, COUNTRY_OPTIONS } from "@/components/country-selector-modal";
 import { useBookingModal } from "@/context/booking-modal-context";
@@ -121,7 +122,15 @@ export function InternationalLearningSection() {
                     href={c.href}
                     className="p-3 rounded-2xl bg-white/10 hover:bg-white/20 transition-all flex items-center gap-2.5 border border-white/10"
                   >
-                    <span className="text-2xl">{c.flag}</span>
+                    <div className="w-8 h-5.5 rounded-xs overflow-hidden border border-white/30 shrink-0">
+                      <Image 
+                        src={c.flagSvg || "/flags/globe.svg"} 
+                        alt={`${c.name} flag`} 
+                        width={32} 
+                        height={22} 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     <div className="text-left">
                       <div className="text-xs font-bold text-white">{c.name}</div>
                       <div className="text-[10px] text-[#ffe80a] font-semibold">{c.currency}</div>

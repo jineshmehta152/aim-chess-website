@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { X, Globe2, Check, ArrowRight, Clock, CreditCard, ShieldCheck } from "lucide-react";
 
@@ -8,6 +9,7 @@ export interface CountryOption {
   code: string;
   name: string;
   flag: string;
+  flagSvg: string;
   currency: string;
   timezones: string;
   href: string;
@@ -20,6 +22,7 @@ export const COUNTRY_OPTIONS: CountryOption[] = [
     code: "in",
     name: "India",
     flag: "🇮🇳",
+    flagSvg: "/flags/in.svg",
     currency: "INR (₹)",
     timezones: "IST (GMT+5:30)",
     href: "/in",
@@ -27,12 +30,24 @@ export const COUNTRY_OPTIONS: CountryOption[] = [
     notes: "Local class timings, UPI / Netbanking / Card payments, domestic & FIDE tournament prep.",
   },
   {
+    code: "uae",
+    name: "United Arab Emirates",
+    flag: "🇦🇪",
+    flagSvg: "/flags/ae.svg",
+    currency: "AED (د.إ)",
+    timezones: "GST (GMT+4)",
+    href: "/uae",
+    popular: true,
+    notes: "Gulf evening & weekend batches, Arabic & English speaking master trainers, seamless card checkout.",
+  },
+  {
     code: "us",
     name: "United States",
     flag: "🇺🇸",
+    flagSvg: "/flags/us.svg",
     currency: "USD ($)",
     timezones: "EST, CST, MST, PST",
-    href: "/us",
+    href: "/usa",
     popular: true,
     notes: "US time-zone evening & weekend batches, USCF & FIDE prep, international card checkout.",
   },
@@ -40,6 +55,7 @@ export const COUNTRY_OPTIONS: CountryOption[] = [
     code: "uk",
     name: "United Kingdom",
     flag: "🇬🇧",
+    flagSvg: "/flags/gb.svg",
     currency: "GBP (£)",
     timezones: "GMT / BST",
     href: "/uk",
@@ -50,6 +66,7 @@ export const COUNTRY_OPTIONS: CountryOption[] = [
     code: "international",
     name: "Other Countries (Global)",
     flag: "🌐",
+    flagSvg: "/flags/globe.svg",
     currency: "USD / EUR / AED / AUD",
     timezones: "UAE (GST), Australia (AEST), Singapore (SGT), Europe (CET)",
     href: "/international",
@@ -181,8 +198,14 @@ export function CountrySelectorModal() {
                 }`}
               >
                 <div className="flex items-start gap-3.5 min-w-0">
-                  <div className="text-3xl sm:text-4xl shrink-0 p-1 bg-white rounded-xl shadow-xs border border-slate-100">
-                    {country.flag}
+                  <div className="w-12 h-9 sm:w-14 sm:h-10 shrink-0 p-1 bg-white rounded-xl shadow-xs border border-slate-200 overflow-hidden flex items-center justify-center">
+                    <Image 
+                      src={country.flagSvg} 
+                      alt={`${country.name} flag`} 
+                      width={48} 
+                      height={32} 
+                      className="w-full h-full object-cover rounded-md"
+                    />
                   </div>
                   <div className="space-y-1 min-w-0">
                     <div className="flex items-center gap-2">
