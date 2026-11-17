@@ -10,6 +10,7 @@ Modern, responsive web application for **AIM Chess Academy** built with Next.js 
 - **Photo Gallery & Trophy Room**: High-resolution image showcase with category filters and lightbox view.
 - **Interactive Chess Board & Demo Booking**: One-click free demo assessment modal with WhatsApp & direct phone integration.
 
+
 ## 🛠️ Tech Stack
 
 - **Framework**: Next.js 14+ (App Router)
