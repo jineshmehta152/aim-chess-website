@@ -64,12 +64,12 @@ export function FeaturedChampionVideoSection() {
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[#042047] tracking-tight">
             Meet Our US Champion:{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0c71c3] via-[#00aeef] to-[#042047]">
-              Mark 🇺🇸
+              Atharva Kudva 🇺🇸
             </span>
           </h2>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            Real outcomes from our online junior cohorts. Watch Mark proudly showcase his official tournament championship trophy and share how AIM coaching guided his winning moves.
+            Real outcomes from our online junior cohorts. Watch Atharva Kudva proudly showcase his official tournament championship trophy and share how AIM coaching guided his winning moves.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export function FeaturedChampionVideoSection() {
               {/* USA Flag & Champion Tag Overlay */}
               <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-20 flex items-center gap-2 bg-[#042047]/90 backdrop-blur-md text-white px-3 py-1.5 rounded-full border border-white/20 shadow-lg">
                 <span className="text-lg leading-none">🇺🇸</span>
-                <span className="text-xs font-black tracking-wide">Mark · USA Tournament Winner</span>
+                <span className="text-xs font-black tracking-wide">Atharva Kudva · USA Tournament Winner</span>
               </div>
 
               {/* Play / Pause Center Overlay Button */}
@@ -137,7 +137,7 @@ export function FeaturedChampionVideoSection() {
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <h3 className="text-xl sm:text-2xl font-black text-[#042047]">Mark</h3>
+                  <h3 className="text-xl sm:text-2xl font-black text-[#042047]">Atharva Kudva</h3>
                   <span className="text-2xl" title="United States">🇺🇸</span>
                 </div>
                 <p className="text-xs font-bold text-[#0c71c3]">
@@ -153,7 +153,7 @@ export function FeaturedChampionVideoSection() {
                 <span>Tournament Victory Highlights</span>
               </div>
               <p className="text-xs sm:text-sm text-slate-700 italic leading-relaxed">
-                &ldquo;AIM Chess Academy gave Mark the calculation discipline, blunder-check patience, and tournament opening prep to compete with composure and claim the championship trophy!&rdquo;
+                &ldquo;AIM Chess Academy gave Atharva the calculation discipline, blunder-check patience, and tournament opening prep to compete with composure and claim the championship trophy!&rdquo;
               </p>
             </div>
 

@@ -277,7 +277,7 @@ export default function MarketingLandingClient() {
               
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#0c71c3] text-xs font-black uppercase tracking-wider">
                 <Flame className="w-4 h-4 text-orange-500 animate-pulse" />
-                <span>#1 Rated Online Junior Chess Academy for Ages 4–16</span>
+                <span>#1 Rated Online Junior Chess Academy for Ages 4–17</span>
               </div>
 
               <h1 className="text-3xl sm:text-5xl lg:text-5xl font-black text-[#042047] tracking-tight leading-[1.12]">

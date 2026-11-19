@@ -27,7 +27,7 @@ export default function HomePage({ params }: Props) {
       <HeroSection />
       <MetricsStripSection />
       <AboutSection />
-      {/* Featured Champion Video: Mark 🇺🇸 Tournament Winner */}
+      {/* Featured Champion Video: Atharva Kudva 🇺🇸 Tournament Winner */}
       <FeaturedChampionVideoSection />
       <WhyChooseUsSection />
       <PartiesSection />

@@ -52,7 +52,7 @@ const usConfig: CountryLandingConfig = {
     ],
   },
   studentMilestone: {
-    name: "Mark 🇺🇸",
+    name: "Atharva Kudva 🇺🇸",
     achievement: "US Tournament Championship Winner",
     image: "/images/achievements/mark-usa-trophy.jpg",
     quote: "AIM Chess Academy gave me the calculation discipline and tournament opening preparation to play with confidence and win the championship trophy!",

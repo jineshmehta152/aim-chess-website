@@ -64,9 +64,9 @@ const usaMarketingConfig: RegionalMarketingConfig = {
     "USCF Scholastic Tournament Preparation & Tactical Discipline",
     "Convenient After-School Batches (EST, CST, MST, PST)",
     "Safe, Child-Friendly Cloud Classrooms with Active Puzzle Solving",
-    "Home of Real US Tournament Champions (like Mark 🇺🇸)",
+    "Home of Real US Tournament Champions (like Atharva Kudva 🇺🇸)",
   ],
-  ageRange: "For Ages 5 – 14 Years",
+  ageRange: "For Ages 5 – 17 Years",
   leadCardTitle: "Get Started with a Free Demo Class",
   leadCardSubtitle: "Experience our teaching style and discover your child's natural thinking reflexes.",
   benefitsList: [
@@ -76,9 +76,9 @@ const usaMarketingConfig: RegionalMarketingConfig = {
     "Find the Right Program for Your Child",
   ],
   extraStudentSpotlight: {
-    name: "Mark 🇺🇸",
+    name: "Atharva Kudva 🇺🇸",
     badge: "US Tournament Champion",
-    desc: "Watch Mark proudly celebrate his tournament championship trophy in our video above!",
+    desc: "Watch Atharva Kudva proudly celebrate his tournament championship trophy in our video above!",
   },
 };
 

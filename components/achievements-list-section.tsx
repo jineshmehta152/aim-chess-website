@@ -66,20 +66,20 @@ export default function AchievementsListSection() {
       medalColor: "bg-[#042047] text-[#ffe80a]",
       category: "international",
       categoryLabel: "INTERNATIONAL SCHOLASTIC TOURNAMENT (USA 🇺🇸)",
-      student: "Mark 🇺🇸",
+      student: "Atharva Kudva 🇺🇸",
       tournament: "US Junior Scholastic Championship",
       location: "United States (US Online Cohort)",
       date: "2024 Season",
       score: "Championship Trophy Winner",
       ratingChange: "US Scholastic Podium",
-      desc: "Our young champion Mark from the United States proudly secured his championship trophy in his junior tournament! Coached live online by AIM Chess Academy's FIDE trainers, Mark mastered calculation depth, opening traps, and endgame composure to claim the winner's podium.",
+      desc: "Our young champion Atharva Kudva from the United States proudly secured his championship trophy in his junior tournament! Coached live online by AIM Chess Academy's FIDE trainers, Atharva mastered calculation depth, opening traps, and endgame composure to claim the winner's podium.",
       quote: "AIM Chess Academy helped me spot tactical combinations fast, stay calm with the clock running, and win my tournament trophy!",
       keyHighlights: [
         "Championship Trophy Winner in competitive US junior scholastic chess circuit",
         "Trained online through AIM's US time-zone evening batches with personalized coach review",
         "Demonstrates tactical patience, blunder prevention, and active endgame technique"
       ],
-      coachReview: "Team AIM is immensely proud of Mark! His dedication to solving weekly tactical puzzles and applying our opening frameworks delivered this wonderful tournament championship trophy."
+      coachReview: "Team AIM is immensely proud of Atharva Kudva! His dedication to solving weekly tactical puzzles and applying our opening frameworks delivered this wonderful tournament championship trophy."
     },
     {
       id: 1,

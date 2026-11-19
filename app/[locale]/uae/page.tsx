@@ -66,7 +66,7 @@ const uaeMarketingConfig: RegionalMarketingConfig = {
     "Safe, Interactive & Child-Friendly Cloud Classrooms",
     "Regular Practice, Assessments & Official Level Recognition",
   ],
-  ageRange: "For Ages 5 – 14 Years",
+  ageRange: "For Ages 5 – 17 Years",
   leadCardTitle: "Get Started with a Free Demo Class",
   leadCardSubtitle: "Experience our teaching style and discover your child's natural thinking reflexes.",
   leadSectionImage: "/images/marketing-uae-demo-boy.jpg",
