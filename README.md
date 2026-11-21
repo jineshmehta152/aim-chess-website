@@ -1,3 +1,4 @@
+
 # AIM Chess Academy Website
 
 Modern, responsive web application for **AIM Chess Academy** built with Next.js (App Router), TypeScript, Tailwind CSS, and Next-Intl.
